@@ -8,15 +8,15 @@ Gracias a una amigable interface de nuetro sitio, de simple uso y dinámica, log
 ## EQUIPO DE DESARROLLO
 El proyecto fue desarrollado por los estudiantes del grupo 4 del bootcamp **Full Stack Node TN28** de *Digital House* integrado por:
 
-* Marcela Melendez: contadora, 38 años, de Bs As (CABA), viviendo en Chile, mamá de Isabella y Cayetano, profesora de piano, runner y amante del cine.
+* Marcela Melendez: contadora, 38 años, de CABA, viviendo en Chile, mamá de Isabella y Cayetano, profesora de piano, runner y amante de la gastronomía.
 
-* Natalia Sandoval: abogada, 33 años, de Bs As (CABA), mamá de Mateo, Cleta y Mega, amante del deporte, de la comida y vida sana, naturaleza, animales y viajes.
+* Natalia Sandoval: abogada, 33 años, de CABA, mamá de Mateo, Cleta y Mega, amante del deporte, de la comida y vida sana, naturaleza, animales y viajes.
 
 * África Aular: cardiopulmonar, 33 años, de Caracas (Venezuela), viviendo en Argentina hace 7 años, mamá de Isabella, amante de la comida y el cine.
 
 * Facundo Vasquez: ing. mecánico, 27 años, Rosarino (Arg), amante de la aviación, natación y la F1, la vida sana y futuro data scientist.
 
-* Federico Drago:<!--AGREGAR RESUMEN DE FEDE -->
+* Federico Drago: diseñador gráfico, 26 años, de CABA y amante del deporte.
 
 ## REFERENTES
 
