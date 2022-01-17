@@ -9,3 +9,5 @@ const path =require ("path")
 const publicPath =path.resolve(__dirname,"./public")
 
 app.use (express.static(publicPath))
+
+app.get('/productCart', (req, res) => res.sendFile(path.resolve(__dirname, 'views', 'productCart.html')));
