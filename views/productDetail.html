@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/productDetail.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <title>Detalle de producto</title>
+</head>
+
+<body>
+  <header>
+    <div class="menu-navegacion">
+      <img src="img/logo-kapu-01.png" alt="logo">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-lavel">
+        <i class="fas fa-bars"></i>
+        </label>
+      <nav class="menu-desplegable">
+        <ul>
+          <li> <a href="#">Inicio</a></li>
+          <li> <a href="#">Productos</a></li>
+          <li> <a href="#">Quienes somos</a></li>
+          <li> <a href="#">Contacto</a></li>
+          <li> <a href="#">Carrito</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="product-title">
+      <h2 class="product-name">Remera hombre para aplicar diseño</h2>
+      <h3 class="product-price">$500</h3>
+    </section>
+    <section class="product-container">
+      <div class="product-image">
+        <img src="img/AC mockup.png" alt="remera" width="100%"/>
+      </div>
+      <div class="carrousel-container">
+        <div class="carrousel-image">
+          <img src="img/AC mockup.png" alt="img1" class="img-carrousel" width="30%"/>
+          <img src="img/AC mockup.png" alt="img2" class="img-carrousel" width="30%"/>
+          <img src="img/AC mockup.png" alt="img3" class="img-carrousel" width="30%"/>
+        </div>
+      </div>
+    </section>
+    <section class="product-form">
+      <form method="post">
+        <div class="size-container">
+          <button type="button" class="size-button">S</button>
+          <button type="button" class="size-button">M</button>
+          <button type="button" class="size-button">L</button>
+          <button type="button" class="size-button">XL</button>
+        </div>
+        <div class="file">
+          <label for="cargar-archivo"></label>
+            <input type="file" accept="image/*" class="up-file">
+          <label for="submit"></label>
+            <button type="submit" class="submit">AGREGAR AL CARRITO</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <!--AGREGAR FOOTER DESDE HOME-->
+  </footer>
+</body>
+
+</html>

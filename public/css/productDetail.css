@@ -1,0 +1,152 @@
+body{
+    box-sizing: border-box;
+    background-color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+}
+header{
+    position:fixed;
+    width: 100%;
+    height: 100px;
+    background-image: url(/grupo_4/public/img/Enmascarar\ grupo\ 6.png);
+    /*background-color: white;*/
+    background-size:contain;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+.menu-navegacion{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;  
+    padding:20px 0;
+
+}
+
+
+.menu-navegacion i{
+    font-size: 30px;
+    color: #679EAB;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+
+.menu-desplegable{
+    position: absolute;
+    background-color: white;
+    padding: 20px 0;
+    
+}
+
+.menu-desplegable a{
+    text-decoration: none;
+    color: #328093;
+}
+
+.menu-desplegable a:hover{
+    color: #DFB760;
+}
+
+
+nav{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    text-align: center;
+    background: gray;
+    left: 0;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    }
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li{
+text-align: center;
+margin: 15px 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+.nav-toggle:checked ~ nav{
+ transform: scale(1,1);}
+
+
+.product-name{
+    color:#328093;
+    font-size:28px;
+}
+.product-price{
+    color:#DFB760;
+    font-size:32px;
+}
+.product-container, .img-carrousel{
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.5);
+}
+.product-container{
+    max-width: 80%;
+    margin: 10%;
+    display: flex;
+    flex-flow: column;
+}
+.carrousel-container{
+    padding: 5%;
+    margin: 5%;
+}
+.carrousel-image{
+    display: flex;
+    justify-content: space-between;
+}
+
+.size-container{
+    display:flex;
+    justify-content: space-evenly;
+}
+.file{
+    margin: 10%;
+    display:flex;
+    flex-flow: column;
+}
+.up-file, .submit{
+    padding-bottom: 10%;
+}
+.size-button{
+    border: solid 4px #328093;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color:#DFB760;
+}
+.size-button:hover {
+    box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.5); 
+    color: #ffffff;
+    background-color: #328093;
+}
+.submit{
+    background-color: #328093;
+    border-radius: 25px;
+    padding:15px;
+    margin:10%;
+    color:#ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    
+}
+.submit:hover{
+    box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.5); 
+}
