@@ -43,4 +43,6 @@ Las páginas prototipadas fueron:
 * Carrito de compras
 * Login 
 * Registro de usuario
-<!--aca podemos agregar una imagen del wireframe como referencia>
+
+# Tablero de Trabajo
+https://trello.com/b/Q06Mp1l6/grupo4personalizar
