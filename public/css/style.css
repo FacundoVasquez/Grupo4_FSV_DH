@@ -8,6 +8,7 @@ body{
     margin: 0;
     padding:0;
     font-family: 'Noto Sans', sans-serif;
+    
 }
 header{
     position:fixed;
@@ -165,6 +166,7 @@ height: 80px;
 margin-left: -5px;
 border-radius: 50px;
 text-align: center;
+
 
 }
 
@@ -362,6 +364,10 @@ font-size: 1.5em;
         display: block;
         margin: auto;
         margin-right: 30px;
+    }
+
+    .calculador-precio{
+        max-width: 500px;
     }
 
     footer{
