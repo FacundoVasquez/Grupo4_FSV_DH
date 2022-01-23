@@ -9,14 +9,14 @@ header{
     position:fixed;
     width: 100%;
     height: 100px;
-    background-image: url(/grupo_4/public/img/Enmascarar\ grupo\ 6.png);
-    /*background-color: white;*/
+    background-image:url(/img/Trazado\ 13.jpg);
+    background-color: white;
     background-size:contain;
     background-repeat: no-repeat;
     z-index: 100;
 }
-
 .menu-navegacion{
+    
     display: flex;
     width: 90%;
     justify-content: space-between;
@@ -25,34 +25,28 @@ header{
     padding:20px 0;
 
 }
-
-
 .menu-navegacion i{
     font-size: 30px;
     color: #679EAB;
 }
-
 .nav-toggle{
     display: none;
 }
-
-
 .menu-desplegable{
     position: absolute;
     background-color: white;
     padding: 20px 0;
-    
 }
-
+.fa-shopping-cart{
+    color: yellowgreen;
+}
 .menu-desplegable a{
     text-decoration: none;
     color: #328093;
 }
-
 .menu-desplegable a:hover{
     color: #DFB760;
 }
-
 nav{
     position: absolute;
     top: 100%;
@@ -63,19 +57,16 @@ nav{
     transform: scale(1,0);
     transform-origin: top;
     transition: transform 400ms ease-in-out;
-    }
-
+}
 nav ul{
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 nav ul li{
 text-align: center;
 margin: 15px 0;
 }
-
 nav ul li a{
     text-decoration: none;
     font-size: 1.5em;
@@ -85,9 +76,7 @@ nav ul li a{
  transform: scale(1,1);
 }
 
-
 /*  *****ESTILOS DE DETALLE DE PRODUCTO*****   */
-
 main{
     padding-top: 10px;
 }    
@@ -153,7 +142,6 @@ main{
     color:#ffffff;
     font-size: 17px;
     font-weight: bold;
-    
 }
 .submit:hover{
     box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.5); 
@@ -164,16 +152,14 @@ footer{
     padding-top: 50px;
     background-color: #328093;
 }
- footer img{
+footer img{
      display: block;
      margin: auto;
-    }
-
+}
 footer div ul{
     list-style: none;
     padding: 0;
 }
-
 footer div ul li{
     padding: 10px 0;
     text-align: center;
@@ -192,4 +178,149 @@ font-size: 1.5em;
     width: 45px;
     padding: 10px;
     border-radius: 50px;
+}
+
+
+/*      *****MEDIA QUERIES*****    */
+
+/*LARGE*/
+@media (min-width: 1280px){
+    header{
+        position: absolute;
+    }
+    .menu-navegacion{
+        display: flex;
+        width: 90%;
+        align-items: center;
+        margin: auto;  
+        padding: 0;
+    }
+    .menu-navegacion i{
+        display: none;
+    }
+    .nav-toggle{
+        display: none;
+    }
+    .menu-desplegable{
+        position:inherit;
+        background-color: transparent;
+        padding: 20px 0; 
+    }
+    .menu-desplegable a{
+        text-decoration: none;
+        color: #328093;
+        margin-left: 50px;
+        font-size: 1em;
+    }
+    .menu-desplegable a:hover{
+        color: #DFB760;
+    }
+    nav{
+        all: unset;
+    }
+    nav ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    nav ul li{
+        text-align: center;
+        margin: 15px 0;
+    }
+    nav ul li a{
+        text-decoration: none;
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+    .fa-shopping-cart{
+        margin-left: 50px;
+    }
+    .nav-toggle:checked ~ nav{
+     transform:none;
+    }
+    main{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+    }
+    .product-container{
+        order:-1;
+    }
+    .product-title {
+        max-height: 300px;
+        position: relative;
+    }
+    .product-form{
+        max-height: 300px;
+        position: absolute;
+        margin-left:50%;
+        margin-top:20%;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+
+    }
+    footer img{
+        margin: 10%;
+        }
+
+    .redes{
+        margin: 10%;
+    }
+    .redes i{
+        margin-left: 10px;
+    }
+}
+
+/* MEDIUM */
+@media (min-width: 768px) and (max-width: 1279px){
+    main{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+    }
+    .product-container{
+        order:-1;
+    }
+    .product-title {
+        max-height: 300px;
+        position: relative;       
+    }
+    .product-form{
+        max-height: 300px;
+        position: absolute;
+        margin-left:60%;
+        margin-top:40%;
+    }
+    .size-button{
+        border: solid 2px #328093;
+        padding: 10px;
+        font-size: 15px;
+    }
+    .submit{
+        font-size: 12px;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    footer img{
+        margin: 10%;
+    }
+    .redes{
+        margin: 10%;
+    }
+    .redes i{
+        margin-left: 10px;
+    }
 }
