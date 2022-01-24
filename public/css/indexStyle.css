@@ -84,7 +84,6 @@ nav ul li a{
     text-transform: uppercase;
 }
 
-
 footer{
     padding-top: 50px;
     background-color: #328093;
@@ -122,20 +121,172 @@ footer div ul li{
     border-radius: 50px;
 }
 
+.ppal{
+    font-family: DM Serif Text;
+    font-style: normal;
+    font-weight: normal;
+    color: #328093;
+}
+
+.dejaVolar{
+    width: 313px;
+    height: 532px;
+    left: 25px;
+    top: 145px;
+    background-color: white;
+    box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.25);
+    border-radius: 20px;
+}
+
+.buttonPersonalizar{
+    background: #DFB760;
+    border-radius: 32px;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+
+}
+
+.imagine{
+    font-family: WindSong;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 56px;
+    color: #DFB760;
+}
+
+.prodDestacados {
+    background: rgba(223, 183, 96, 0.1);
+    }
+.parent{
+    position: relative;
+}
+
+.imgProductos{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.fondoAzul{
+    background-color: #328093;
+    color: white;
+    z-index: 50;
+    font-family: Noto Sans;
+    font-style: normal;
+    text-align: center;
+    width: auto;
+    height: 75px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.botellas{
+    color: #DFB760;
+    background-image: url("/img/MaskGroupIndexMobile.png");
+    background-size: auto;
+    width: 313px;
+    height: 338px;
+    left: 25px;
+    top: 2504px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: DM Serif Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 55px;    
+}
+
+.botonBotellas{
+    background-color: #328093;
+    color: white;
+    border-radius: 32px;
+    font-family: Noto Sans;
+    font-style: normal;
+
+}
+
+.accesorios{
+    background-image: url("/img/MaskGroupIndexMobile.png");
+    background-color: #328093;
+    color: white;
+    background-size: auto;
+    width: 313px;
+    height: 338px;
+    left: 25px;
+    top: 2504px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: DM Serif Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 55px;     
+}
+
+.botonAccesorios{
+    background-color: white;
+    color: #DFB760;
+    border-radius: 32px;
+    font-family: Noto Sans;
+    font-style: normal;
+}
+
+.indumentaria{
+    background-image: url("/img/MaskGroupIndexMobile.png");
+    background-color: #DFB760;
+    color: white;
+    background-size: auto;
+    width: 313px;
+    height: 338px;
+    left: 25px;
+    top: 2504px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: DM Serif Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 55px; 
+}
+
+.botonIndumentaria{
+    background-color: #328093;
+    color: white;
+    border-radius: 32px;
+    font-family: Noto Sans;
+    font-style: normal;
+}
 
 @media (min-width: 768px){
-    .secciones{
+    footer{
         display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+     footer img{
+         margin: 10%;
+        }
+    
+    .redes{
+        margin: 10%;
+    }
+
+    .redes i{
+        margin-left: 10px;
     }
 }    
    
 @media (min-width: 1280px){
 
-    .secciones{
-        display: flex;
-        justify-content: center;
-    }
-
+    
     footer{
         display: flex;
         justify-content: center;
@@ -165,7 +316,6 @@ footer div ul li{
         margin: auto;  
         padding: 0;    
     }
-    
     
     .menu-navegacion i{
         display: none;
@@ -219,6 +369,10 @@ footer div ul li{
 
     .nav-toggle:checked ~ nav{
         transform:none;
+    }
+
+    .ProdDestParent{
+        display: flex;
     }
         
 }

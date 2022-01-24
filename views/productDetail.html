@@ -16,7 +16,7 @@
 <body>
   <header>
     <div class="menu-navegacion">
-      <img src="img/logo-kapu-01.png" alt="logo">
+      <img src="/img/logo-kapu-01.png" alt="logo">
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <label for="nav-toggle" class="nav-toggle-lavel">
         <i class="fas fa-bars"></i>
@@ -27,14 +27,14 @@
           <li> <a href="#">Productos</a></li>
           <li> <a href="#">Quienes somos</a></li>
           <li> <a href="#">Contacto</a></li>
-          <li> <a href="#">Carrito</a></li>
+          <li> <a href="#"><i class="fas fa-shopping-cart" style="display: block"></i></a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
     <section class="product-title">
-      <h2 class="product-name">Remera hombre para aplicar diseño</h2>
+      <h2 class="product-name">Remera para aplicar diseño</h2>
       <h3 class="product-price">$500</h3>
     </section>
     <section class="product-container">
@@ -59,7 +59,7 @@
         </div>
         <div class="file">
           <label for="cargar-archivo"></label>
-            <input type="file" accept="image/*" class="up-file">
+            <input type="file" accept="image/*" class="up-file" name="archivo">
           <label for="submit"></label>
             <button type="submit" class="submit">AGREGAR AL CARRITO</button>
         </div>
@@ -67,7 +67,22 @@
     </section>
   </main>
   <footer>
-    <!--AGREGAR FOOTER DESDE HOME-->
+    <img src="./img/logo-kapu-01.png" alt="Logo">
+<!-- menu footer-->
+        <div class="menu-footer">
+            <ul>
+                <li>Inicio</li>
+                <li>Productos</li>
+                <li>Quienes somos</li>
+                <li>Contacto</li>
+                <li>Cart</li>
+            </ul>
+        </div>
+        <!-- redes footer-->
+        <div class="redes">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+                </div>
   </footer>
 </body>
 
