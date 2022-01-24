@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4{
+    padding: 0;
+    margin: 0;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body{
@@ -128,6 +136,12 @@ footer div ul li{
     color: #328093;
     padding-top: 35px;
 }
+.fondo{
+    background-image: url(/img/BackgroundIndexMobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
 
 .dejaVolar{
     width: 90%;
@@ -135,20 +149,28 @@ footer div ul li{
     height: 70vh;
     box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.25);
     border-radius: 20px;
+    background-color: white;
+}
+
+.content-dejavolar{
+    padding: 0 15px ;
+
 }
 
 .section1-dejaVolar{
-    background-color: white;
-    width: 75%;
+    font-size: 2.5em;
     
+}
+
+.section1-prodPers{
+    padding: 30% 0 0 0;
 }
 
 .imagine{
     font-family: WindSong;
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
-    line-height: 56px;
+    font-size: 3em;
     color: #DFB760;
 }
 
