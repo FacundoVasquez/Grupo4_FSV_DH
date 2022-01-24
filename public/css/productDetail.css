@@ -37,8 +37,8 @@ header{
     background-color: white;
     padding: 20px 0;
 }
-.fa-shopping-cart{
-    color: yellowgreen;
+.fa-shopping-cart:hover{
+    color: #DFB760;
 }
 .menu-desplegable a{
     text-decoration: none;
@@ -163,7 +163,14 @@ footer div ul{
 footer div ul li{
     padding: 10px 0;
     text-align: center;
+    
+}
+.a-footer{
+    text-decoration: none;
     color: #DFB760;
+}
+.a-footer:hover{
+    color: white;
 }
 .redes{
     display: flex;
