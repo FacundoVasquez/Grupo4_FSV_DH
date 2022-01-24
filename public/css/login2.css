@@ -41,43 +41,61 @@ footer {
     text-align: center;
 }
 
-.sección1 {
-    padding-left: 20px;
-    padding-right: 20px;
-
+form {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
 }
+
 
 .titulo-label{
-    color: #328093;
-    font-size: 40px;
-    padding-top: 10px;
+    text-align: left;
+    padding-left: 55px;
+    padding-right: 55px;
 
 }
+
+.label {
+    text-align: center;
+    color: #328093;
+    font-size: 25px;
+    padding-top: 10px;
+    }
 
 .input {
     border-radius: 20px;
-    width: 98%;
+    width: 80%;
     height: 50px;
     padding-right: 10px;
+}
+
+.caja-input {
+    text-align: center;
 }
 
 .sección2 {
     font-size: 30px;
     padding-top: 50px;
     text-align: center;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 
 .iniciar-sesión {
     background-color: #328093;
     border-radius: 20px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center
+    }
+.iniciar {
+    text-decoration: none;
 }
-
+.contraseña {
+    color:#328093;
+    text-decoration: none;
+}
+.crear-cuenta1 {
+    color:#328093;
+    text-decoration: none;
+}
 .olvidé-contraseña{
     font-size: 25px;
     padding-top: 20px;
@@ -88,16 +106,37 @@ footer {
     padding-top: 20px;
 }
 
+
 .sección3 {
-    height: 350px;
+    height: 40%;
     padding-top: 60px;
     font-size: 25px;
     text-align: center;
     }
 
+    .iniciar{
+        list-style: none;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    }
+    .contraseña{
+        list-style: none;
+        color: #328093;
+        
+    }
+    .crear-cuenta {
+        list-style: none;
+        color: #328093;
+    }
+
 .url1{
     background-color: #328093;
-    color: white;
     margin-right: 50px;
     margin-left: 40px;
     height: 50px;
@@ -106,11 +145,15 @@ footer {
     align-items: center;
     margin-bottom: 15px;
 }
+.vinculos{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
 
 .url2{
-    background-color: #328093;
-    color: white;
-    margin-right: 50px;
+    background-color: #3b5998; 
+   margin-right: 50px;
     margin-left: 40px;
     height: 50px;
     display: flex;
@@ -184,13 +227,21 @@ main {
 
 .logo3 {
         display: block;
-        width:100%;
-        height: 60%;
+        width:400px;
+        height: 200px;
         padding-top: 100px;
         padding-left: 100px;
         padding-right: 100px;
 }
 
+.logo-3Kapu{
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .caja2 {
     display: block;
     width: 50vw;
@@ -257,17 +308,19 @@ form {
 
 }
 .imagenes{
-    padding-top: 300px;
+    padding-top: 230px;
     width: 50vw;
 }
 
 .fondo {
     width: 50vw;
-    height: 100vh;
+    height: 110vh;
     position: absolute;
     top: 30px;
     right: 5px;
 
 }
 
+
+}
 }
