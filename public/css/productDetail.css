@@ -15,6 +15,7 @@ header{
     background-repeat: no-repeat;
     z-index: 100;
 }
+
 .menu-navegacion{
     
     display: flex;
@@ -78,16 +79,19 @@ nav ul li a{
 
 /*  *****ESTILOS DE DETALLE DE PRODUCTO*****   */
 main{
-    padding-top: 10px;
+    padding-top: 100px;
+}
+.product-title{
+    margin: 20px;
 }    
 .product-name{
     color:#328093;
-    font-size:28px;
-    margin-top: 100px;
+    font-size:24px;
+    
 }
 .product-price{
     color:#DFB760;
-    font-size:32px;
+    font-size:24px;
 }
 .product-container, .img-carrousel{
     background-color: #ffffff;
@@ -95,8 +99,9 @@ main{
     box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.5);
 }
 .product-container{
-    max-width: 80%;
+    width: 80%;
     margin: 10%;
+    text-align: center;
     display: flex;
     flex-flow: column;
 }
@@ -108,7 +113,10 @@ main{
     display: flex;
     justify-content: space-between;
 }
-
+.container-title-form{
+    margin: 5%;
+    margin-top: 5%;
+}
 .size-container{
     display:flex;
     justify-content: space-evenly;
@@ -124,8 +132,8 @@ main{
 .size-button{
     border: solid 4px #328093;
     border-radius: 50%;
-    padding: 15px;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 15px;
     font-weight: bold;
     color:#DFB760;
 }
@@ -137,10 +145,10 @@ main{
 .submit{
     background-color: #328093;
     border-radius: 25px;
-    padding:15px;
-    margin:10%;
+    padding:10px;
+    margin:5%;
     color:#ffffff;
-    font-size: 17px;
+    font-size: 10px;
     font-weight: bold;
 }
 .submit:hover{
@@ -176,7 +184,7 @@ footer div ul li{
     display: flex;
     justify-content: space-around;
     padding-bottom: 50px;
-font-size: 1.5em;
+    font-size: 1.5em;
     color: #328093;
 }
 .redes i{
@@ -192,6 +200,9 @@ font-size: 1.5em;
 
 /*LARGE*/
 @media (min-width: 1280px){
+    body{
+        height: 100%;
+    }
     header{
         position: absolute;
     }
@@ -249,23 +260,32 @@ font-size: 1.5em;
      transform:none;
     }
     main{
-        position: relative;
+        
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         padding-top: 10px;
+        background-color: transparent;
     }
     .product-container{
-        order:-1;
+        width: 50%;
+        height: 50%;
+        margin-inline-end: auto;
+        display: flex;
+        flex-flow: column;
     }
-    .product-title {
-        max-height: 300px;
-        position: relative;
+    .container-title-form{
+        display:flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    .product-name{
+        font-size: 34px;
+    }
+    .product-price{
+        font-size: 38px;
     }
     .product-form{
-        max-height: 300px;
-        position: absolute;
-        margin-left:50%;
-        margin-top:20%;
+        margin: 0;
     }
     footer{
         display: flex;
@@ -289,23 +309,7 @@ font-size: 1.5em;
 /* MEDIUM */
 @media (min-width: 768px) and (max-width: 1279px){
     main{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        padding-top: 30px;
-    }
-    .product-container{
-        order:-1;
-    }
-    .product-title {
-        max-height: 300px;
-        position: relative;       
-    }
-    .product-form{
-        max-height: 300px;
-        position: absolute;
-        margin-left:60%;
-        margin-top:40%;
+        padding-top: 50px;
     }
     .size-button{
         border: solid 2px #328093;
