@@ -1,72 +1,74 @@
 *{
     box-sizing: border-box;
+    margin:0;
+    padding: 0;
 }
+
 header{  
-text-align: center;
+    text-align: center;
+}
+
+.logo{
+    margin:auto;
+    display: block;
+    height: 190px;
+    background: url(/img/Trazado\ 15.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 50px;;
 }
 
 
 header h1{
-position: absolute;
-left: 19.17%;
-right: 19.72%;
-top: 10.54%;
-bottom: 86.91%;
 font-family: 'Noto Sans', sans-serif;;
-font-style: normal;
-font-weight: bold;
+font-weight: 700;
 font-size: 41px;
-line-height: 56px;
 color:#328093;
 }
 
 section{
-    padding: 5px;
-}
-section .detalle1{
-margin-top: 14.64%;
-font-family: Noto Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 16px;
-line-height: 22px;
-color:#328093;
-}
-section .detalle{
-font-family: Noto Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 16px;
-line-height: 22px;
-color:#328093
+    width: 100%;
+    padding: 10px;
     }
-section .dato {
-width: 325px;
-height: 43px;
-background: #FFFFFF;
-border: 1px solid #328093;
-box-sizing: border-box;
-border-radius: 50px;
 
+.seccionform{
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color:#328093; 
+    margin: 25px 0;   
+}
+
+.seccionform label{
+    display:block;
+    padding: 0 0 5px 10px;
+}
+
+.seccionform input{
+    border: 1px solid #328093;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #328093;
+    border-radius: 50px;
+    width: 100%;
+    height: 43px;
+    text-indent: 10px;
 
 }
-input{
-border: none;
-border-left: 2px;
-font-family: Noto Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 22px;
-color: #328093;
-opacity: 0.5;
 
+.seccionform input::placeholder{
+    color:#328093;
+    opacity: 0.5;
 }
+
 button{
-Width: 324px;
-Height:57px;
-Top: 731px;
-Left: 17px;
+Width: 100%;
+Height:50px;
 background-color:#328093 ;
 color:#FFFFFF;
 filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.161));
@@ -76,52 +78,156 @@ border:none;
 font-family: Noto Sans;
 font-style: normal;
 font-weight: 700;
-font-size: 22px;
+font-size: 16px;
 line-height: 29,96px;
+margin-top: 20px;
 }
 
+button.facebook{
+    background:darkblue;
+    color:white;
+    border:darkblue;
+    font-size: 12px;
+    height: 30px;
+    border-radius: 0px;
+    text-align: center;
+    display: block;
+    width: 50%;
+    margin:auto;
+    margin-top: 10px;
+    
+}
+button.google{
+    background: blue;
+    color:white;
+    border:blue;
+    font-size: 12px;
+    height: 30px;
+    border-radius: 0px;
+    text-align: center;
+    display: block;
+    width: 50%;
+    margin:auto;
+    margin-top:10px ;
+    
+}
+
+.modelo{
+    display: none;
+    background: url(/img/Mask\ Group.png);
+    box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.5);
+    text-align: center;
+    border-radius:30px 0 0 30px;
+    background-image: cover;
+    padding: auto;
+    }
+
+
+.modelo h1{
+    font-family: 'DM Serif Text', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    color: #328093;
+}
+.modelo h3{
+    font-family: WindSong;
+    font-style: normal  ;
+    font-weight: normal;
+    font-size:50px;
+    color: #DFB760;
+    
+}
+.modelo p{
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #328093;
+    text-align: center;
+    justify-content: center;
+    margin: 0 100px;
+}
+
+.merchandising{
+    display: block;
+    margin: auto;
+    padding:10px;
+}
 footer{
-height: 572px;
-width: 362px;
-left: 0px;
-top: 980px;
-border-radius: 0px;
-position: absolute;
-width: 362px;
-height: 572px;
-left: 0px;
-top: 980px;
-background: #328093;
-font-family: Noto Sans SC;
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: 29px;
-letter-spacing: 0em;
-text-align: left;
-color: #FFFFFF;
+    padding-top: 50px;
+    background-color: #328093;
+}
+ footer img{
+     display: block;
+     margin: auto;
+    }
 
+footer div ul{
+    list-style: none;
+    padding: 0;
 }
 
-h3 {
-font-family: Noto Sans SC;
-font-style: normal;
-font-weight: bold;
-font-size: 20px;
-line-height: 29px;
-color: #FFFFFF;
+footer div ul li{
+    padding: 10px 0;
+    text-align: center;
+    color: #DFB760;
 }
-h3.quienes {
-    position: absolute;
-    left: 28.06%;
-    right: 25.56%;
-    top: 58.3%;
-    bottom: 40.37%;
+
+.redes{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+font-size: 1.5em;
+    color: #328093;
 }
-h3.contacto{
-    position: absolute;
-left: 38.89%;
-right: 36.39%;
-top: 60.86%;
-bottom: 37.82%;
+.redes i{
+    background-color: white;
+    text-align: center;
+    width: 45px;
+    padding: 10px;
+    border-radius: 50px;
 }
+
+@media (min-width:1024px) {
+
+.flex-container{
+    display:flex
+}
+.modelo {
+    display:block;
+    width: 60vw;
+
+}
+.register{
+width: 40vw;
+}
+
+.logo{
+    background: #FFFFFF;
+
+         }
+
+         footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+    
+        }
+         footer img{
+             margin: 10%;
+            }
+        
+        .redes{
+            margin: 10%;
+    
+        }
+        .redes i{
+            margin-left: 10px;
+    
+        }
+    
+
+  
+    
