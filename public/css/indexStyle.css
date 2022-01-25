@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4{
+    padding: 0;
+    margin: 0;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body{
@@ -12,7 +20,7 @@ body{
 
 header{
     position:fixed;
-    width: 100%;
+    width: 100vw;
     height: 100px;
     background-image: url(/img/Enmascarar\ grupo\ 6.png);
     background-color: white;
@@ -116,7 +124,7 @@ footer div ul li{
 .redes i{
     background-color: white;
     text-align: center;
-    width: 45px;
+    width: 100%;
     padding: 10px;
     border-radius: 50px;
 }
@@ -126,16 +134,44 @@ footer div ul li{
     font-style: normal;
     font-weight: normal;
     color: #328093;
+    padding-top: 35px;
+}
+.fondo{
+    background-image: url(/img/BackgroundIndexMobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .dejaVolar{
-    width: 313px;
-    height: 532px;
-    left: 25px;
-    top: 145px;
-    background-color: white;
+    width: 90%;
+    margin: 110px auto 0;
+    height: 70vh;
     box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.25);
     border-radius: 20px;
+    background-color: white;
+}
+
+.content-dejavolar{
+    padding: 0 15px ;
+
+}
+
+.section1-dejaVolar{
+    font-size: 2.5em;
+    
+}
+
+.section1-prodPers{
+    padding: 30% 0 0 0;
+}
+
+.imagine{
+    font-family: WindSong;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3em;
+    color: #DFB760;
 }
 
 .buttonPersonalizar{
@@ -147,16 +183,6 @@ footer div ul li{
     font-size: 16px;
     line-height: 22px;
     color: #FFFFFF;
-
-}
-
-.imagine{
-    font-family: WindSong;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 56px;
-    color: #DFB760;
 }
 
 .prodDestacados {
@@ -189,7 +215,7 @@ footer div ul li{
     color: #DFB760;
     background-image: url("/img/MaskGroupIndexMobile.png");
     background-size: auto;
-    width: 313px;
+    width: 100%;
     height: 338px;
     left: 25px;
     top: 2504px;
@@ -216,7 +242,7 @@ footer div ul li{
     background-color: #328093;
     color: white;
     background-size: auto;
-    width: 313px;
+    width: 100%;
     height: 338px;
     left: 25px;
     top: 2504px;
@@ -242,7 +268,7 @@ footer div ul li{
     background-color: #DFB760;
     color: white;
     background-size: auto;
-    width: 313px;
+    width: 100%;
     height: 338px;
     left: 25px;
     top: 2504px;
@@ -282,6 +308,15 @@ footer div ul li{
     .redes i{
         margin-left: 10px;
     }
+    
+    .ProdDestParent{
+        display: flex;
+    }
+
+    .productos{
+        display: flex;
+    }
+        
 }    
    
 @media (min-width: 1280px){
@@ -372,6 +407,10 @@ footer div ul li{
     }
 
     .ProdDestParent{
+        display: flex;
+    }
+
+    .productos{
         display: flex;
     }
         
