@@ -13,10 +13,10 @@ header{
     display: block;
     height: 200px;
     background: url(/img/Trazado\ 15.png);
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
-    padding: 50px;;
-    background-position: center;
+    padding: 50px;
+    background-position:bottom;
 }
 
 
@@ -119,7 +119,9 @@ button.google{
     box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.5);
     text-align: center;
     border-radius:30px 0 0 30px;
-    background-image: cover;
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
     padding: auto;
     }
 
@@ -216,6 +218,10 @@ width: 50vw;
     padding: 100px 0px 0px 0px;
 
          }
+.remera{
+    width: 100%;
+}
+
 section{
              padding: 0px 70px;
          }
