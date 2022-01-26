@@ -130,6 +130,7 @@ button.google{
     font-weight: normal;
     font-size: 70px;
     color: #328093;
+    padding-top: 65px;
 }
 .modelo h3{
     font-family: WindSong;
@@ -238,7 +239,4 @@ section{
         
              }
         }
-        .img-remera{
-            position: absolute;
-            right: -100px;
-        }
+        
