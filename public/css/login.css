@@ -1,187 +1,295 @@
-html{
-    background-color: #E5E5E5;
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
 }
 
-header {
-    width: 100vw;
-    height: 300px;
-}
-.top-header {
-    display: flex;
-}
-
-.logo1{
-    width: 500px;
-    height: 350px;
-    
-}
-
-.frase {
-    display: none;
-}
-
-
-.imaginacion {
-    display: none;
-}
-
-.saludo {
-   width: 260px;
-   height: 56px;;
-   color:#328093;
-   font-size: 40px;
-   position: absolute;
-   top: 215px;
-   left: 145px
-
-}
-
-.frase2 {
-    display: none;
-}
-
-.datos1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.input {
-    border-radius:20px;
-    width: 85vw;
-    height: 5vh;
-}
-
-
-.titulo-label {
-    width: 85vw;
-    display: flex;
-    justify-content: flex-start;
-    padding-top: 5px;
-    font-size: 16px;
-}
-
-.rutas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30px;;
-    padding-bottom: 15px;
-}
-
-.iniciar-sesión {
-    background-color: #328093;
-    color: white;
-    width: 324px;
-    height: 57px;
-    margin: 10px;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    text-decoration: none;
- }
-
-.olvidé-contraseña {
-    color: #328093;
-    padding-bottom: 10px;
-    text-decoration: none;
-}
-
-.crear-cuenta {
-    color: #328093;
-    text-decoration: none;
-}
-
-.remera {
-    display:none;
-}
-
-.tasa {
-    display:none;
-}
-
-.celular{
-    display:none;
-}
-.links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position:relative
-}
-
-footer {
-    padding-top: 30px;
-    width: 100vw;
-}
-.facebook {
-    width: 280px;
-    height: 53px;
-    background-color:blue;
-    color: white;
-    margin: 5px;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
- }
-
-.logo-facebook {
-    position: relative;
-    z-index: 1;
-}
-
-.google{
-    width: 280px;
-    height: 53px;
-    background-color: #328093;
-    color: white;
-    margin: 5px;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.footer-1 {
-    width: 100vw;
-    height: 300px;
-    background-color: #328093 ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    margin: 0;
-
-}
-
-.listado-footer1{
-    list-style: none;
-    align-items: center;
-    padding: 0px;
+header{  
     text-align: center;
 }
 
-.footer-2 {
-    font-size: 10px;
-    background-color: #133138;
+.logo{
+    margin:auto;
+    display: block;
+    height: 200px;
+    background: url(/img/Trazado\ 15.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px;
+    background-position: center;
+}
+
+.login {
+    padding-bottom: 20px;
+}
+
+header h1{
+font-family: 'Noto Sans', sans-serif;
+font-weight: 700;
+font-size: 41px;
+color:#328093;
+padding-top: 20px;
+}
+
+
+section{
+    width: 100%;
+    padding: 10px;
+    }
+
+.seccionform{
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color:#328093; 
+    margin: 25px 0;   
+}
+
+.seccionform label{
+    display:block;
+    padding: 15px 0 5px 10px;
+}
+
+.seccionform input{
+    border: 1px solid #328093;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #328093;
+    border-radius: 50px;
+    width: 100%;
+    height: 43px;
+    text-indent: 10px;
+
+}
+
+.seccionform input::placeholder{
+    color:#328093;
+    opacity: 0.5;
+}
+
+button{
+Width: 100%;
+Height:50px;
+background-color:#328093 ;
+color:#FFFFFF;
+filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.161));
+text-align: center;
+border-radius: 50px;
+border:none;
+font-family: Noto Sans;
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 29,96px;
+margin-top: 20px;
+}
+
+.vínculos {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.contraseña {
+    text-decoration: none;
+    color:#328093;
+    font-size: 15px;
+    font-family:Noto Sans;
+    padding-bottom: 10px;
+}
+.crear-cuenta1 {
+    color:#328093;
+    text-decoration: none;
+    font-size: 15px;
+    font-family:Noto Sans;
+}
+
+button.facebook{
+    background:#3b5998;
+    color:white;
+    font-size: 12px;
+    height: 30px;
+    border-radius: 0px;
+    text-align: center;
+    display: block;
+    width: 50%;
+    margin:auto;
+    margin-top: 10px;
+    
+}
+button.google{
+    background: blue;
+    color:white;
+    border:blue;
+    font-size: 12px;
+    height: 30px;
+    border-radius: 0px;
+    text-align: center;
+    display: block;
+    width: 50%;
+    margin:auto;
+    margin-top:10px ;
+    
+}
+
+.modelo{
+    display: none;
+
+}
+
+
+.footer-1 {
+    background-color:#328093;
+    width: 100vw;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.logo2{
+    width: 20vw;
+    height: auto;
+
+}
+
+.listado-footer1 {
     color: white;
-    height: 15px;
-    justify-content: space-around;
+    list-style: korean-hanja-informal;
+    FONT-FAMILY: 'Noto Sans', sans-serif;
+    FONT-SIZE: 12px;
+    padding-bottom: 20px;
+}
+
+.listado-footer2 {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-2 {
+   background-color:  #133138;
+ 
+}
+
+.listado-footer3 {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
     list-style: none;
-   }
+    FONT-FAMILY: 'Noto Sans', sans-serif;
+}
 
-   .logo2{
-       width: 170px;
-       height: 88.4px;
-   }
+@media (min-width:1024px) {
+.flex-container{
+    display:flex
+}
 
-   .lista {
-       padding: 10px;
-   }
+.modelo {
+display:block;
+width:50vw; 
+max-width: 1500px;  
+    }
 
-   
+.login{
+width: 50vw;
+}
+
+.logo{
+background: #FFFFFF;
+padding: 100px 0px 0px 0px;
+      }
+
+section{
+padding: 0px 70px;
+    }
+
+     
+.modelo {
+    background: url(/img/Mask\ Group.png);
+    box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.5);
+    text-align: center;
+    border-radius:30px 0 0 30px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    }
+       
+.modelo h1{
+    font-family: 'DM Serif Text', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    color: #328093;
+    padding-top: 65px;
+}
+.modelo h3{
+    font-family: WindSong;
+    font-style: normal  ;
+    font-weight: normal;
+    font-size:50px;
+    color: #DFB760;
+    font-size: 65px;
+}
+
+.modelo p{
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #328093;
+    text-align: center;
+    justify-content: center;
+    margin: 0 100px;
+}
+
+.merchandising{
+    width: 50vw;
+    height: 30%;
+    display: block;
+    margin: auto;
+    padding:10px;
+}
+            
+.remera{
+width: 80%;
+height: auto;
+     }
+
+.logo2 {
+    width: 10vw;
+}
+.listado-footer1 {
+   padding-top: 20px;
+   list-style: korean-hanja-informal;
+   FONT-SIZE: 22px;
+   padding-bottom: 20px;
+}
+
+.listado-footer2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 40px;
+}
+
+.footer-2 {
+   background-color:  #133138;
+   height: 50px;
+ 
+}
+
+.listado-footer3 {
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    padding-top: 10px;
+   }
+}
