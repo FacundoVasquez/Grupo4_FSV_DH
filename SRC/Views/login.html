@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/login.css">
     <script src="https://kit.fontawesome.com/2dbd763d9c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com">
-    <link rel="normalice" href="css/normalice.css">
+    <link href="css/login.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Noto+Sans&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
@@ -27,7 +27,7 @@
         <div class="login">
             <header>
                 <div class="logo"><img src="/img/logo-kapu-01.png" alt="logo"></div>
-                <h1>Bienvenidos</h1>
+                <h1>Ingresá a tu cuenta</h1>
             </header>
 
             <section>
@@ -35,32 +35,30 @@
                     <div class="seccionform">
                         <label for="email">E-mail</label>
                         <input type="email" name="email" placeholder="Ingresa tu e-mail" id="email">
+                        
                         <label for="password">Contraseña</label>
                         <input type="password" name="password" placeholder="Ingresa tu contraseña" id="password">
+                        
                         <i class="fas fa-eye-slash"></i>    
-                    </div>
+                        
+                        <button type="submit">INICIAR SESIÓN</button>
 
-                    <button type="submit">INICIAR SESIÓN</button>
+                        <div class="vínculos">
+                            <a class="contraseña" href="./" type="submit">No recuerdo mi contraseña</a>
+                            <a class="crear-cuenta1" href="./" type="submit">No tengo cuenta</a>
+                        </div>
+                                       
+                        <div class="urlfb">
+                            <button class="facebook" type="submit"><i class="fab fa-facebook-square"> Continuar en
+                            Facebook</i></button>
+                        </div>
+                         
+                        <div class="urlg">
+                            <button class="google" type="submit"><i class="fab fa-google"> Continuar en google</i></button>
+                        </div>
 
-                    <div class="vínculos">
-                        <a class="contraseña" href="./" type="submit">No recuerdo mi contraseña</a>
-                        <a class="crear-cuenta1" href="./" type="submit">No tengo cuenta</a>
-                    </div>
-
+                   </div>
                 </form>
-
-                <div class="urlfb">
-                    <form action="./" method="POST">
-                        <button class="facebook" type="submit"><i class="fab fa-facebook-square"> Continuar en
-                                Facebook</i></button>
-                    </form>
-                </div>
-                
-                <div class="urlg">
-                    <form action="./" method="POST">
-                        <button class="google" type="submit"><i class="fab fa-google"> Continuar en google</i></button>
-                    </form>
-                </div>
 
             </section>
         </div>
