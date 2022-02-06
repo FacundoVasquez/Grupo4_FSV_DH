@@ -12,13 +12,15 @@ app.use (express.static(publicPath));
 
 app.set("view engine", "ejs"); 
 
-app.use('/', mainRutes)
+const rutasMain = require ("./routes/mainRoutes");
 
-app.get('/', (req, res) => res.sendFile(path.resolve(__dirname, "src/views/index.html")));
+app.use('/', rutasMain);
 
-app.get('/register', (req, res) => res.sendFile(path.resolve(__dirname, "src/views/register.html")));
+router.get('/', mainContoller.index);
 
-app.get ("/login", function (req, res) {res.sendFile (path.resolve (__dirname, "src/views/login.html"))});
+router.get('/register', mainContoller.register);
+
+router.get ("/login", mainContoller.login);
 
 app.get('/productCart', (req, res) => res.sendFile(path.resolve(__dirname, "src/views/productCart.html")));
 
