@@ -22,4 +22,3 @@ app.get ("/login", function (req, res) {res.sendFile (path.resolve (__dirname, "
 
 app.get ("/login2", function (req, res) {res.sendFile (path.resolve (__dirname, "./views/login2.html"))});
 
-
