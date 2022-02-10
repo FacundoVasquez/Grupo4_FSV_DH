@@ -11,21 +11,20 @@ header{
 .logo{
     margin:auto;
     display: block;
-    height: 200px;
     background: url(/img/Trazado\ 15.png);
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     padding: 50px;
-    background-position: center;
+    background-position: bottom;
 }
-
+ 
 .login {
     padding-bottom: 20px;
 }
 
 header h1{
 font-family: 'Noto Sans', sans-serif;
-font-size: 1.5em;
+font-size: 2em;
 color:#328093;
 padding-bottom: 20px;
 padding-top: 10px;
@@ -141,10 +140,10 @@ button.google{
     display: none;
 
 }
-
 .modelo h3 {
-    margin-top: -50px;
+    margin-top: -30px;
 }
+
 .footer-1 {
     background-color:#328093;
     width: 100vw;
@@ -176,21 +175,19 @@ width: 50vw;
 .logo{
 background: #FFFFFF;
 padding: 65px 0px 0px 0px;
-width: 50vw;
 height: auto;
       }
 
 .logo img {
-    width: 10em;
+    width: 13em;
 }
 
 section{
-padding: 0 10%;
+padding: 10%;
     }
 
 .seccionform{
        margin: 0%;   
-       border: solid 0.5px #328093;
        padding: 20px;
     }
     
