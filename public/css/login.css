@@ -157,7 +157,7 @@ button.google{
 
 }
 
-@media (min-width: 769px) {
+@media (min-width:1024px) {
 .flex-container{
     display:flex
 }
@@ -174,12 +174,12 @@ width: 50vw;
 
 .logo{
 background: #FFFFFF;
-padding: 65px 0px 0px 0px;
+padding: 85px 0px 0px 0px;
 height: auto;
       }
 
 .logo img {
-    width: 13em;
+    width: 10em;
 }
 
 section{

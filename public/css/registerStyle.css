@@ -200,7 +200,7 @@ button.google{
     FONT-FAMILY: 'Noto Sans', sans-serif;
 }
 
-@media (min-width:769px) {
+@media (min-width:1024px) {
 
 .flex-container{
     display:flex
@@ -216,7 +216,7 @@ width: 50vw;
 
 .logo{
     background: #FFFFFF;
-    padding: 100px 0px 0px 0px;
+    padding: 85px 0px 0px 0px;
 
          }
 .remera{
@@ -233,7 +233,7 @@ section{
             }
         
         .logo img{
-            width: 13vw;
+            width: 10em;
         }
     
         .listado-footer1 {
