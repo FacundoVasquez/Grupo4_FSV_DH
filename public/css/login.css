@@ -25,10 +25,10 @@ header{
 
 header h1{
 font-family: 'Noto Sans', sans-serif;
-font-weight: 700;
-font-size: 41px;
+font-size: 1.5em;
 color:#328093;
-padding-top: 20px;
+padding-bottom: 20px;
+padding-top: 10px;
 }
 
 
@@ -44,8 +44,7 @@ section{
     font-size: 16px;
     line-height: 22px;
     color:#328093; 
-    margin: 25px 0;   
-}
+  }
 
 .seccionform label{
     display:block;
@@ -165,29 +164,34 @@ button.google{
     FONT-FAMILY: 'Noto Sans', sans-serif;
     FONT-SIZE: 12px;
     padding-bottom: 20px;
+    white-space: pre-line;
 }
 
 .listado-footer2 {
     padding-bottom: 20px;
     display: flex;
     justify-content: space-evenly;
-}
+    font-size: 25px;
+   }
 
 .footer-2 {
-   background-color:  #133138;
- 
-}
+    background-color:  #133138;
+    width: 100vw;
+    height: 4vh;
+    padding-left: 10px;
+    padding-right: 10px;
+ }
 
 .listado-footer3 {
     color: white;
     display: flex;
     justify-content: space-between;
-    font-size: 10px;
+    font-size: 12px;
     list-style: none;
     FONT-FAMILY: 'Noto Sans', sans-serif;
 }
 
-@media (min-width: 1026px) {
+@media (min-width: 769px) {
 .flex-container{
     display:flex
 }
@@ -204,14 +208,26 @@ width: 50vw;
 
 .logo{
 background: #FFFFFF;
-padding: 100px 0px 0px 0px;
+padding: 65px 0px 0px 0px;
+width: 50vw;
+height: auto;
       }
 
+.logo img {
+    width: 10em;
+}
+
 section{
-padding: 0px 70px;
+padding: 0 10%;
     }
 
-     
+.seccionform{
+       margin: 0%;   
+       border: solid 0.5px #328093;
+       padding: 20px;
+    }
+    
+
 .modelo {
     background: url(/img/FONDO\ LOGIN-REGISTER.png);
     box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.5);
@@ -259,25 +275,28 @@ padding: 0px 70px;
 }
             
 .remera{
-width: 80%;
-height: auto;
-     }
+width: 100%;
+    }
+   
 
 .footer-1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    }
+    width: 100vw;
+    height: auto;
+}
 
 .logo2 {
-    width: 10vw;
+    width: 12vw;
 }
 .listado-footer1 {
    padding-top: 20px;
-   list-style: korean-hanja-informal;
-   FONT-SIZE: 22px;
+   margin-bottom: 20px;
+   FONT-SIZE: 14px;
    padding-bottom: 20px;
    list-style: none;
+   white-space: normal;
 }
 
 .listado-footer2 {
@@ -285,20 +304,22 @@ height: auto;
     padding-bottom: 20px;
     display: flex;
     justify-content: space-evenly;
-    font-size: 40px;
+    font-size: 30px;
+    width: 130px;
 }
 
 .footer-2 {
-   background-color:  #133138;
-   height: 50px;
- 
-}
+    padding-bottom: 10px;
+    height: auto;
+ }
 
 .listado-footer3 {
     color: white;
     justify-content: space-around;
     align-items: center;
-    font-size: 20px;
+    font-size: 10px;
     padding-top: 10px;
    }
+
+   
 }

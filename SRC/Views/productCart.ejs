@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2dbd763d9c.js" crossorigin="anonymous"></script>
+    <link href="css/productCart.css"  rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Barra de navegacion-->
+    <header>
+        <div class="menu-navegacion">
+        <img src="/img/logo-kapu-01.png" alt="logo">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-lavel">
+        <i class="fas fa-bars"></i>
+    </label>
+        <nav class="menu-desplegable">
+            <ul>
+                <li> <a href="#">Inicio</a></li>
+                <li> <a href="#">Productos</a></li>
+                <li> <a href="#">Quienes somos</a></li>
+                <li> <a href="#">Contacto</a></li>
+                <li> <a href="#">Carrito</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    </header>
+
+<div class="secciones">
+
+    <!--Seccion de Producto-->
+
+    <section class="productos-en-carrito">
+        <div class="info-producto">
+
+                  <img src="/img/AC mockup.png" alt="Imagen remera">
+                 <h3>Remera Hombre para aplicar Diseño Blanca</h3>
+
+            <div class="datos-producto">
+
+                 <span class="talle">M</span>
+                 <span class="precio">$500</span>
+
+                 <div class="cantidad-productos">
+
+                     <span class="menos">-</span>
+                     <span class="cantidad">1</span>      
+                     <span class="mas">+</span>
+                
+                 </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Seccion de Calculo de Precio-->
+    <section class="calculador-precio">
+        <div class="contenedor-precios">
+<h2>Total del Carrito</h2>
+<hr>
+<!-- SUbtotal del producto -->
+<div class="subtotal">
+    <span>Subtotal</span>
+    <span>$***</span>
+</div>
+<hr class="hr-amarilla">
+<!-- Costo de envio -->
+<div class="costo-envio">
+    <div class="info-envio">
+    <span>Envio</span>
+    <span>$*****</span>
+  </div>
+    <br>
+    <a href="#" class="calculo-envio">Calcular envio</a>
+    <hr class="hr-amarilla">
+
+</div>
+    <!--Total -->
+    <div class="total">
+        <span>Total</span>
+        <span>$*****</span>
+    </div>
+    <hr class="hr-amarilla">
+
+    <button class="boton">Finalizar compra</button>
+    <!--Cupon-->
+    <div>
+        <h3 class="cupon">Cupon</h3>
+        <hr>
+        <input type="text" class="input-cupon" placeholder="Insertar cupon de descuento">
+        <button class="boton">Aplicar cupon</button>
+    </div>
+</div>
+
+    </section>
+
+</div>
+
+    <footer>
+        <img src="./img/logo-kapu-01.png" alt="Logo">
+<!-- menu footer-->
+        <div>
+            <ul>
+                <li>Inicio</li>
+                <li>Productos</li>
+                <li>Quienes somos</li>
+                <li>Contacto</li>
+                <li>Cart</li>
+            </ul>
+        </div>
+        <!-- redes footer-->
+        <div class="redes">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+                </div>
+
+    </footer>
+
+    
+</body>
+</html>
