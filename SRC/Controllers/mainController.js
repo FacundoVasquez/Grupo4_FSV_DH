@@ -10,9 +10,9 @@ const controller = {
        return res.render("login")
             }, 
 
-    head: (req, res) => {
-      return res.render ()
-    }
+    productCart: (req, res) => {
+      return res.render ("productCart")
+    },
     
     }
 
