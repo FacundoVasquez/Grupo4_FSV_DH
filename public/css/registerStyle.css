@@ -11,7 +11,6 @@ header{
 .logo{
     margin:auto;
     display: block;
-    height: 200px;
     background: url(/img/Trazado\ 15.png);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -22,8 +21,9 @@ header{
 
 header h1{
 font-family: 'Noto Sans', sans-serif;;
-font-weight: 700;
-font-size: 41px;
+padding-top: 10px;
+padding-bottom: 20px;
+font-size: 2em;
 color:#328093;
 }
 
@@ -138,8 +138,9 @@ button.google{
     font-family: WindSong;
     font-style: normal  ;
     font-weight: normal;
-    font-size:50px;
+    font-size:60px;
     color: #DFB760;
+    margin-top: -30px;
     
 }
 .modelo p{
@@ -215,7 +216,7 @@ width: 50vw;
 
 .logo{
     background: #FFFFFF;
-    padding: 100px 0px 0px 0px;
+    padding: 85px 0px 0px 0px;
 
          }
 .remera{
@@ -223,7 +224,7 @@ width: 50vw;
 }
 
 section{
-             padding: 0px 70px;
+             padding: 0px 85px;
          }
          .footer-1 {
             display: flex;
@@ -231,9 +232,10 @@ section{
             align-items: center;
             }
         
-        .logo2 {
-            width: 10vw;
+        .logo img{
+            width: 10em;
         }
+    
         .listado-footer1 {
            padding-top: 20px;
            list-style: korean-hanja-informal;

@@ -1,26 +1,8 @@
 <!DOCTYPE html>
 
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
-    <script src="https://kit.fontawesome.com/2dbd763d9c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com">
-    <link href="css/login.css" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Noto+Sans&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat:wght@200&family=Noto+Sans&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat:wght@200&family=Noto+Sans&family=Roboto:wght@400;700&family=WindSong&display=swap"
-        rel="stylesheet">
-    <title>Login</title>
-</head>
+    
+<%-include("./partials/head")%>
 
 <body>
     <div class="flex-container">
@@ -31,7 +13,7 @@
             </header>
 
             <section>
-                <form action="/views/login.html " method="POST">
+                <form action="./" method="GET">
                     <div class="seccionform">
                         <label for="email">E-mail</label>
                         <input type="email" name="email" placeholder="Ingresa tu e-mail" id="email">
@@ -45,7 +27,7 @@
 
                         <div class="vínculos">
                             <a class="contraseña" href="./" type="submit">No recuerdo mi contraseña</a>
-                            <a class="crear-cuenta1" href="./" type="submit">No tengo cuenta</a>
+                            <a class="crear-cuenta1" href="/register" type="submit">No tengo cuenta</a>
                         </div>
                                        
                         <div class="urlfb">
@@ -73,29 +55,6 @@
         </div>
     </div>
 
-<footer>   
-    <div class= "footer-1">
-        <img class="logo2" src="./img/logo-kapu-01.jpg" alt = "Logo Kapu">
-        <ul class="listado-footer1">
-            <li class="lista">Inicio</li>
-            <li class="lista">Productos</li>
-            <li class="lista">¿Quienes Somos?</li>
-            <li class="lista">Contacto</li>
-        </ul>
-
-        <ul class="listado-footer2">
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-youtube"></i>
-        </ul>
-    </div>
+<%-include("./partials/footer")%>    
     
-    <div class="footer-2">
-        <ul class="listado-footer3">
-            <li>Políticas de Privacidad</li>
-            <li>Términos & Condiciones</li>
-        </ul>
-</div>
-</footer>
-
 </body>
