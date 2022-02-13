@@ -5,8 +5,10 @@ const path = require("path");
 const publicPath = path.resolve(__dirname,"../public");
 
 // Rutas
-const mainRoutes = require("./routes/mainRoutes");
-app.use('/', mainRoutes);
+const mainRouter = require("./router/mainRouter");
+app.use('/', mainRouter);
+const productsRouter = require("./router/productsRouter");
+app.use("/productDetail", productsRouter)
 
 app.use ((req, res,next) => {res.status(404).render("not-found")});
 app.use (express.json());
