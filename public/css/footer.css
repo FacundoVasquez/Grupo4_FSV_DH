@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+.footer-1 {
+    background-color:#328093;
+    width: 100vw;
+    text-align: center;
+    padding-top: 20px;
+}
 
 .listado-footer1 {
     color: white;
@@ -38,6 +44,13 @@
     FONT-FAMILY: 'Noto Sans', sans-serif;
 }
 
+
+.logo2{
+    width: 15vw;
+    height: auto;
+
+}
+
 @media (min-width: 769px) {
     
 .footer-1 {
@@ -48,9 +61,7 @@
     height: auto;
 }
 
-.logo2 {
-    width: 12vw;
-}
+
 .listado-footer1 {
    padding-top: 20px;
    margin-bottom: 20px;
@@ -75,10 +86,8 @@
  }
 
 .listado-footer3 {
-    color: white;
     justify-content: space-around;
     align-items: center;
-    font-size: 10px;
     padding-top: 10px;
    }
 
