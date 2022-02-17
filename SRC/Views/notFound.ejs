@@ -4,20 +4,24 @@
   <%- include('partials/head', {title: 'Error 404'}) %>
 </head>
 
+<link href="css/not.found.css" rel="stylesheet">
 <body>
-  <div>
+  
+  <secction class = "seccion1">
+    <div class="caja_icono">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+
+    <div class = caja_lista>
       <h1>No hay publicaciones que coincidan con tu búsqueda</h1>
-      <ul>
+      <ul class="lista_notfound">
         <li>Revisá la ortografía de la palabra</li>
         <li>Utilizá palabras más genéricas o menos palabras</li>
         <li><a hreF = "/products">Navegá por las categorías</a> para encontrar un producto similar</li>
-    </ul> 
-  </div>
+      </ul> 
+    </div>
 
-  <div>
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </div>
-
+  </secction>
   <footer>
     <%-include("./partials/footer")%>  
   </footer>

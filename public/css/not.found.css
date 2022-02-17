@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.seccion1 {
+    display: flex;
+    margin: 15px;
+    height: 60vh;
+}
+
+.caja_icono{
+    width: 40%;
+}
+
+.caja_lista {
+    width: 60%;
+}
+
+h1 {
+    font-size: 16px;
+    padding-top: 25px;
+}
+
+.lista_notfound {
+    font-size: 12px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+.lista_notfound li {
+padding: 3px;
+}
+
+@media (min-width: 769px) {
+h1 {
+    font-size: 25px;
+} 
+.lista_notfound {
+    font-size: 15px;
+}
+}
+    
