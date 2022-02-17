@@ -108,19 +108,7 @@ margin-top: 20px;
     font-family:Noto Sans;
 }
 
-button.facebook{
-    background:#3b5998;
-    color:white;
-    font-size: 12px;
-    height: 30px;
-    border-radius: 0px;
-    text-align: center;
-    display: block;
-    width: 50%;
-    margin:auto;
-    margin-top: 10px;
-    
-}
+
 button.google{
     background: blue;
     color:white;

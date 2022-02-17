@@ -7,6 +7,10 @@
 <link href="css/login.css" rel="stylesheet">
 
 <body>
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v13.0&appId=358220775911138&autoLogAppEvents=1" nonce="jKBn80AV"></script>
+   
     <div class="flex-container">
         <div class="login">
             <header>
@@ -32,10 +36,8 @@
                             <a class="crear-cuenta1" href="/register" type="submit">No tengo cuenta</a>
                         </div>
                                        
-                        <div class="urlfb">
-                            <button class="facebook" type="submit"><i class="fab fa-facebook-square"> Continuar en
-                            Facebook</i></button>
-                        </div>
+                        <div class="fb-login-button" data-width="" data-size="small" data-button-type="continue_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="false"></div>
+                      
                          
                         <div class="urlg">
                             <button class="google" type="submit"><i class="fab fa-google"> Continuar en google</i></button>
