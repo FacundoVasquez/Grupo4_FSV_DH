@@ -3,19 +3,22 @@ const { redirect } = require("express/lib/response");
 const app = express();
 const path = require("path");
 
+//Se configura la ruta de la carpeta pública y views
 const publicPath = path.resolve(__dirname,"../public");
+const viewPath = path.join(__dirname, 'Views');
 
 //Configuración
-app.set('views', path.join(__dirname, 'Views'));
+app.set('views', viewPath);
 app.set("view engine", "ejs"); 
 app.use(express.static(publicPath));
 app.use(express.urlencoded ({extended:false}));
 
-// Rutas
+//Rutas
 const mainRouter = require("./router/mainRouter");
 app.use('/', mainRouter);
+
 const productsRouter = require("./router/productsRouter");
-app.use("/productDetail", productsRouter)
+app.use("/product", productsRouter)
 
 app.use(function(req,res,next){
     res.status(404);
