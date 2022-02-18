@@ -34,12 +34,12 @@ const controller = {
 		// Agregarle ID e Image
 		const productToCreate = req.body;
 		// Number('123') = 123;
-		productToCreate.precio = Number(productToCreate.price);
+		productToCreate.precio = Number(productToCreate.precio);
 		productToCreate.imagen = req.file.filename;
         if (productToCreate.descuento == '') {
 			productToCreate.descuento = 0;
 		} else {
-			productToCreate.descuento = Number(productToCreate.discount);
+			productToCreate.descuento = Number(productToCreate.descuento);
 		}
 
 		productToCreate.id = controller.asignarIdAProductoEnBaseAlUltimo();
@@ -53,7 +53,7 @@ const controller = {
 		// Guardar el archivo json con el nuevo array
 
 
-		return res.send(products)
+		return res.send(products);
 
     },
 		
@@ -67,9 +67,11 @@ const controller = {
 	destroy: (req, res) => {
 		// Do the magic
 	},
+
 	guardarProductos() {
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
 	},
+
 	asignarIdAProductoEnBaseAlUltimo: function () {
 		return products[products.length - 1].id + 1;
 	}

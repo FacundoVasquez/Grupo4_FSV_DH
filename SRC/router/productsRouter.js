@@ -8,23 +8,20 @@ const storage=multer.diskStorage({
     destination:function(req, file, cb) {
         cb(null, path.resolve("public/img/products"))
     },
-    filename: function (req, res, cb) {
-        cb (null, file.filename + '_' + Date.now () + patch.extname (file.originalname))},   
+    filename: function (req, file, cb) {
+        cb(null, file.filename + '_' + Date.now () + path.extname (file.originalname))},   
 });
 
 const upload=multer({storage:storage});
 
-
-
 router.get("/", productsController.index);
-
-router.get("/:id", productsController.detail);
 
 router.get("/cart", productsController.productCart);
 
 router.get("/create", productsController.create);
 router.post('/',upload.single('imagen'),productsController.store);
 
+router.get("/:id", productsController.detail);  
 
 module.exports = router;
 
