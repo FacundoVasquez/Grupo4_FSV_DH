@@ -11,7 +11,10 @@ const viewPath = path.join(__dirname, 'Views');
 app.set('views', viewPath);
 app.set("view engine", "ejs"); 
 app.use(express.static(publicPath));
+
+// Permite trabajar con los datos que se envian desde el FORM
 app.use(express.urlencoded ({extended:false}));
+app.use(express.json());
 
 //Rutas
 const mainRouter = require("./router/mainRouter");

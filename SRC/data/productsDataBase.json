@@ -1,16 +1,26 @@
 [
     {
         "id":1,
-        "name": "Remera"
+        "nombre": "Remera",
+        "precio": 10000,
+        "descuento": "10%",
+        "imagen": "remera-login-mockup.jpg"
+
     },
 
     {
         "id":2,
-        "name": "Botella"
+        "nombre": "Botella",
+        "precio": 20000,
+        "descuento": "20%",
+        "imagen": "remera-login-mockup.jpg"
     },
 
     {
         "id":3,
-        "name": "Gorra"
+        "nombre": "Gorra",
+        "precio": 30000,
+        "descuento": "30%",
+        "imagen": "remera-login-mockup.jpg"
     }
 ]

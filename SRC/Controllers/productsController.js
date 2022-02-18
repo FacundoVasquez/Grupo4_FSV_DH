@@ -18,13 +18,62 @@ const controller = {
         return res.render("productDetail", {product});
     },
     
-    store: (req, res) => {
+    create: (req, res) => {
         return res.render("productCreate")
     },
+
+    store:  function (req, res) {
+		// req.file es una nueva clave que multer le agrega al objeto req 
+		// con todos los datos resultantes de procesar el archivo
+
+		// Pushear al array de productos existente un nuevo producto
+		// Un nuevo objeto literal
+
+
+		// Convertir price a número
+		// Agregarle ID e Image
+		const productToCreate = req.body;
+		// Number('123') = 123;
+		productToCreate.precio = Number(productToCreate.price);
+		productToCreate.imagen = req.file.filename;
+        if (productToCreate.descuento == '') {
+			productToCreate.descuento = 0;
+		} else {
+			productToCreate.descuento = Number(productToCreate.discount);
+		}
+
+		productToCreate.id = controller.asignarIdAProductoEnBaseAlUltimo();
+
+		// Agregar un elemento a un array 
+		// Método Push
+		// Array.push(nuevoElemento)
+		products.push(productToCreate);
+
+		controller.guardarProductos()
+		// Guardar el archivo json con el nuevo array
+
+
+		return res.send(products)
+
+    },
+		
 
     productCart: (req, res) => {
         return res.render ("productCart")
     },
+
+    
+    // Delete - Delete one product from DB
+	destroy: (req, res) => {
+		// Do the magic
+	},
+	guardarProductos() {
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
+	},
+	asignarIdAProductoEnBaseAlUltimo: function () {
+		return products[products.length - 1].id + 1;
+	}
+    
     
 };
 
