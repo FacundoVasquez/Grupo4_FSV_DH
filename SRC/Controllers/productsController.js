@@ -62,6 +62,37 @@ const controller = {
         return res.render ("productCart")
     },
 
+	// Update - Form to edit
+	edit: (req, res) => {
+		// Encontrar un producto en base a su id
+		// Pasarle a la vista los datos de este producto
+		// Buscar en array de products
+		// El elemento cuyo id sea el enviado por parámetros
+		// find()
+		// Accedo al id en req.params.id
+		const idProducto = req.params.id;
+		const productToEdit = products.find((product) => product.id == idProducto);
+		if (!productToEdit) {
+			return res.send('ERROR NO EXISTE PRODUCTO')
+		}
+
+		return res.render('productEdit', { productToEdit })
+	},
+
+
+	// Update - Method to update
+	update: (req, res) => {
+		// Voy a tener que buscar el indice en el array del producto en base a su id
+		const idProducto = req.params.id;
+		const indiceDelProducto = products.findIndex((product) => product.id == idProducto);
+
+		products[indiceDelProducto] = { ...products[indiceDelProducto], ...req.body }
+		controller.guardarProductos()
+
+		return res.send(products)
+		// Do the magic
+	},
+
     
     // Delete - Delete one product from DB
 	destroy: (req, res) => {

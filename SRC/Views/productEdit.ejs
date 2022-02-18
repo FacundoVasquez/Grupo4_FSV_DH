@@ -2,15 +2,22 @@
 <html lang="es">
 <body>
     <!--Chequear metodo put-->
-    <form action="/grupo_4/src/views/productCreate.ejs" name="_method" value="PUT" enctype="multipart/form-data">
+    <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST">
+
         <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" placeholder="nombre">
+        <input type="text" name="nombre" value="<%= productToEdit.nombre %>" id="nombre" placeholder="nombre">
+
         <label for="precio">Precio</label>
-        <input type="number" name="precio" placeholder="precio">
+        <input type="number" name="precio"  value="<%= productToEdit.precio %>" id="precio" placeholder="precio">
+
+<!-- Ver como dejar precargada la imagen para editar -->
+
         <label for="imagen">Imagen</label>
-        <input type="file" name="imagen">
+        <input type="file"  name="imagen"  id="imagen">
+
         <label for="descuento">Descuento</label>
-        <input type="number" name="descuento" placeholder="% descuento">
+        <input type="number" name="descuento"  value="<%= productToEdit.descuento %>" id="descuento" placeholder="% descuento">
+
         <button type="submit">Editar</button>
     </form>
 </body>
