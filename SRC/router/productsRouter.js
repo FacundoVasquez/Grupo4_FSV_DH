@@ -12,18 +12,10 @@ const storage = multer.diskStorage({
     filename: function (req, file, cb) {
         cb(null, file.filename + '_' + Date.now () + path.extname (file.originalname))},   
 });
-const upload = multer({storage:storage})
 
-<<<<<<< HEAD
-const productsController = require("../controllers/productsController");
-
-router.get("/", productsController.detail);
-/*falta router.get productIndex*/
-
-router.get ("/productCreate", productsController.create)
-router.post('/',upload.single('imagen'),productsController.store)
-=======
 const upload=multer({storage:storage});
+
+//Rutas
 
 router.get("/", productsController.index);
 
@@ -36,7 +28,6 @@ router.get("/:id/edit", productsController.edit);
 router.put("/:id", upload.single('imagen'),productsController.update);
 
 router.get("/:id", productsController.detail);  
->>>>>>> 88f6460e9eebafdf3074c688d8cb6917628c686b
 
 module.exports = router;
 

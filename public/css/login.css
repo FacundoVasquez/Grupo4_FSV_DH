@@ -208,6 +208,8 @@ button.google{
         text-align: center;
         justify-content: center;
         margin: 25px 0 50px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
     
     .merchandising{
