@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nombre": "Remera",
+    "precio": 10000,
+    "descuento": "10%",
+    "imagen": "remera-login-mockup.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Botella",
+    "precio": 20000,
+    "descuento": "20%",
+    "imagen": "remera-login-mockup.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Gorra",
+    "precio": 30000,
+    "descuento": "30%",
+    "imagen": "remera-login-mockup.jpg"
+  },
+  {
+    "nombre": "Guitarra",
+    "precio": 50000,
+    "descuento": 50,
+    "imagen": "undefined_1645148528209.JPG",
+    "id": 4
+  }
+]

@@ -5,15 +5,20 @@
 <link href="css/product_create.css" rel="stylesheet">
 
 <body>
-    <form action="/grupo_4/src/views/productCreate.ejs" method="POST" enctype="multipart/form-data">
+    <form action="/product" method="POST" enctype="multipart/form-data">
+
         <label for="nombre">Nombre</label>
         <input type="text" name="nombre" placeholder="nombre">
+
         <label for="precio">Precio</label>
         <input type="number" name="precio" placeholder="precio">
+
         <label for="imagen">Imagen</label>
         <input type="file" name="imagen">
+
         <label for="descuento">Descuento</label>
         <input type="number" name="descuento" placeholder="% descuento">
+
         <button type="submit">Enviar</button>
     </form>
 
