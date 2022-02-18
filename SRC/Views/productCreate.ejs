@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
+   
+<%- include('partials/head', {title: 'Crea Tu Producto'}) %>
+<link href="css/product_create.css" rel="stylesheet">
+
 <body>
     <form action="/grupo_4/src/views/productCreate.ejs" method="POST" enctype="multipart/form-data">
         <label for="nombre">Nombre</label>
@@ -11,7 +15,8 @@
         <label for="descuento">Descuento</label>
         <input type="number" name="descuento" placeholder="% descuento">
         <button type="submit">Enviar</button>
-
     </form>
+
+<%-include("./partials/footer")%>   
 </body>
 </html>

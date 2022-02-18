@@ -2,21 +2,24 @@ const express = require("express");
 const { redirect } = require("express/lib/response");
 const app = express();
 const path = require("path");
+const methodOverride = require("method-override");
 
 const publicPath = path.resolve(__dirname,"../public");
 
-//Configuración
+// Importaciones de Rutas
+const mainRouter = require("./router/mainRouter");
+const productsRouter = require("./router/productsRouter");
+
+//Configuraciones
 app.set('views', path.join(__dirname, 'Views'));
 app.set("view engine", "ejs"); 
 app.use(express.static(publicPath));
 app.use(express.urlencoded ({extended:false}));
-
-// Rutas
-const mainRouter = require("./router/mainRouter");
+app.use (methodOverride ("_method")); 
+app.use("/product", productsRouter)
 app.use('/', mainRouter);
-const productsRouter = require("./router/productsRouter");
-app.use("/productDetail", productsRouter)
 
+//Error 404
 app.use(function(req,res,next){
     res.status(404);
     return res.render("notFound")}

@@ -3,8 +3,12 @@ const controller = {
      return res.render("productDetail")
         },
     
-    store: (req, res) =>{
+    create: (req, res) => {
         return res.render("productCreate")
+           },
+
+    store: (req, res) =>{
+        return res.render(req.file)
     },
     
     }
