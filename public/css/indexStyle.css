@@ -20,6 +20,8 @@ body{
     background-position: center;
     height: auto;
     z-index: 0;
+    padding-top: 100px;
+
 }
 
 .seccion_frases{
