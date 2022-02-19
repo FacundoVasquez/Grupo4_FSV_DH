@@ -33,5 +33,12 @@
     "descuento": 40,
     "imagen": "undefined_1645280189199.JPG",
     "id": 5
+  },
+  {
+    "nombre": "tazaaa",
+    "precio": 45934052,
+    "descuento": 50,
+    "imagen": "undefined_1645281970093.JPG",
+    "id": 6
   }
 ]
