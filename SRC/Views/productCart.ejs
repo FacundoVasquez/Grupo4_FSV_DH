@@ -2,30 +2,10 @@
 <html lang="es">
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Cart'}) %>
-<link href="css/productCart.css" rel="stylesheet">
+<link href="/css/productCart.css" rel="stylesheet">
 
 <body>
-    <!-- Barra de navegacion-->
-    <header>
-        <div class="menu-navegacion">
-        <img src="/img/logo-kapu-01.png" alt="logo">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-lavel">
-        <i class="fas fa-bars"></i>
-    </label>
-        <nav class="menu-desplegable">
-            <ul>
-                <li> <a href="#">Inicio</a></li>
-                <li> <a href="#">Productos</a></li>
-                <li> <a href="#">Quienes somos</a></li>
-                <li> <a href="#">Contacto</a></li>
-                <li> <a href="#">Carrito</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    </header>
-
+    <%- include('partials/header') %>
 <div class="secciones">
 
     <!--Seccion de Producto-->

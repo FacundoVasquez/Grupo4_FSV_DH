@@ -1,0 +1,160 @@
+header{
+    position:fixed;
+    width: 100%;
+    height: 100px;
+    background-image: url(/img/Enmascarar\ grupo\ 6.png);
+    background-color: white;
+    background-size:contain;
+    background-repeat: no-repeat;
+    z-index: 100;
+  }
+  
+  .menu-navegacion{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;  
+  
+    padding:20px 0;
+  
+  }
+  
+  
+  .menu-navegacion i{
+    font-size: 30px;
+    color: #679EAB;
+  }
+  
+  .nav-toggle{
+    display: none;
+  }
+  
+  
+  .menu-desplegable{
+    position: absolute;
+    background-color: white;
+    padding: 20px 0;
+    
+  }
+  
+  .menu-desplegable a{
+    text-decoration: none;
+    color: #328093;
+  }
+  
+  .menu-desplegable a:hover{
+    color: #DFB760;
+  }
+  
+  
+  nav{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    text-align: center;
+    background: gray;
+    left: 0;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    }
+  
+  nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  
+  
+  }
+  
+  nav ul li{
+  text-align: center;
+  margin: 15px 0;
+  
+  }
+  
+  nav ul li a{
+    text-decoration: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+  .nav-toggle:checked ~ nav{
+  transform: scale(1,1);}
+  
+
+  @media (min-width: 1280px){
+
+
+  .menu-navegacion{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    margin: auto;  
+    padding: 0;
+
+}
+
+
+.menu-navegacion i{
+display: none;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+
+.menu-desplegable{
+
+    position:inherit;
+    background-color: transparent;
+    padding: 20px 0;
+    
+}
+
+.menu-desplegable a{
+    text-decoration: none;
+    color: #328093;
+    margin-left: 50px;
+    font-size: 1em;
+}
+
+.menu-desplegable a:hover{
+    color: #DFB760;
+}
+
+
+nav{
+all: unset;
+
+    }
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+nav ul li{
+text-align: center;
+margin: 15px 0;
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+.nav-toggle:checked ~ nav{
+ transform:none;
+}
+
+
+}
