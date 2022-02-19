@@ -4,17 +4,15 @@ const productsController = require("../controllers/productsController");
 const multer = require("multer");
 const path = require("path");
 
-//MULTER
-const storage = multer.diskStorage({
+const storage=multer.diskStorage({
     destination:function(req, file, cb) {
         cb(null, path.resolve("public/img/products"))
     },
     filename: function (req, file, cb) {
         cb(null, file.filename + '_' + Date.now () + path.extname (file.originalname))},   
 });
-const upload=multer({storage:storage});
 
-//Rutas
+const upload=multer({storage:storage});
 
 router.get("/", productsController.index);
 
@@ -29,4 +27,3 @@ router.put("/:id", upload.single('imagen'),productsController.update);
 router.get("/:id", productsController.detail);  
 
 module.exports = router;
-

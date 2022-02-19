@@ -2,7 +2,8 @@ const express = require("express");
 const { redirect } = require("express/lib/response");
 const app = express();
 const path = require("path");
-const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+
 
 //Se configura la ruta de la carpeta pública y views
 const publicPath = path.resolve(__dirname,"../public");
@@ -25,11 +26,12 @@ app.use('/', mainRouter);
 const productsRouter = require("./router/productsRouter");
 app.use("/product", productsRouter)
 
- 
+/* 
 app.use(function(req,res,next){
     res.status(404);
     return res.render("notFound")}
 ); 
+*/
 
 app.use(express.json()); 
 
