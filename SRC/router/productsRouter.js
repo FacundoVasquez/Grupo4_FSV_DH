@@ -9,7 +9,7 @@ const storage=multer.diskStorage({
         cb(null, path.resolve("public/img/products"))
     },
     filename: function (req, file, cb) {
-        cb(null, file.filename + '_' + Date.now () + path.extname (file.originalname))},   
+        cb(null, file.filename + '_' + Date.now() + path.extname(file.originalname))},   
 });
 
 const upload=multer({storage:storage});
