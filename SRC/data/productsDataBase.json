@@ -40,5 +40,12 @@
     "descuento": 50,
     "imagen": "undefined_1645281970093.JPG",
     "id": 6
+  },
+  {
+    "nombre": "Trompeta",
+    "precio": 60000,
+    "descuento": 50,
+    "imagen": "imagen_1645372362241.JPG",
+    "id": 7
   }
 ]
