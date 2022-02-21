@@ -47,12 +47,5 @@
     "descuento": 50,
     "imagen": "imagen_1645372362241.JPG",
     "id": 7
-  },
-  {
-    "nombre": "remera",
-    "precio": 50,
-    "descuento": 8,
-    "imagen": "imagen_1645375291034.jpg",
-    "id": 8
   }
 ]
