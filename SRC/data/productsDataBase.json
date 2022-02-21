@@ -26,5 +26,33 @@
     "descuento": 50,
     "imagen": "undefined_1645148528209.JPG",
     "id": 4
+  },
+  {
+    "nombre": "piano",
+    "precio": 566666,
+    "descuento": 40,
+    "imagen": "undefined_1645280189199.JPG",
+    "id": 5
+  },
+  {
+    "nombre": "tazaaa",
+    "precio": 45934052,
+    "descuento": 50,
+    "imagen": "undefined_1645281970093.JPG",
+    "id": 6
+  },
+  {
+    "nombre": "Trompeta",
+    "precio": 60000,
+    "descuento": 50,
+    "imagen": "imagen_1645372362241.JPG",
+    "id": 7
+  },
+  {
+    "nombre": "taza",
+    "precio": 1100,
+    "descuento": 10,
+    "imagen": "imagen_1645408073627.JPG",
+    "id": 8
   }
 ]

@@ -2,7 +2,8 @@
 <html lang="es">
 <body>
     <!--Chequear metodo put-->
-    <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST">
+    <h2>Editar <i><%= productToEdit.nombre %></i> </h2>
+    <form action="/product<%= productToEdit.id %>?_method=PUT" method="POST">
 
         <label for="nombre">Nombre</label>
         <input type="text" name="nombre" value="<%= productToEdit.nombre %>" id="nombre" placeholder="nombre">

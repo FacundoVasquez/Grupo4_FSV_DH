@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
-   
-<%- include('partials/head', {title: 'Crea Tu Producto'}) %>
-<link href="css/product_create.css" rel="stylesheet">
 
-<body>
-    <form action="/product" method="POST" enctype="multipart/form-data">
+<%- include('partials/head', {title: 'Crea Tu Producto' }) %>
+    <link href="/css/product_create.css" rel="stylesheet">
 
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" placeholder="nombre">
 
-        <label for="precio">Precio</label>
-        <input type="number" name="precio" placeholder="precio">
+    <body>
 
-        <label for="imagen">Imagen</label>
-        <input type="file" name="imagen">
+        <header>
+            <%- include('partials/header') %>
+        </header>
 
-        <label for="descuento">Descuento</label>
-        <input type="number" name="descuento" placeholder="% descuento">
 
-        <button type="submit">Enviar</button>
-    </form>
+        <section class="form-section">
+            <form action="/product" method="POST" enctype="multipart/form-data">
 
-<%-include("./partials/footer")%>   
-</body>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" placeholder="nombre">
+
+                <label for="precio">Precio</label>
+                <input type="number" name="precio" placeholder="precio">
+
+                <label for="imagen">Imagen</label>
+                <input type="file" name="imagen">
+
+                <label for="descuento">Descuento</label>
+                <input type="number" name="descuento" placeholder="% descuento">
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <%-include("partials/footer")%>
+
+    </body>
+
 </html>

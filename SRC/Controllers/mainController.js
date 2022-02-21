@@ -1,3 +1,14 @@
+//Se requieren los módulos necesarios
+const path = require("path");
+const fs = require("fs");
+
+
+//Se definen las rutas hacia los JSONs
+const usersPath = path.join(__dirname, "../data/usersDataBase.json");
+const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+
 const controller = {
     index: (req, res) => {
      return res.render("index")
@@ -10,6 +21,29 @@ const controller = {
     login: (req, res) => {
        return res.render("login")
     },
+
+    store: (req,res) => {
+      
+      const userToCreate = req.body;
+           
+      userToCreate.id = controller.asignarIdAUsuarioEnBaseAlUltimo();
+		  
+      users.push(userToCreate);
+
+		  controller.guardarUsuario();
+
+
+		  return res.send(users);
+
+    },
+
+    guardarUsuario() {
+      fs.writeFileSync(usersPath, JSON.stringify(users, null, 2))
+    },
+    asignarIdAUsuarioEnBaseAlUltimo: function () {
+      return users[users.length - 1].id + 1;
+    }
+      
      
 }
 

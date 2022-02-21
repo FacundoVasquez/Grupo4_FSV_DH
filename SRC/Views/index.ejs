@@ -1,106 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    
+
 <!-- Include Head -->
+
 <head>
-    <%- include('partials/head', {title: 'Inicio'}) %>
-    <link href="css/indexStyle.css" rel="stylesheet">
+    <%- include('partials/head', {title: 'Inicio' }) %>
+        <link href="css/indexStyle.css" rel="stylesheet">
 </head>
 
 <body>
+    <header>
+        <%- include('partials/header') %>
+    </header>
+    <main class="ppal">
 
-<main class="ppal">
+        <section class="seccion1">
+            <div class="seccion_frases">
+                <div class="caja_frases">
+                    <h4>Productos Personalizables</h4>
+                    <h1>Dejá volar tu</h2>
+                        <h2>imaginación</h2>
+                        <p class="frase">Personalizá cualquier producto y hace realidad esa prenda que siempre quisiste
+                        </p>
+                        <div class="boton"> <button class="buttonPersonalizar">PERSONALIZAR</button></div>
+                </div>
 
-<section class="seccion1">
-        <div class="seccion_frases">
-            <div class="caja_frases">
-                <h4>Productos Personalizables</h4>
-                <h1>Dejá volar tu</h2>
-                <h2>imaginación</h2> 
-                <p class="frase">Personalizá cualquier producto y hace realidad esa prenda que siempre quisiste</p>
-                <div class="boton"> <button class="buttonPersonalizar">PERSONALIZAR</button></div>
-            </div>
-       
-            <div class="caja_remera"><img class="remera" src="/img/AC mockup.png"></div>
-        </div>
-    
-</section>
-    
-<section class="seccion2">
-        <h3>Productos Destacados</h3>
-        <div class="caja_productos">
-            <div class="productos">
-                <div>
-                    <img class="imgProductos" src="img/AC mockup.png" alt="img3"/>
-                </div>
-                <div class="info_productos">
-                    <h5>Remera</h5>
-                    <h4 class="precio">$500</h4>
-                </div>
+                <div class="caja_remera"><img class="remera" src="/img/AC mockup.png"></div>
             </div>
 
-            <div class="productos">
-                <div>
-                    <img class="imgProductos" src="img/AC mockup.png" alt="img3"/>
+        </section>
+
+        <section class="seccion2">
+            <h3>Productos Destacados</h3>
+            <div class="caja_productos">
+                <div class="productos">
+                    <div>
+                        <img class="imgProductos" src="img/AC mockup.png" alt="img3" />
+                    </div>
+                    <div class="info_productos">
+                        <h5>Remera</h5>
+                        <h4 class="precio">$500</h4>
+                    </div>
                 </div>
-                <div class="info_productos">
-                    <h5>Remera</h5>
-                    <h4 class="precio">$500</h4>
+
+                <div class="productos">
+                    <div>
+                        <img class="imgProductos" src="img/AC mockup.png" alt="img3" />
+                    </div>
+                    <div class="info_productos">
+                        <h5>Remera</h5>
+                        <h4 class="precio">$500</h4>
+                    </div>
+                </div>
+
+                <div class="productos">
+                    <div>
+                        <img class="imgProductos" src="img/AC mockup.png" alt="img3" />
+                    </div>
+                    <div class="info_productos">
+                        <h5>Remera</h5>
+                        <h4 class="precio">$500</h4>
+                    </div>
+                </div>
+        </section>
+
+        <section class="seccion3">
+            <div class="caja1flex_seccion3">
+                <div class="productos_seccion3">
+                    <div class="caja_botella_seccion3">
+                        <img class="remera1_seccion3" src="/img/AC mockup.png">
+                    </div>
+                    <div class="detalle_producto_botella">
+                        <h2 class="botTitle">Botellas</h2>
+                        <div class="caja_boton"><button class="botones_seccion3">VER MÁS</S></button></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="productos">
-                <div>
-                    <img class="imgProductos" src="img/AC mockup.png" alt="img3"/>
+            <div class="caja2flex_seccion3">
+                <div class="productos1_seccion3">
+                    <div class="caja_accesorios_seccion3">
+                        <img class="remera2_seccion3" src="/img/AC mockup.png">
+                    </div>
+                    <div class="detalle_producto_accesorios">
+                        <h2 class="accesoriosTitle">Accesorios</h2>
+                        <div class="caja_boton"><button class="botones_seccion3">VER MÁS</S></button></div>
+                    </div>
                 </div>
-                <div class="info_productos">
-                    <h5>Remera</h5>
-                    <h4 class="precio">$500</h4>
+
+                <div class="productos1_seccion3">
+                    <div class="caja_remera_seccion3">
+                        <img class="remera2_seccion3" src="/img/AC mockup.png">
+                    </div>
+                    <div class="detalle_producto_remera">
+                        <h2 class="remeraTitle">Indumentaria</h2>
+                        <div class="caja_boton"><button class="botones_indumentaria_seccion3">VER MÁS</S></button></div>
+                    </div>
                 </div>
-            </div>          
-</section>
+            </div>
+        </section>
+        </div>
 
-<section class="seccion3">
-    <div class="caja1flex_seccion3">
-    <div class="productos_seccion3">
-        <div class="caja_botella_seccion3">
-            <img class="remera1_seccion3" src="/img/AC mockup.png">
-        </div>
-        <div class="detalle_producto_botella">
-            <h2 class="botTitle">Botellas</h2>
-            <div class="caja_boton"><button class="botones_seccion3">VER MÁS</S></button></div>
-        </div>
-    </div>
-    </div>
+    </main>
 
-    <div class="caja2flex_seccion3">
-    <div class="productos1_seccion3">
-        <div class="caja_accesorios_seccion3">
-            <img class="remera2_seccion3" src="/img/AC mockup.png">
-        </div>
-        <div class="detalle_producto_accesorios">
-            <h2 class="accesoriosTitle">Accesorios</h2>
-            <div class="caja_boton"><button class="botones_seccion3">VER MÁS</S></button></div>
-        </div>
-    </div>
-
-    <div class="productos1_seccion3">
-        <div class="caja_remera_seccion3">
-            <img class="remera2_seccion3" src="/img/AC mockup.png">
-        </div>
-        <div class="detalle_producto_remera">
-            <h2 class="remeraTitle">Indumentaria</h2>
-            <div class="caja_boton"><button class="botones_indumentaria_seccion3">VER MÁS</S></button></div>
-        </div>
-    </div>
-    </div>
-    </section>
-</div>
-
-</main>
-
-<%-include("./partials/footer")%>   
+    <%-include("partials/footer")%>
 
 </body>
 

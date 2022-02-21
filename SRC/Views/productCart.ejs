@@ -1,121 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Cart'}) %>
-<link href="css/productCart.css" rel="stylesheet">
+<%- include('partials/head', {title: 'Cart' }) %>
+    <link href="/css/productCart.css" rel="stylesheet">
 
-<body>
-    <!-- Barra de navegacion-->
-    <header>
-        <div class="menu-navegacion">
-        <img src="/img/logo-kapu-01.png" alt="logo">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-lavel">
-        <i class="fas fa-bars"></i>
-    </label>
-        <nav class="menu-desplegable">
-            <ul>
-                <li> <a href="#">Inicio</a></li>
-                <li> <a href="#">Productos</a></li>
-                <li> <a href="#">Quienes somos</a></li>
-                <li> <a href="#">Contacto</a></li>
-                <li> <a href="#">Carrito</a></li>
-            </ul>
-        </nav>
-    </div>
+    <body>
+        <header>
+            <%- include('partials/header') %>
+        </header>
+        <div class="secciones">
 
-    </header>
+            <!--Seccion de Producto-->
 
-<div class="secciones">
+            <section class="productos-en-carrito">
+                <div class="info-producto">
 
-    <!--Seccion de Producto-->
+                    <img src="/img/AC mockup.png" alt="Imagen remera">
+                    <h3>Remera Hombre para aplicar Diseño Blanca</h3>
 
-    <section class="productos-en-carrito">
-        <div class="info-producto">
+                    <div class="datos-producto">
 
-                  <img src="/img/AC mockup.png" alt="Imagen remera">
-                 <h3>Remera Hombre para aplicar Diseño Blanca</h3>
+                        <span class="talle">M</span>
+                        <span class="precio">$500</span>
 
-            <div class="datos-producto">
+                        <div class="cantidad-productos">
 
-                 <span class="talle">M</span>
-                 <span class="precio">$500</span>
+                            <span class="menos">-</span>
+                            <span class="cantidad">1</span>
+                            <span class="mas">+</span>
 
-                 <div class="cantidad-productos">
-
-                     <span class="menos">-</span>
-                     <span class="cantidad">1</span>      
-                     <span class="mas">+</span>
-                
-                 </div>
-            </div>
-        </div>
-        
-    </section>
-
-    <!-- Seccion de Calculo de Precio-->
-    <section class="calculador-precio">
-        <div class="contenedor-precios">
-<h2>Total del Carrito</h2>
-<hr>
-<!-- SUbtotal del producto -->
-<div class="subtotal">
-    <span>Subtotal</span>
-    <span>$***</span>
-</div>
-<hr class="hr-amarilla">
-<!-- Costo de envio -->
-<div class="costo-envio">
-    <div class="info-envio">
-    <span>Envio</span>
-    <span>$*****</span>
-  </div>
-    <br>
-    <a href="#" class="calculo-envio">Calcular envio</a>
-    <hr class="hr-amarilla">
-
-</div>
-    <!--Total -->
-    <div class="total">
-        <span>Total</span>
-        <span>$*****</span>
-    </div>
-    <hr class="hr-amarilla">
-
-    <button class="boton">Finalizar compra</button>
-    <!--Cupon-->
-    <div>
-        <h3 class="cupon">Cupon</h3>
-        <hr>
-        <input type="text" class="input-cupon" placeholder="Insertar cupon de descuento">
-        <button class="boton">Aplicar cupon</button>
-    </div>
-</div>
-
-    </section>
-
-</div>
-
-    <footer>
-        <img src="./img/logo-kapu-01.png" alt="Logo">
-<!-- menu footer-->
-        <div>
-            <ul>
-                <li>Inicio</li>
-                <li>Productos</li>
-                <li>Quienes somos</li>
-                <li>Contacto</li>
-                <li>Cart</li>
-            </ul>
-        </div>
-        <!-- redes footer-->
-        <div class="redes">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
                 </div>
 
-    </footer>
+            </section>
 
-    
-</body>
+            <!-- Seccion de Calculo de Precio-->
+            <section class="calculador-precio">
+                <div class="contenedor-precios">
+                    <h2>Total del Carrito</h2>
+                    <hr>
+                    <!-- SUbtotal del producto -->
+                    <div class="subtotal">
+                        <span>Subtotal</span>
+                        <span>$***</span>
+                    </div>
+                    <hr class="hr-amarilla">
+                    <!-- Costo de envio -->
+                    <div class="costo-envio">
+                        <div class="info-envio">
+                            <span>Envio</span>
+                            <span>$*****</span>
+                        </div>
+                        <br>
+                        <a href="#" class="calculo-envio">Calcular envio</a>
+                        <hr class="hr-amarilla">
+
+                    </div>
+                    <!--Total -->
+                    <div class="total">
+                        <span>Total</span>
+                        <span>$*****</span>
+                    </div>
+                    <hr class="hr-amarilla">
+
+                    <button class="boton">Finalizar compra</button>
+                    <!--Cupon-->
+                    <div>
+                        <h3 class="cupon">Cupon</h3>
+                        <hr>
+                        <input type="text" class="input-cupon" placeholder="Insertar cupon de descuento">
+                        <button class="boton">Aplicar cupon</button>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+        <footer>
+            <img src="./img/logo-kapu-01.png" alt="Logo">
+            <!-- menu footer-->
+            <div>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Productos</li>
+                    <li>Quienes somos</li>
+                    <li>Contacto</li>
+                    <li>Cart</li>
+                </ul>
+            </div>
+            <!-- redes footer-->
+            <div class="redes">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+
+        </footer>
+
+
+    </body>
+
 </html>
