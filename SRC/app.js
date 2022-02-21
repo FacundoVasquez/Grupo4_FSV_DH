@@ -26,12 +26,12 @@ app.use('/', mainRouter);
 const productsRouter = require("./router/productsRouter");
 app.use("/product", productsRouter)
 
-/* 
+
 app.use(function(req,res,next){
     res.status(404);
     return res.render("notFound")}
 ); 
-*/
+
 /*
 app.use(express.json()); */
 
