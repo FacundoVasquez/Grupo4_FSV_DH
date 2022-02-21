@@ -47,5 +47,12 @@
     "descuento": 50,
     "imagen": "imagen_1645372362241.JPG",
     "id": 7
+  },
+  {
+    "nombre": "taza",
+    "precio": 1100,
+    "descuento": 10,
+    "imagen": "imagen_1645408073627.JPG",
+    "id": 8
   }
 ]
