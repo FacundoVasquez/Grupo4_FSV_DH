@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-header{  
+.header{  
     text-align: center;
 }
 
@@ -22,7 +22,7 @@ header{
     padding-bottom: 20px;
 }
 
-header h1{
+.header h1{
 font-family: 'Noto Sans', sans-serif;
 font-size: 2em;
 color:#328093;
