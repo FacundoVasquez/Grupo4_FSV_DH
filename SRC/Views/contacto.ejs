@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head', {title: 'Contactanos'}) %>
+    <link href="css/contacto.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <%- include('partials/header') %>
+    </header>
+
+    <h1 class="saludo_contacto">Ponete en contacto con nosotros!</h1>
+    
+    <form action="./" method="POST">
+        <div class="seccionform">
+        <div class="motivo">
+            <h2>Seleccione el motivo de su consulta</h2>
+            <label for="radio"><input type="radio" name="motivo" value="Cambios y devoluciones">Cambios y devoluciones</label>
+            <label for="radio"></label><input type="radio" name="motivo" value="Envío del Pedido">Envío del pedido</label>
+            <label for="radio"></label><input type="radio" name="motivo" value="RRHH">RRHH</label>
+            <label for="radio"><input type="radio" name="motivo" value="Otros">Otros</label>
+        </div>
+        <div class="nombreCompleto">
+            <label for="nombreCompleto">*Nombre Completo</label>
+            <input type="text" name="nombreCompleto" placeholder="Juan Perez">
+        </div>
+
+        <div class="emailContacto">
+            <label for="emailContacto">*E-mail</label>
+            <input type="email" name="emailContacto" placeholder="user@cuenta.com">
+        </div>
+
+        <div class="telefonoContacto">
+            <label for="telefonoContacto">*Teléfono</label>
+            <input type="number" name="telefonoContacto" placeholder="444444444">
+        </div>
+
+        <div class="numeroPedido">
+            <label for="numeroPedido">*N° de Pedido</label>
+            <input type="number" name="numeroPedido">
+        </div>
+
+        <div class="comentariosContacto">
+            <label for="comentariosContacto">*Deje sus Comentarios</label>
+            <input type= "textarea" name="comentariosContacto">
+        </div>
+
+        <button>Enviar</button>
+    </form>
+<footer>
+    <%-include("./partials/footer")%>  
+</footer>
+</body>
+</html>
