@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "nombre": "Remera",
-    "precio": 10000,
-    "descuento": "10%",
-    "imagen": "remera-login-mockup.jpg"
+    "nombre": "taza",
+    "precio": "10000",
+    "descuento": "",
+    "imagen": ""
   },
   {
     "id": 2,
