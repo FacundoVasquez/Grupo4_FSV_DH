@@ -15,6 +15,7 @@
     <section class="product-container">
       <div class="product-image">
         <img src="/img/AC mockup.png" alt="remera" width="50%"/>
+        <div id="divTopText" class="div-top-text"> Tu frase acá</div>
       </div>
       <div class="carrousel-container">
         <div class="carrousel-image">
@@ -40,6 +41,20 @@
         <div class="file">
           <label for="cargar-archivo"></label>
             <input type="file" accept="image/*" class="up-file" name="archivo">
+            <label for="top-text">Tu frase acá</label>
+                <input type="text" id="topText" value=" "><label for="option">Elige la fuente</label>
+                <select name="option" id="option">
+                    <option id= "arial" value="arial" style="font-family:Arial, Helvetica, sans-serif">ARIAL</option>
+                    <option id= "courier" value="courier" style="font-family: 'Courier New', Courier, monospace;">COURIER NEW</option>
+                    <option id= "cursive" value="cursive" style="font-family:'cursive'"> COMIC SANS </option>
+                    <option id= "impact" value="impact" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">IMPACT</option>
+                    <option id= "timesNewRoman" value="times-new-roman" style="font-family:'Times New Roman', Times, serif">Times New Roman</option>
+                </select>
+            <label for="color-text">Color del texto</label>
+                <input type="color" id="color-text" value="#000000">
+              <label for="font-size"> Tamaño del texto
+                  <input id="fontSize" type="number" value="30" min="10" max="45">
+                  </label>
           <label for="submit"></label>
             <button type="submit" class="submit">AGREGAR AL CARRITO</button>
         </div>
@@ -51,6 +66,7 @@
     <footer>
       <%- include('partials/footer') %>
     </footer>
+  <script src="/scripts/productDetail.js"></script>
 </body>
 
 </html>
