@@ -21,6 +21,9 @@ const controller = {
     login: (req, res) => {
        return res.render("login")
     },
+    productDetail: (req, res) => {
+      return res.render("productDetail")
+    },//Controlador de la vista detalle producto
 
     store: (req,res) => {
       

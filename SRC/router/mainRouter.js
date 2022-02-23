@@ -12,4 +12,6 @@ router.get("/login", mainController.login);
 router.get("/register", mainController.register);
 router.post("/", mainController.store);
 
+router.get("/productDetail", mainController.productDetail);//Chequear luego para asociar a productos
+
 module.exports = router;
