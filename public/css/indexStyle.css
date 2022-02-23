@@ -3,14 +3,12 @@
 }
 
 body{
-    margin: 0;
+    margin-top: 0;
     padding:0;
     font-family: 'Noto Sans', sans-serif;
 }
 
 .seccion1{
-    box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.25);
-    border-radius: 20px;
     background-color: white;
     margin: auto;
     padding: 10px;
@@ -20,9 +18,7 @@ body{
     background-position: center;
     height: auto;
     z-index: 0;
-    padding-top: 100px;
-
-}
+  }
 
 .seccion_frases{
     z-index: 1;
@@ -30,6 +26,7 @@ body{
     width: 240px;
     margin: auto;
     border-radius: 20px;
+    box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.25);
 }
 
 .caja_frases {
@@ -273,9 +270,18 @@ h5 {
 }
 
 @media (min-width: 769px) {
-.seccion1 {
+body {
     background-image: url(/img/fondo_index_grande.png);
-    height: 50vh;
+    background-position: top;
+    background-size: 439px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+
+.seccion1 {
+   box-shadow: none;
+   background: none;
+   padding: 30px;
 }
 
 .caja_frases {
@@ -289,10 +295,10 @@ h5 {
 }
 
 .seccion_frases{
-    width: 35%;
+    width: 335px;
     margin-left: 10%; 
     box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.25);
-    z-index: 2;
+    
 }
 
 
@@ -301,7 +307,11 @@ h3 {
 }
 
 h4 {
-    margin-left: 14%;
+    margin-left: 23%;
+}
+
+.boton {
+    padding-bottom: 15px;
 }
 
 .seccion2 {

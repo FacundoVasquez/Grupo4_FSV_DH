@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
 
+<html lang="es">
 
 <!-- Include Head -->
 
 <head>
     <%- include('partials/head', {title: 'Inicio' }) %>
         <link href="css/indexStyle.css" rel="stylesheet">
+        <link href="css/header.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <%- include('partials/header') %>
-    </header>
-    <main class="ppal">
 
+<header>
+    <%- include('partials/header') %>
+</header>
+
+<main class="ppal">
         <section class="seccion1">
             <div class="seccion_frases">
                 <div class="caja_frases">
@@ -102,7 +104,7 @@
         </section>
         </div>
 
-    </main>
+</main>
 
     <%-include("partials/footer")%>
 
