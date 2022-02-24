@@ -5,15 +5,12 @@
     font-family: 'Noto Sans', sans-serif;
 }
 
-body {
-    background-color: #E5E5E5;
-}
+
 .seccion1 {
     display: flex;
     margin: 20px;
     height: 80vh;
-    background-color: white;
-}
+    }
 
 .caja_icono{
     width: 40%;

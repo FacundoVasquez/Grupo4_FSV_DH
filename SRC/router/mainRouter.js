@@ -15,5 +15,8 @@ router.post("/", mainController.store);
 
 router.get("/productDetail", mainController.productDetail);//Chequear luego para asociar a productos
 
-router.get("/contacto", mainController.contacto)
+router.get("/contacto", mainController.contacto);
+
+router.get("/quienesSomos", mainController.quienesSomos)
+
 module.exports = router;
