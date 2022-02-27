@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Listado de productos'}) %>
+
+  <link href="/css/productDetail.css" rel="stylesheet">
+
 <body>
-    <h1>Este es el Listado de Productos</h1>
+
+<header>
+    <%- include('partials/header') %>
+</header>
+
     <div class="product">
         <% products.forEach( product=> { %>
 				<section class="product-box">
@@ -24,5 +33,8 @@
 
 
     </div>
+
+    <%-include("./partials/footer")%>    
+    
 </body>
 </html>
