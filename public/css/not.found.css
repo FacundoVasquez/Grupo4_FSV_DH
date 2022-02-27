@@ -5,11 +5,12 @@
     font-family: 'Noto Sans', sans-serif;
 }
 
+
 .seccion1 {
     display: flex;
-    margin: 15px;
-    height: 60vh;
-}
+    margin: 20px;
+    height: 80vh;
+    }
 
 .caja_icono{
     width: 40%;
@@ -17,6 +18,7 @@
 
 .caja_lista {
     width: 60%;
+    padding: 0;
 }
 
 h1 {
@@ -34,12 +36,37 @@ h1 {
 padding: 3px;
 }
 
-@media (min-width: 769px) {
+@media (min-width:769px) and (max-width:1278px) {
 h1 {
     font-size: 25px;
-} 
+}
+
+.caja_lista {
+    padding-top: 70px ;
+}
 .lista_notfound {
     font-size: 15px;
 }
+.seccion1 {
+    margin: 50px;
+     }
+
+}
+
+@media (min-width: 1279px){
+
+    h1 {
+        font-size: 35px;
+    }
+    .lista_notfound {
+        font-size: 28px;
+    }
+    .seccion1 {
+        margin: 80px;
+         }
+
+    .caja_lista {
+        padding-top: 115px;
+    }
 }
     

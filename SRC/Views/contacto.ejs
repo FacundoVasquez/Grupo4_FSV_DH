@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head', {title: 'Contactanos'}) %>
+    <link href="css/contacto.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <%- include('partials/header') %>
+    </header>
+
+    <h1 class="saludo_contacto">Ponete en contacto con nosotros!</h1>
+    
+    <form action="./" method="POST">
+        <div class="seccionform">
+        
+        <div class="motivo">
+            <h2>Seleccione el motivo de su consulta</h2>
+            <li class="listaContactoFlex">
+            <label for="radio"><input type="radio" name="motivo" value="Cambios y devoluciones">Cambios y devoluciones</label>
+            <label for="radio"><input type="radio" name="motivo" value="Envío del Pedido">Envío del pedido</label>
+            <label for="radio"><input type="radio" name="motivo" value="RRHH">RRHH</label>
+            <label for="radio"><input type="radio" name="motivo" value="Otros">Otros</label>
+            </li>
+        </div>
+
+        <div class="nombreCompleto">
+            <label for="nombreCompleto">*Nombre Completo</label>
+            <div>
+                <input class="input2" type="text" name="nombreCompleto" placeholder="Juan Perez">
+            </div>
+        </div>
+
+        <div class="emailContacto">
+            <label for="emailContacto">*E-mail</label>
+            <div>
+                <input class="input2" type="email" name="emailContacto" placeholder="user@cuenta.com">
+            </div>
+        </div>
+
+        <div class="telefonoContacto">
+            <label for="telefonoContacto">*Teléfono</label>
+            <div>             
+                <input class="input2" type="number" name="telefonoContacto" placeholder="444444444">
+            </div>
+        </div>
+
+        <div class="numeroPedido">
+            <label for="numeroPedido">*N° de Pedido</label>
+            <div>
+                <input class="input2" type="number" name="numeroPedido">
+            </div>
+        </div>
+
+        <div class="comentariosContacto">
+            <label for="comentariosContacto">*Descripción</label>
+            <div>
+                <textarea name="comentariosContacto" placeholder="Dejanos tus comentarios"></textarea>
+            </div>
+        </div>
+        
+        <div class="boton">
+            <button>Enviar</button>
+        </div>
+    </div>
+    </form>
+
+
+    <%-include("./partials/footer")%>  
+
+</body>
+</html>

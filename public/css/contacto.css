@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h1 {
+    font-size: 26px;
+    color: #328093;
+    text-align: center;
+}
+
+.seccionform {
+    padding: 10px;
+    text-align: left;
+    width: 95%;
+    margin: auto;
+}
+h2 {
+    padding-top: 20px;
+    font-size: 16px;
+    color: #328093;
+    text-align: left;
+}
+
+.motivo {
+    text-align: left;
+    width: 100%;
+    margin: auto;
+}
+
+.listaContactoFlex {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+.nombreCompleto {
+    padding-bottom: 15px;
+}
+
+.input2 {
+   width: 100%;
+   }
+
+textarea {
+  width: 100%; 
+  margin-bottom: 10px; 
+}
+
+.boton {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 15px;
+}
+button {
+    width: 80%;
+    height: 30px;
+    background-color: #328093;
+    font-weight: bold;
+    color: white;
+}
+
+@media(min-width: 769px){
+    .seccionform {
+        width: 75%;
+    }
+}

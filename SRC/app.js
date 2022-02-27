@@ -32,8 +32,8 @@ app.use(function(req,res,next){
     return res.render("notFound")}
 ); 
 
-/*
-app.use(express.json()); */
+
+app.use(express.json()); 
 
 //Servidor
 app.listen(3000, () => console.log ("Servidor Corriendo")); 

@@ -10,11 +10,19 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 const controller = {
-    index: (req, res) => {
+  index: (req, res) => {
      return res.render("index")
     },
-        
-    register: (req, res) => {
+  
+  contacto: (req, res) => {
+      return res.render("contacto")
+     }, 
+  
+  quienesSomos: (req, res) => {
+    return res.render("quienesSomos")
+   }, 
+
+  register: (req, res) => {
       return res.render("register")
     },
 
