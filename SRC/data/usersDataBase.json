@@ -11,5 +11,12 @@
     "password1": "khflehf",
     "tel": "984793",
     "id": 2
+  },
+  {
+    "email": "melendez.marcela@gmail.com",
+    "password": "1234567",
+    "password1": "1234567",
+    "tel": "4444444",
+    "id": 3
   }
 ]
