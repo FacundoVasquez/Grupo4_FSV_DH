@@ -12,5 +12,13 @@
     "descuento": 10,
     "imagen": "imagen_1645992070455.jpg",
     "id": 2
+  },
+  {
+    "nombre": "Cafetera",
+    "precio": 23000,
+    "descuento": 56,
+    "descripcion": "Cafetera cápsulas",
+    "imagen": "imagen_1646169558682.jpg",
+    "id": 3
   }
 ]
