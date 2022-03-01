@@ -3,21 +3,21 @@
 
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Detalle de productos'}) %>
-
-  <link href="/css/productDetail.css" rel="stylesheet">
+<link href="/css/productDetail.css" rel="stylesheet">
 
 <body>
 
   <header>
     <%- include('partials/header') %>
-</header>
+  </header>
+
   <main>
     <section class="product-container">
       <div class="product-image">
-        <h2><%= product.nombre%></h2>
-        <img src="<%= product.imagen %>" alt="remera" width="50%"/>
-        <div id="divTopText" class="div-top-text"> Tu frase acá</div>
+        <img src="/img/products/<%= product.imagen %>" alt="remera" width="50%"/>
+        <div id="divTopText" class="div-top-text"> <%= product.descripcion %> </div>
       </div>
+
       <div class="carrousel-container">
         <div class="carrousel-image">
           <img src="/img/AC mockup.png" alt="img1" class="img-carrousel" width="20%"/>
@@ -26,48 +26,60 @@
         </div>
       </div>
     </section>
+
     <section class="container-title-form">
-    <div class="product-title">
-      <h2 class="product-name">Remera para aplicar diseño</h2>
-      <h3 class="product-price">$500</h3>
-    </div>
-    <div class="product-form">
-      <form method="post">
-        <div class="size-container">
-          <button type="button" class="size-button">S</button>
-          <button type="button" class="size-button">M</button>
-          <button type="button" class="size-button">L</button>
-          <button type="button" class="size-button">XL</button>
-        </div>
-        <div class="file">
-          <label for="cargar-archivo"></label>
+      <div class="product-title">
+        <h2 class="product-name"><%= product.nombre %> para aplicar diseño</h2>
+        <h3 class="product-price">$<%= product.precio %></h3>
+      </div>
+
+      <div class="product-form">
+        <form method="post">
+          <div class="size-container">
+            <button type="button" class="size-button">S</button>
+            <button type="button" class="size-button">M</button>
+            <button type="button" class="size-button">L</button>
+            <button type="button" class="size-button">XL</button>
+          </div>
+
+          <div class="file">
+            <label for="cargar-archivo"></label>
             <input type="file" accept="image/*" class="up-file" name="archivo">
+            
             <label for="top-text">Tu frase acá</label>
-                <input type="text" id="topText" value=" "><label for="option">Elige la fuente</label>
-                <select name="option" id="option">
-                    <option id= "arial" value="arial" style="font-family:Arial, Helvetica, sans-serif">ARIAL</option>
-                    <option id= "courier" value="courier" style="font-family: 'Courier New', Courier, monospace;">COURIER NEW</option>
-                    <option id= "cursive" value="cursive" style="font-family:'cursive'"> COMIC SANS </option>
-                    <option id= "impact" value="impact" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">IMPACT</option>
-                    <option id= "timesNewRoman" value="times-new-roman" style="font-family:'Times New Roman', Times, serif">Times New Roman</option>
-                </select>
-            <label for="color-text">Color del texto</label>
-                <input type="color" id="color-text" value="#000000">
+            <input type="text" id="topText" value=" "><label for="option">Elige la fuente</label>
+            
+            <select name="option" id="option">
+              <option id= "arial" value="arial" style="font-family:Arial, Helvetica, sans-serif">ARIAL</option>
+              <option id= "courier" value="courier" style="font-family: 'Courier New', Courier, monospace;">COURIER NEW</option>
+              <option id= "cursive" value="cursive" style="font-family:'cursive'"> COMIC SANS </option>
+              <option id= "impact" value="impact" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">IMPACT</option>
+              <option id= "timesNewRoman" value="times-new-roman" style="font-family:'Times New Roman', Times, serif">Times New Roman</option>
+            </select>
+
+              <label for="color-text">Color del texto</label>
+              <input type="color" id="color-text" value="#000000">
+            
               <label for="font-size"> Tamaño del texto
-                  <input id="fontSize" type="number" value="30" min="10" max="45">
-                  </label>
-          <label for="submit"></label>
-            <button type="submit" class="submit">AGREGAR AL CARRITO</button>
-        </div>
-      </form>
-    </div>
-  </section>
+              <input id="fontSize" type="number" value="30" min="10" max="45">
+              </label>
+
+              <label for="submit"></label>
+              <button type="submit" class="submit">AGREGAR AL CARRITO</button>
+            
+          </div>
+        </form>
+      </div>
+    </section>
+
   </main>
+
   <footer>
-    <footer>
-      <%- include('partials/footer') %>
-    </footer>
+    <%-include('partials/footer') %>
+  </footer>
+  
   <script src="/scripts/productDetail.js"></script>
+
 </body>
 
 </html>

@@ -15,7 +15,7 @@ const controller = {
     detail: (req, res) => {
         const productIdToFind = req.params.id;
         const product = products.find( (p) => p.id == productIdToFind);
-        return res.render("productDetail", {product});
+        return res.render("productDetail", {"product": product});
     },
     
     create: (req, res) => {

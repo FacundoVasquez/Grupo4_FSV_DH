@@ -12,5 +12,14 @@
     "descuento": 10,
     "imagen": "imagen_1645992070455.jpg",
     "id": 2
+  },
+  {
+    "nombre": "Mouse",
+    "precio": 1230,
+    "descuento": 5,
+    "ETA": 7,
+    "descripcion": "Mouse óptico",
+    "imagen": "imagen_1646172453629.jpg",
+    "id": 3
   }
 ]
