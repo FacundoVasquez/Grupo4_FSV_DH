@@ -21,6 +21,10 @@ body{
     z-index: 0;
   }
 
+.seccion_imgroup{
+    display: none;
+}
+
 .seccion_frases{
     z-index: 1;
     background-color: white;
@@ -271,165 +275,169 @@ h5 {
 }
 
 @media (min-width:769px) {
-body {
-    background-image: url(/img/fondo_index_grande.png);
-    background-position: top;
-    background-size: 439px;
-    background-repeat: no-repeat;
-    background-position-x: right;
-}
-
-.seccion1 {
-   box-shadow: none;
-   background: none;
-   padding: 30px;
-}
-
-.caja_frases {
-    margin-top: 0px;
-}
-
-.frase {
-    padding: 0px;
-    padding-bottom: 5px;
-    background-color: white;
-}
-
-.seccion_frases{
-    width: 335px;
-    margin-left: 10%; 
-    box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.25);
-    
-}
-
-
-h3 {
-    font-size: 25px;
-}
-
-h4 {
-    margin-left: 23%;
-}
-
-.boton {
-    padding-bottom: 15px;
-}
-
-.seccion2 {
-    padding-bottom: 30px;
-}
-
-
-.caja_productos{
-    display: flex;
-}
-
-.productos {
-    margin: 10px;
-}
-
-.caja_remera {
-    display: none;
-}
-
-.caja1flex_seccion3 {
-   width: 50%;
-   height: 100%;
-   margin: auto;
-}
-
-.productos_seccion3 {
-    height: 360px;
-    width: 70%;
-    background-color: #DFB760;
-    margin-top: 16px;
-}
-.detalle_producto_remera {
-height: 40%;
-}
-
-.detalle_producto_botella {
-    padding-top: 30px;
-}
-.caja2flex_seccion3 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin-bottom: 20px;
-}
-
-.productos1_seccion3 {
-    height: 50%;
-    margin: auto;
-    width: 80%;
-    margin-bottom: 10px;
-}
-
-.seccion3 {
-    display: flex;
-    height: 400px;
-    margin-top: 10px;
-}
-
-.caja_botella_seccion3 {
-    height: 60%;
-}
-
-
-.remera1_seccion3 {
-    transform: rotate(-18deg);
-    margin-right: -56%;
-    width: 230px;
-    margin-top: -15px;
-}
-
-
-.remera1_seccion3 {
-    transform: rotate(-18deg);
-    margin-right: -56%;
-    width: 75%;
-    margin-top: -15px;
-}
-
-.remera2_seccion3 {
-    transform: rotate(-18deg);
-    margin-right: -72%;
-    width: 50%;
-    margin-top: -28px;
-}
-
-.caja_remera_seccion3 {
-    height: 60%;
-}
-
-.caja_accesorios_seccion3 {
-    height: 60%;
-}
-
-
-.botTitle {
-    font-size: 35px;
-}
-.accesoriosTitle{
-    font-size: 30px;
+    body {
+        background-image: none;
     }
 
-.remeraTitle {
-    font-size: 30px;
-}
+    .seccion1 {
+    box-shadow: none;
+    background: none;
+    padding: 30px;
+    background-image: url(/img/fondo_index_grande.png);
+    background-position: top;
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    z-index: 0;
+    }
 
-.caja_boton {
-    padding-bottom: 0;
-    width: 70%;
-}
+    .caja_frases {
+        margin-top: 0px;
+    }
 
-.botones_seccion3 {
-    height: 32px;
-}
+    .frase {
+        padding: 0px;
+        padding-bottom: 5px;
+        background-color: white;
+    }
 
-.botones_indumentaria_seccion3 {
-    height: 32px;
-}
+    .seccion_frases{
+        display: flex;
+        justify-content:space-around;
+        width: 335px;
+        margin-left: 10%; 
+        box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.25);
+    }
+
+    .seccion_imgroup{
+        display:flex;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    h4 {
+        margin-left: 23%;
+    }
+
+    .boton {
+        padding-bottom: 15px;
+    }
+
+    .seccion2 {
+        padding-bottom: 30px;
+    }
+
+    .caja_productos{
+        display: flex;
+    }
+
+    .productos {
+        margin: 10px;
+    }
+
+    .caja_remera {
+        display: none;
+    }
+
+    .caja1flex_seccion3 {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    }
+
+    .productos_seccion3 {
+        height: 360px;
+        width: 70%;
+        background-color: #DFB760;
+        margin-top: 16px;
+    }
+
+    .detalle_producto_remera {
+    height: 40%;
+    }
+
+    .detalle_producto_botella {
+        padding-top: 30px;
+    }
+
+    .caja2flex_seccion3 {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .productos1_seccion3 {
+        height: 50%;
+        margin: auto;
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .seccion3 {
+        display: flex;
+        height: 400px;
+        margin-top: 10px;
+    }
+
+    .caja_botella_seccion3 {
+        height: 60%;
+    }
+
+    .remera1_seccion3 {
+        transform: rotate(-18deg);
+        margin-right: -56%;
+        width: 230px;
+        margin-top: -15px;
+    }
+
+    .remera1_seccion3 {
+        transform: rotate(-18deg);
+        margin-right: -56%;
+        width: 75%;
+        margin-top: -15px;
+    }
+
+    .remera2_seccion3 {
+        transform: rotate(-18deg);
+        margin-right: -72%;
+        width: 50%;
+        margin-top: -28px;
+    }
+
+    .caja_remera_seccion3 {
+        height: 60%;
+    }
+
+    .caja_accesorios_seccion3 {
+        height: 60%;
+    }
+
+    .botTitle {
+        font-size: 35px;
+    }
+    .accesoriosTitle{
+        font-size: 30px;
+        }
+
+    .remeraTitle {
+        font-size: 30px;
+    }
+
+    .caja_boton {
+        padding-bottom: 0;
+        width: 70%;
+    }
+
+    .botones_seccion3 {
+        height: 32px;
+    }
+
+    .botones_indumentaria_seccion3 {
+        height: 32px;
+    }
 
 }
 
