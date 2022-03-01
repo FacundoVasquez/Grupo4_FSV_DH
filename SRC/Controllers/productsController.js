@@ -35,6 +35,7 @@ const controller = {
 		const productToCreate = req.body;
 		// Number('123') = 123;
 		productToCreate.precio = Number(productToCreate.precio);
+		productToCreate.ETA = Number(productToCreate.ETA);
 		productToCreate.imagen = req.file.filename;
         if (productToCreate.descuento == '') {
 			productToCreate.descuento = 0;
