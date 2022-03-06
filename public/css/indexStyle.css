@@ -289,10 +289,16 @@ h5 {
     background-repeat: no-repeat;
     background-position-x: center;
     z-index: 0;
+    display: flex;
+    height: 400px;
+    margin-top: 10px;
     }
 
     .caja_frases {
         margin-top: 0px;
+        width: 50%;
+        height: 100%;
+        margin: auto;
     }
 
     .frase {
@@ -304,13 +310,16 @@ h5 {
     .seccion_frases{
         display: flex;
         justify-content:space-around;
-        width: 335px;
+        width: 400px;
         margin-left: 10%; 
         box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.25);
     }
 
     .seccion_imgroup{
         display:flex;
+        width: 35%;
+        height: 100%;
+        margin: auto;
     }
 
     h3 {

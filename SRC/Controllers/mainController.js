@@ -44,7 +44,7 @@ const controller = {
 		  controller.guardarUsuario();
 
 
-		  return res.send(users);
+		  return res.redirect("/product/cart");
 
     },
 
