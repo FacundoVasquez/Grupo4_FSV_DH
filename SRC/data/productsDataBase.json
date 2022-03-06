@@ -21,5 +21,23 @@
     "descripcion": "Mouse óptico",
     "imagen": "imagen_1646172453629.jpg",
     "id": 3
+  },
+  {
+    "nombre": "mesa",
+    "precio": 20000,
+    "descuento": 10,
+    "ETA": 1,
+    "descripcion": "Enter details here...",
+    "imagen": "imagen_1646267006306.png",
+    "id": 4
+  },
+  {
+    "nombre": "remera",
+    "precio": 1400,
+    "descuento": 20,
+    "ETA": 2,
+    "descripcion": "Enter details here...",
+    "imagen": "imagen_1646267115636.jpg",
+    "id": 5
   }
 ]

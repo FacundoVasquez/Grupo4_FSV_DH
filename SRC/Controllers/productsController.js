@@ -54,7 +54,8 @@ const controller = {
 		// Guardar el archivo json con el nuevo array
 
 
-		return res.send(products);
+		return res.redirect("/product")
+		
 
     },
 		
