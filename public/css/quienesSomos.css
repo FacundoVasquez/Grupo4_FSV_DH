@@ -14,14 +14,34 @@
 
 .titulo_Kapu{
     color: #328093;
-    font-size: 40px;
+    font-size: 60px;
     text-align: center;
     padding: 30px 0 30px 0;
 }
 
 p {
     padding: 0 100px;
-    font-size: 26px;
+    font-size: 30px;
     text-align: justify;
    
+}
+
+@media (min-width: 769px) and (max-width: 1023px){
+    .titulo_Kapu { 
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+@media (min-width: 1024px) {
+    .titulo_Kapu { 
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }  
+}
 }
