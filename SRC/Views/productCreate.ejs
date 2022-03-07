@@ -11,28 +11,32 @@
         </header>
 
 
-        <section class="form-section">
+        <section class="seccionform">
             <form action="/product" method="POST" enctype="multipart/form-data">
-
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" placeholder="nombre">
-
-                <label for="precio">Precio</label>
-                <input type="number" name="precio" placeholder="precio">
-
-                <label for="imagen">Imagen</label>
+                <div class="form-container">
+                   <div class="">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" placeholder="nombre">
+                    <label for="precio">Precio</label>
+                    <input type="number" name="precio" placeholder="precio"> 
+                   <label for="descuento">Descuento</label>
+                    <input type="number" name="descuento" placeholder="% descuento">
+                </div>
+                   <div>
+                       <label for="imagen">Imagen</label>
                 <input type="file" name="imagen">
-
-                <label for="descuento">Descuento</label>
-                <input type="number" name="descuento" placeholder="% descuento">
-
-                <label for="ETA">ETA [días]</label>
-                <input type="number" name="ETA" placeholder="Tiempo de Entrega">
-
-                <label for="descripcion">Descripción</label>
+                   </div>
+                   <div>
+                       <label for="descripcion">Descripción</label>
                 <textarea rows = "5" cols = "60" name = "descripcion">Enter details here...</textarea>
-
-                <button type="submit">Enviar</button>
+                   </div>
+                   <div>
+                    <label for="ETA">Entrega Estimada [días]</label>
+                    <input type="number" name="ETA" placeholder="Tiempo de Entrega"> 
+                   </div>             
+                <button type="submit">Enviar</button> 
+                </div>
+                
             </form>
         </section>
 

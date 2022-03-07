@@ -1,9 +1,9 @@
 [
   {
     "nombre": "Remera",
-    "precio": 2000,
-    "descuento": 5,
-    "imagen": "imagen_1645991929510.png",
+    "precio": "2000",
+    "descuento": "5",
+    "imagen": "",
     "id": 1
   },
   {
