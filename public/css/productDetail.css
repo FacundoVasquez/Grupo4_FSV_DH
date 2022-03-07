@@ -4,79 +4,6 @@ body{
     font-family: 'Noto Sans', sans-serif;
 }
 
-/*    *****ESTILOS DEL HEADER*****    */
-header{
-    position:fixed;
-    width: 100%;
-    height: 100px;
-    background-image:url(/img/Trazado\ 13.jpg);
-    background-color: white;
-    background-size:contain;
-    background-repeat: no-repeat;
-    z-index: 100;
-}
-
-.menu-navegacion{
-    
-    display: flex;
-    width: 90%;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;  
-    padding:20px 0;
-
-}
-.menu-navegacion i{
-    font-size: 30px;
-    color: #679EAB;
-}
-.nav-toggle{
-    display: none;
-}
-.menu-desplegable{
-    position: absolute;
-    background-color: white;
-    padding: 20px 0;
-}
-.fa-shopping-cart:hover{
-    color: #DFB760;
-}
-.menu-desplegable a{
-    text-decoration: none;
-    color: #328093;
-}
-.menu-desplegable a:hover{
-    color: #DFB760;
-}
-nav{
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    text-align: center;
-    background: gray;
-    left: 0;
-    transform: scale(1,0);
-    transform-origin: top;
-    transition: transform 400ms ease-in-out;
-}
-nav ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-nav ul li{
-text-align: center;
-margin: 15px 0;
-}
-nav ul li a{
-    text-decoration: none;
-    font-size: 1.5em;
-    text-transform: uppercase;
-}
-.nav-toggle:checked ~ nav{
- transform: scale(1,1);
-}
-
 /*  *****ESTILOS DE DETALLE DE PRODUCTO*****   */
 main{
     padding-top: 100px;
@@ -155,47 +82,6 @@ main{
     box-shadow: 0px 0px 12px rgba(50, 128, 147, 0.5); 
 }
 
-/*  *****ESTILOS DEL FOOTER*****   */
-footer{
-    padding-top: 50px;
-    background-color: #328093;
-}
-footer img{
-     display: block;
-     margin: auto;
-}
-footer div ul{
-    list-style: none;
-    padding: 0;
-}
-footer div ul li{
-    padding: 10px 0;
-    text-align: center;
-    
-}
-.a-footer{
-    text-decoration: none;
-    color: #DFB760;
-}
-.a-footer:hover{
-    color: white;
-}
-.redes{
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 50px;
-    font-size: 1.5em;
-    color: #328093;
-}
-.redes i{
-    background-color: white;
-    text-align: center;
-    width: 45px;
-    padding: 10px;
-    border-radius: 50px;
-}
-
-
 /*      *****MEDIA QUERIES*****    */
 
 /*LARGE*/
@@ -203,62 +89,7 @@ footer div ul li{
     body{
         height: 100%;
     }
-    header{
-        position: absolute;
-    }
-    .menu-navegacion{
-        display: flex;
-        width: 90%;
-        align-items: center;
-        margin: auto;  
-        padding: 0;
-    }
-    .menu-navegacion i{
-        display: none;
-    }
-    .nav-toggle{
-        display: none;
-    }
-    .menu-desplegable{
-        position:inherit;
-        background-color: transparent;
-        padding: 20px 0; 
-    }
-    .menu-desplegable a{
-        text-decoration: none;
-        color: #328093;
-        margin-left: 50px;
-        font-size: 1em;
-    }
-    .menu-desplegable a:hover{
-        color: #DFB760;
-    }
-    nav{
-        all: unset;
-    }
-    nav ul{
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    nav ul li{
-        text-align: center;
-        margin: 15px 0;
-    }
-    nav ul li a{
-        text-decoration: none;
-        font-size: 1.5em;
-        text-transform: uppercase;
-    }
-    .fa-shopping-cart{
-        margin-left: 50px;
-    }
-    .nav-toggle:checked ~ nav{
-     transform:none;
-    }
+    
     main{
         
         display: flex;
@@ -287,23 +118,7 @@ footer div ul li{
     .product-form{
         margin: 0;
     }
-    footer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-
-    }
-    footer img{
-        margin: 10%;
-        }
-
-    .redes{
-        margin: 10%;
-    }
-    .redes i{
-        margin-left: 10px;
-    }
+    
 }
 
 /* MEDIUM */
@@ -319,19 +134,5 @@ footer div ul li{
     .submit{
         font-size: 12px;
     }
-    footer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-    }
-    footer img{
-        margin: 10%;
-    }
-    .redes{
-        margin: 10%;
-    }
-    .redes i{
-        margin-left: 10px;
-    }
+    
 }
