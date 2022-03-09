@@ -29,6 +29,7 @@ const controller = {
     login: (req, res) => {
        return res.render("login")
     },
+    
     productDetail: (req, res) => {
       return res.render("productDetail")
     },//Controlador de la vista detalle producto
@@ -51,6 +52,7 @@ const controller = {
     guardarUsuario() {
       fs.writeFileSync(usersPath, JSON.stringify(users, null, 2))
     },
+    
     asignarIdAUsuarioEnBaseAlUltimo: function () {
       return users[users.length - 1].id + 1;
     },

@@ -41,17 +41,12 @@
     "id": 6
   },
   {
-<<<<<<< HEAD
-=======
-    "motivo": "Otros",
->>>>>>> ed40cd32213aa596f37dfc2412a78cd96957e9fb
     "nombreCompleto": "",
     "emailContacto": "",
     "telefonoContacto": "",
     "numeroPedido": "",
     "comentariosContacto": "",
     "id": 7
-<<<<<<< HEAD
   },
   {
     "nombreCompleto": "",
@@ -90,7 +85,5 @@
     "password1": "",
     "tel": "",
     "id": 12
-=======
->>>>>>> ed40cd32213aa596f37dfc2412a78cd96957e9fb
   }
 ]
