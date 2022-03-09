@@ -1,3 +1,7 @@
+//Encriptar contraseña
+const bcryptjs = require("bcryptjs");
+
+
 //Se requieren los módulos necesarios
 const path = require("path");
 const fs = require("fs");
@@ -17,15 +21,22 @@ const controller = {
       login: (req, res) => {
          return res.render("login")
       },
+
       store: (req,res) => {
-      
-        const userToCreate = req.body;
-             
+      /*
+        const userToCreate = {
+        ...req.body,
+        
+
+          password:bcryptjs.hashSync(req.body.password, 10),
+        }
+        */
+        
         userToCreate.id = controller.asignarIdAUsuarioEnBaseAlUltimo();
             
         users.push(userToCreate);
   
-            controller.guardarUsuario();
+        controller.guardarUsuario();
   
   
             return res.redirect("/");
