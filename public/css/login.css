@@ -33,8 +33,11 @@ padding-top: 10px;
 
 section{
     width: 100%;
-    padding: 10px;
     }
+
+.form {
+    padding: 10px;
+}
 
 .seccionform{
     font-family: Noto Sans;
@@ -175,10 +178,7 @@ button.google{
     header h1 {
         font-size: 1.5em;
     }
-    section{
-    padding: 0 10% 10% 10%;
-        }
-    
+       
     .seccionform{
            margin: 0%;   
            padding: 20px;
@@ -264,10 +264,6 @@ height: auto;
 .logo img {
     width: 10em;
 }
-
-section{
-padding: 0 10% 10% 10%;
-    }
 
 .seccionform{
        margin: 0%;   
