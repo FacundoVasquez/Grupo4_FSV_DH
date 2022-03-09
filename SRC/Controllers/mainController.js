@@ -21,41 +21,10 @@ const controller = {
   quienesSomos: (req, res) => {
     return res.render("quienesSomos")
    }, 
-
-  register: (req, res) => {
-      return res.render("register")
-    },
-
-    login: (req, res) => {
-       return res.render("login")
-    },
     
     productDetail: (req, res) => {
       return res.render("productDetail")
     },//Controlador de la vista detalle producto
-
-    store: (req,res) => {
-      
-      const userToCreate = req.body;
-           
-      userToCreate.id = controller.asignarIdAUsuarioEnBaseAlUltimo();
-		  
-      users.push(userToCreate);
-
-		  controller.guardarUsuario();
-
-
-		  return res.redirect("/");
-
-    },
-
-    guardarUsuario() {
-      fs.writeFileSync(usersPath, JSON.stringify(users, null, 2))
-    },
-    
-    asignarIdAUsuarioEnBaseAlUltimo: function () {
-      return users[users.length - 1].id + 1;
-    },
 
     
      

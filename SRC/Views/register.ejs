@@ -4,7 +4,7 @@
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Register'}) %>
 
-<link href="css/registerStyle.css" rel="stylesheet">
+<link href="/css/registerStyle.css" rel="stylesheet">
  
 
 <body>
@@ -17,7 +17,7 @@
 
             </section>
             <section class="form">
-                <form action="./" method="POST">
+                <form action="/user/register" method="POST">
                     <div class="seccionform">
                         <label for="email">E-mail</label>
                         <input type="email" name="email" placeholder="Ingresa tu e-mail" id="email">

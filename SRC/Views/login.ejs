@@ -5,7 +5,7 @@
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Login'}) %>
    
-<link href="css/login.css" rel="stylesheet">
+<link href="/css/login.css" rel="stylesheet">
 
     <body>
 
@@ -23,7 +23,7 @@
                 </section>
 
                 <section class="form">
-                    <form action="./" method="GET">
+                    <form action="/user/login" method="GET">
                         <div class="seccionform">
                             <label for="email">E-mail</label>
                             <input type="email" name="email" placeholder="Ingresa tu e-mail" id="email">
@@ -39,7 +39,7 @@
 
                             <div class="vínculos">
                                 <a class="contraseña" href="./" type="submit">No recuerdo mi contraseña</a>
-                                <a class="crear-cuenta1" href="/register" type="submit">No tengo cuenta</a>
+                                <a class="crear-cuenta1" href="/user/register" type="submit">No tengo cuenta</a>
                             </div>
 
                             <div class="fb-login-button" data-width="" data-size="small"
