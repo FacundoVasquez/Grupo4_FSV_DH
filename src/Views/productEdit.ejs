@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+    <%- include('partials/head', {title: 'Edita Tu Producto' }) %>
+    <link href="/css/product_create.css" rel="stylesheet">
+
+    <body>
+
+        <header>
+            <%- include('partials/header') %>
+        </header>
+
 <body>
-    <!--Chequear metodo put-->
+    <section class="seccionform">
     <h2>Editar <i><%= productToEdit.nombre %></i> </h2>
     <form action="/product/<%= productToEdit.id %>?_method=PUT" method="POST">
 
@@ -21,5 +30,10 @@
 
         <button type="submit">Editar</button>
     </form>
+    </section>
+    <footer>
+        <%-include("partials/footer")%>
+    </footer>
+
 </body>
 </html>
