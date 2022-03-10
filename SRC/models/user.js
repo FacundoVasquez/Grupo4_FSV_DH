@@ -36,12 +36,12 @@ const user = {
     create: function (usersData) {
         let allUsers= this.findAll();
         let newUser = {
-            id: this.generateId,
+            id: this.generateId(),
             ...usersData,
         }
-        allUsers.push(usersData);
+        allUsers.push(newUser);
         fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ""))
-        return newUser;
+        return true;
     },
 
     delete: function(id) {
