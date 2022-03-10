@@ -35,7 +35,6 @@ app.use(function(req,res,next){
     return res.render("notFound")}
 ); 
 
-
 app.use(express.json()); 
 
 //Servidor
