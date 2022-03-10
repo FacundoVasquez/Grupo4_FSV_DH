@@ -20,6 +20,6 @@ router.get("/login", userController.login);
 
 router.get("/register", userController.register);
 
-router.post("/register", userController.processRegister);
+router.post("/register", upload.single("avatar"), userController.processRegister);
 
 module.exports= router;
