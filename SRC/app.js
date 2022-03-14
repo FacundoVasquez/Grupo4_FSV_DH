@@ -3,6 +3,8 @@ const { redirect } = require("express/lib/response");
 const app = express();
 const path = require("path");
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 
 //Se configura la ruta de la carpeta pública y views
@@ -18,6 +20,14 @@ app.use(express.static(publicPath));
 app.use(express.urlencoded ({extended:false}));
 app.use(express.json());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+
+// session y cookies
+app.use(cookieParser());
+app.use(session({
+    secret:'palabra secreta',
+    resave:false,
+    saveUninitialized:true,
+}))
 
 //Rutas
 const mainRouter = require("./router/mainRouter");
