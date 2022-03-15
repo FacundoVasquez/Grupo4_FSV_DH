@@ -7,6 +7,7 @@ const fs = require("fs");
 const user = require("../models/user");
 const express = require ("express");
 const { validationResult } = require ("express-validator")
+const { body } = require("express-validator");
 
 //Se definen las rutas hacia los JSONs
 const usersPath = path.join(__dirname, "../data/usersDataBase.json");
@@ -28,6 +29,20 @@ const controller = {
         });
       }
       */
+
+      let errors = validationResult(req);
+
+        if (!errors.isEmpty()) {
+        
+            return res.render("register", { errors: errors.errors, old:req.body})
+
+        }else { 
+
+            return res.render("register", { data: req.body}); 
+ 
+        }
+      
+
       let userByEmail = user.findByField ("email", req.body.email); 
       
       if (userByEmail) {

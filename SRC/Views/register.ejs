@@ -15,6 +15,16 @@
                 <div class="logo"><img src="/img/logo-kapu-01.png" alt="logo"></div>
                 <h1>Registrate</h1>
 
+                <% if (typeof errors != "undefined") { %>
+
+                    <% errors.forEach(error => { %> 
+            
+                    <span style="color:red"><li><%= error.msg %> </li></span>
+            
+                    <% }) %>
+                    <% } %>
+            
+
             </section>
             <section class="form">
                 <form action="/user/register" method="POST">

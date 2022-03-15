@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const userController = require("../controllers/userController");
+const validation = require('../middleware/validation')
 const path = require("path");
 const multer = require("multer");
 
@@ -25,6 +26,6 @@ router.post("/login", userController.falta_agregar_ruta_post);
 
 router.get("/register", userController.register);
 
-router.post("/register", upload.single("avatar"), userController.processRegister);
+router.post("/register", upload.single("avatar"), validation, userController.processRegister);
 
 module.exports= router;
