@@ -22,19 +22,32 @@ const controller = {
      /* const resultValidation= validationResult(req);
 
       if (resultValidation.error.length > 0) {
-        res.render ("register", {
+        return res.render ("register", {
           errors: resultValidation.mapped(), 
           oldData:req.body
         });
       }
       */
+      let userByEmail = user.findByField ("email", req.body.email); 
+      
+      if (userByEmail) {
+        return res.render ("register", {
+        errors: {
+          email:{
+            msg:"Este usuario ya se encuentra registrado"
+          }
+        },
+        oldData:req.body    
+      });
+      }
+
       let userToCreate = {
         ...req.body,
           password:bcryptjs.hashSync(req.body.password, 10),
         }
 
-      user.create(userToCreate);
-      return res.redirect ("/")
+      let userCreated = user.create(userToCreate);
+      return res.redirect ("/user/login")
     },
   
       login: (req, res) => {
@@ -45,29 +58,7 @@ const controller = {
         req.session.user = user
         return res.redirect("/")
       },
-      /*store: (req,res) => {
-              
-        
-        userToCreate.id = controller.asignarIdAUsuarioEnBaseAlUltimo();
-            
-        users.push(userToCreate);
-  
-        controller.guardarUsuario();
-  
-  
-            return res.redirect("/");
-  
-      },
-  
-      guardarUsuario() {
-        fs.writeFileSync(usersPath, JSON.stringify(users, null, 2))
-      },
-      
-      asignarIdAUsuarioEnBaseAlUltimo: function () {
-        return users[users.length - 1].id + 1;
-      },
-  */
-     
+          
 
 }
 

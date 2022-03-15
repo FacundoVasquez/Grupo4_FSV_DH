@@ -12,7 +12,7 @@ const user = {
         let allUsers= this.findAll();
         let lastUser= allUsers.pop();
         if (lastUser){ 
-        return allUsers.id + 1;
+        return lastUser.id + 1;
         }
         return 1;
     },

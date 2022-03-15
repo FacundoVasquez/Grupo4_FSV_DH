@@ -16,7 +16,12 @@ const storage=multer.diskStorage({
 const upload=multer({storage:storage});
 
 //Rutas de Usuarios
-router.post("/login", userController.login);
+
+router.get("/login", userController.login);
+
+/*
+router.post("/login", userController.falta_agregar_ruta_post);
+*/
 
 router.get("/register", userController.register);
 
