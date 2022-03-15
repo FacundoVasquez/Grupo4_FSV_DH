@@ -41,6 +41,10 @@ const controller = {
          return res.render("login")
       },
 
+      store: (req, res) => {
+        req.session.user = user
+        return res.redirect("/")
+      },
       /*store: (req,res) => {
               
         
