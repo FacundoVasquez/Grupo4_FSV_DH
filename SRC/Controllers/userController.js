@@ -6,7 +6,7 @@ const path = require("path");
 const fs = require("fs");
 const user = require("../models/user");
 const express = require ("express");
-const { validationResult } = require ("express-validator")
+const { validationResult } = require("express-validator")
 const { body } = require("express-validator");
 
 //Se definen las rutas hacia los JSONs
@@ -35,6 +35,7 @@ const controller = {
         if (!errors.isEmpty()) {
         
             return res.render("register", { errors: errors.errors, old:req.body})
+            
 
         }else { 
 

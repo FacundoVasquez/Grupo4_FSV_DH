@@ -1,3 +1,4 @@
+const { body } = require("express-validator");
 const fs = require ("fs");
 const path = require ("path");
 
@@ -17,6 +18,7 @@ const user = {
         return 1;
     },
 
+
     findAll: function (){
         return this.getData();
     },
@@ -34,6 +36,7 @@ const user = {
     },
 
     create: function (usersData) {
+
         let allUsers= this.findAll();
         let newUser = {
             id: this.generateId(),
