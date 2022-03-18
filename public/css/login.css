@@ -84,7 +84,23 @@ section{
 
       right: 5px;
     }
-  
+
+.chechbox_rememberMe1 {
+    display: flex;
+    padding-top: 5px;
+}
+
+input.remember_me {
+    width: 20px;
+    margin-left: 5px;
+}
+
+label.checkbox_rememberMe{
+    display: block;
+    padding: 10px 0 5px 10px;
+}
+
+
 button{
 Width: 100%;
 Height:50px;
@@ -234,6 +250,7 @@ button.google{
                 
     .remera{
     width: 100%;
+    margin-left: 15px;
         }
       
        
