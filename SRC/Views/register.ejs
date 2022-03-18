@@ -29,6 +29,10 @@
             <section class="form">
                 <form action="/user/register" method="POST">
                     <div class="seccionform">
+                        <label for="user_name">Nombre y Apellido</label>
+                        <input type="text" name="user_name" placeholder="Ingresa su nombre y apellido" id="user_name">
+                    </div>
+                    <div class="seccionform">
                         <label for="email">E-mail</label>
                         <input type="email" name="email" placeholder="Ingresa tu e-mail" id="email">
                     </div>
@@ -47,7 +51,7 @@
                         <i class="fa fa-eye showpwd" onClick="showPwd('password1', this)"> </i>
                         </div>
                         </div>
-                    <div class="seccionform">
+                    <div class="seccion_avatar">
                         <label for="img">Foto perfil usuario</label>
                         <input type="file" name="avatar" placeholder="Selecciona una imagen" id="img">
                     </div>
