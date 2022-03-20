@@ -39,5 +39,14 @@
     "descripcion": "Enter details here...",
     "imagen": "imagen_1646267115636.jpg",
     "id": 5
+  },
+  {
+    "nombre": "Gorra",
+    "precio": 1235,
+    "descuento": 5,
+    "descripcion": "Gorra estilo propio",
+    "ETA": 7,
+    "imagen": "imagen_1646689759451.png",
+    "id": 6
   }
 ]

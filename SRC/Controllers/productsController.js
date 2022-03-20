@@ -9,13 +9,18 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
     index: (req, res) => {
-        return res.render("products", {products: products})
+        return res.render("products", {products: products});
     },
     
     detail: (req, res) => {
         const productIdToFind = req.params.id;
-        const product = products.find( (p) => p.id == productIdToFind);
-        return res.render("productDetail", {"product": product});
+		const product = products.find((p) => p.id == productIdToFind);
+		//return res.send(product);
+		if(typeof product === "undefined") {
+			return res.send("Producto NO Encontrado");						
+		} else {
+			return res.render("productDetail", {"product": product});
+		};
     },
     
     create: (req, res) => {
