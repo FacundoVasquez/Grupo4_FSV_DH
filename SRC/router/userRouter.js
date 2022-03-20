@@ -19,10 +19,11 @@ const upload=multer({storage:storage});
 //Rutas de Usuarios
 
 router.get("/login", userController.login);
+router.post('/login', [
+    check('email').isEmail().withMessage('Email inválido'),
+    check('password').isLength({min:6}).withMessage('La contraseña debe tener al menos 6 caracteres')],
+    userController.processLogin);
 
-/*
-router.post("/login", userController.falta_agregar_ruta_post);
-*/
 
 router.get("/register", userController.register);
 

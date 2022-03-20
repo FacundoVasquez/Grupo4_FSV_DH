@@ -20,8 +20,15 @@
                 <section class="header">
                     <div class="logo"><a href="/"><img src="/img/logo-kapu-01.png" alt="logo"></a></div>
                     <h1>Ingresá a tu cuenta</h1>
-                </section>
+                    <% if (typeof errors != "undefined") { %>
 
+                    <% errors.forEach(error => { %> 
+            
+                    <span style="color:red"><li><%= error.msg %> </li></span>
+            
+                    <% }) %>
+                    <% } %>
+                </section>
                 <section class="form">
                     <form action="/user/login" method="POST">
                         <div class="seccionform">
