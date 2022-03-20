@@ -4,6 +4,7 @@ const userController = require("../controllers/userController");
 const validation = require('../middleware/validation')
 const path = require("path");
 const multer = require("multer");
+const { check } = require('express-validator');
 
 //Multer foto registro
 const storage=multer.diskStorage({
