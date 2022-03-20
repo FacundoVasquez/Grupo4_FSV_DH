@@ -66,14 +66,41 @@ const controller = {
       let userCreated = user.create(userToCreate);
       return res.redirect ("/user/login")
     },
-  
+
       login: (req, res) => {
          return res.render("login")
       },
-
+      processLogin: function (req, res){
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+          let usersJSON = fs.readFileSync('usersDataBase.json', {encoding:UTF=8});
+          let user;
+          if (usersJSON == "") {
+            user = [];
+          }else{
+            user = JSON.parse(usersJSON);
+          }
+        for (let i=0; i< user.length; i++){
+          if(user[i].email == req.body.email){
+            if(bcryptjs.compareSync(req.body.password, user[i].password)){
+              let userToLogin = user[i];
+              break;
+            }
+          }
+        }
+        if(userToLogin == undefined){
+          return res.render('login', {errors:[
+            {msg:'Datos inválidos'}
+          ]});
+        }
+        req.session.userLogged=userToLogin;
+        } else{
+          return res.render('login', {errors:errors.errors});
+        }
+      },      
       store: (req, res) => {
         req.session.user = user
-        return res.redirect("/")
+        return res.redirect("/ ")
       },
           
 
