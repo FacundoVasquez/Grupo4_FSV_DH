@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(session({
     secret:'palabra secreta',
     resave:false,
-    saveUninitialized:true,
+    saveUninitialized:false,
 }))
 
 //Rutas

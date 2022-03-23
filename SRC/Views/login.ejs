@@ -20,13 +20,10 @@
                 <section class="header">
                     <div class="logo"><a href="/"><img src="/img/logo-kapu-01.png" alt="logo"></a></div>
                     <h1>Ingresá a tu cuenta</h1>
-                    <% if (typeof errors != "undefined") { %>
-
-                    <% errors.forEach(error => { %> 
-            
-                    <span style="color:red"><li><%= error.msg %> </li></span>
-            
-                    <% }) %>
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %> 
+                        </div>                    
                     <% } %>
                 </section>
                 <section class="form">

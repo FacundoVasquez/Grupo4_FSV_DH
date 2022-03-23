@@ -5,6 +5,8 @@ const validation = require('../middleware/validation')
 const path = require("path");
 const multer = require("multer");
 const { check } = require('express-validator');
+const guestMiddleware = require('../middleware/guestMiddleware');
+const authMiddleware = require('../middleware/authMiddleware');
 
 //Multer foto registro
 const storage=multer.diskStorage({
@@ -19,14 +21,13 @@ const upload=multer({storage:storage});
 
 //Rutas de Usuarios
 
-router.get("/login", userController.login);
-router.post('/login', [
-    check('email').isEmail().withMessage('Email inválido'),
-    check('password').isLength({min:6}).withMessage('La contraseña debe tener al menos 6 caracteres')],
-    userController.processLogin);
+router.get("/login", guestMiddleware, userController.login);    //formulario login
+router.post("/login", userController.loginProcess);     //procesar formulario
+router.get("/profile/", authMiddleware, userController.profile);     //perfil del usuario
 
+router.get("/logout/", userController.logout)   //destruir sesion
 
-router.get("/register", userController.register);
+router.get("/register", guestMiddleware, userController.register);
 
 router.post("/register", upload.single("avatar"), validation, userController.processRegister);
 

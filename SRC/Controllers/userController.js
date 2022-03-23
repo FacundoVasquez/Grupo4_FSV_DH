@@ -14,7 +14,7 @@ const usersPath = path.join(__dirname, "../data/usersDataBase.json");
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
-const controller = {
+const controller = { 
     register: (req, res) => {
         return res.render("register")
       },
@@ -67,6 +67,38 @@ const controller = {
       return res.redirect ("/user/login")
     },
 
+      login: (req, res)=>{
+        return res.render('login');
+      },
+      loginProcess: (req, res) =>{
+        let userToLogin = user.findByField('email', req.body.email)
+
+        if(userToLogin){
+          let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+          if(correctPassword){
+            req.session.userLogged = userToLogin;
+            return res.redirect('/user/profile');            
+          }
+          return res.render('login', {
+            errors: {
+              email:{
+                msg: 'credenciales inválidas'
+              }
+            }
+          });
+        }
+      },
+      profile: (req, res)=>{
+        return res.render('userProfile', {
+          user: req.session.userLogged
+        });
+      },
+      logout: (req, res) =>{
+        req.session.destroy();
+        return res.redirect('/');
+      },
+  
+/*
       login: (req, res) => {
          return res.render("login")
       },
@@ -98,12 +130,19 @@ const controller = {
           return res.render('login', {errors:errors.errors});
         }
       },      
-      store: (req, res) => {
+      store: function(req, res) {
+        let errors = validationResult(req);
+        if(!errors.isEmpty()){
+          let usersJSON = fs.readFileSync('usersDataBase.json', {encoding:UTF=8});
+          let user;
+          if (usersJSON == "") {
+            user = [];
+          }else{
+            user = JSON.parse(usersJSON);
+          }
         req.session.user = user
-        return res.redirect("/ ")
-      },
-          
-
+        return res.redirect("/")
+        }},*/
 }
 
 module.exports = controller;
