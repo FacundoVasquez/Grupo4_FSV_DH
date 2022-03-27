@@ -1,51 +1,30 @@
-<!-- Barra de navegacion-->
+<header>
+    <div class="grid-header">
 
-<link href="/css/header.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Noto+Sans&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat:wght@200&family=Noto+Sans&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Montserrat:wght@200&family=Noto+Sans&family=Roboto:wght@400;700&family=WindSong&display=swap"
-        rel="stylesheet">
-<script src="https://kit.fontawesome.com/2720ef9d1a.js" crossorigin="anonymous"></script>
-    
-<header>   
-    <div class="menu-navegacion">
-        <section class="seccionHeader1">
-            <a href="/"><img src="/img/logo-kapu-01.png" alt="logo"></a>
-    
+        <img class="img-logo" src="/img/logo-kapu-01.svg" alt="Kapu-logo">
+
+        <div class="header-flex header-grid">
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <label for="nav-toggle" class="nav-toggle-label">
-                <i class="fas fa-bars"></i>
+                <i><img class="icon-menu" src="img/Grupo 1.svg" /></i>
             </label>
-        
             <nav class="menu-desplegable">
                 <ul>
-                    <li> <a href="/">Inicio</a></li>
-                    <li> <a href="/user/login">LogIn</a></li>
+
                     <li> <a href="/product">Productos</a></li>
-                    <li> <a href="/quienesSomos">Quienes somos</a></li>
+                    <li> <a href="/quienesSomos">Nosotros</a></li>
                     <li> <a href="/contacto">Contacto</a></li>
-                    <li> <a href="/product/Cart">Carrito</a></li>
                 </ul>
             </nav>
-        </section>
-    
-        <section class="seccionHeader2">
-            <nav class="menu-desplegable-web">
-                <ul class="headerFlex">
-                    <li> <a href="/">Inicio</a></li>
-                    <li> <a href="/product">Productos</a></li>
-                    <li> <a href="/quienesSomos">Quienes somos</a></li>
-                    <li> <a href="/contacto">Contacto</a></li>
-                    <li> <a href="/user/login"><i class="fa-solid fa-user"></i></a></li>
-                    <li> <a href="/product/Cart"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                </ul>
-            </nav>
-        </section>
-    </div>  
-</header> 
+
+            <div class="header-search">
+                <input type="serch" placeholder="Buscá tu producto">
+                <img class="icon-search" src="img/Grupo 82.svg" />
+            </div>
+            <div class="flex-user-cart-icon">
+                <img class="icon-menu user" src="img/icono-user.svg" alt="user">
+                <img class="icon-menu cart" src="img/Grupo 81.svg" />
+            </div>
+        </div>
+    </div>
+</header>
