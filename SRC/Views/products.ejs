@@ -2,39 +2,60 @@
 <html lang="en">
 
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Listado de productos'}) %>
+<%- include('partials/head', {title: 'Listado de productos' }) %>
 
-  <link href="/css/productDetail.css" rel="stylesheet">
+	<link href="/css/productDetail.css" rel="stylesheet">
 
-<body>
+	<body>
 
-<header>
-    <%- include('partials/header') %>
-</header>
+		<header>
+			<%- include('partials/header') %>
+		</header>
+		<section class="banner">
+			<div class=" first-gap">
 
-    <div class="product">
-        <% products.forEach( product=> { %>
-				<section class="product-box">
-					<a href="/product/<%= product.id %>">
-						<figure class="product-box_image">
-							<img src="/img/products/<%= product.imagen %>" alt="imagen de producto" width="50%">
-						</figure>
-						<article class="product-box_data">
-							<h2><%= product.precio %></h2>
-							<% if (product.descuento) {%> 
-							<span><%= product.descuento %>% OFF</span>
-							<% } %>
-							<p><%= product.nombre %></p>
-						</article>
-					</a>
-				</section>
-			</div>
-	 <% })  %>
+				<div class="container">
+					<h1 class="">
+						Remeras
+					</h1>
+				</div>
 
+		</section>
+		<section class="all-products container">
+			
+				<div class="flex">
+					<% products.forEach( product=> { %>
+						<a href="/product/<%= product.id %>">
+							<div class="product-info">
+								<div class="img-product-box">
+									<img src="/img/products/<%= product.imagen %>" alt="">
+								</div>
+								<div class="prod-bg">
 
-    </div>
+									<h3>
+										<%= product.nombre %>
+									</h3>
+									<p>$<%= product.precio %>
+									</p>
+									<% if (product.descuento) {%>
+										<span>
+											<%= product.descuento %>% OFF
+										</span>
+										<% } %>
+											<button class="button large-button">
+												<a class="font-color-green"
+													href="/product/<%= product.id %>">Personalizar</a>
+											</button>
+								</div>
+							</div>
+						</a>
+						<% }) %>
+				</div>
+			
+		</section>
 
-    <%-include("./partials/footer")%>    
-    
-</body>
+		<%-include("./partials/footer")%>
+
+	</body>
+
 </html>
