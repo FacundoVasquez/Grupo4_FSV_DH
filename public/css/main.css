@@ -41,6 +41,7 @@ h1{
 
 a{
     text-decoration: none;
+    color: inherit;
 }
 
 .font-color-green{
@@ -306,21 +307,44 @@ header{
     color:var(--color-verde);
 
 }
+
 .flex{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: auto;
+
 }
 .product-info{
     margin: 20px 20px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: var(--color-verde);
+    border-width: 3px;
+}
+
+.product-info:hover{
+    box-shadow: 5px 5px 8px 0px rgba(0,0,0,0.3);
+
+
+
+}
+.img-product-box{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+.img-product-box img{
+width: 100%;
+
 }
 .prod-bg{
     background-color: var(--color-verde);
     height: auto;
-    margin: -60px auto auto ;
+    margin: 0 auto auto ;
     font-family: 'Roboto';
     color: var(--color-white);
-    padding: 50px 10px 10px 10px;
+    padding: 10px;
     width: 250px;
     border-radius: 0 0 10px 10px;
     text-align: left;
@@ -471,6 +495,7 @@ footer img{
 }
 .banner h1{
     padding: 0px 0 20px 30px;
+    font-size: 5em;
 }
 
 /* ------- FIN PAGINA  PRODUCT-LIST -------*/
@@ -790,7 +815,7 @@ li{
     }
 
     .banner-info{
-        background-image: url(img/Grupo\ 83.png);
+        background-image: url(/img/Grupo\ 83.png);
         background-size: 150%;
         background-position-x: center;
         background-position-y: center;
@@ -808,8 +833,8 @@ li{
         font-size: 9vh;
     }
     .product-info img{
-        width: 300px;
-        height: auto;
+        width: auto;
+        height: 200px;
     }
 
     .prod-bg{
