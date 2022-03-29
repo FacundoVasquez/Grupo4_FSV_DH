@@ -2,34 +2,52 @@
 <html lang="en">
 
 <head>
-        <%- include('partials/head', {title: 'Quienes somos'}) %>
-        <link href="css/quienesSomos.css" rel="stylesheet">
+    <%- include('partials/head', {title: 'Quienes somos' }) %>
+
 </head>
 
-<body>
-    <header>
-        <%- include('partials/header') %>
-    </header>
-    <section class="quienesSomos">
-    <h1 class="titulo_Kapu4">Acerca de Kapu</h1>
-    <p class="parrafo_quienes_somos">Kapu nace en el año 2018, cuando un grupo de jóvenes emprendedores estudiantes de programación full stack de Digital House, desarrollaron un e-commerce orientado a un público de jóvenes para que éstos puedieran personalizar sus productos preferidos haciéndolo en productos de la más alta calidad del mercado.</p>
-    <br>
-    <p class="parrafo_quienes_somos"> La marca Kapu es una marca de excelencia, cuenta con productos de primera línea creados con materias primas de la mejor calidad, todas ellas certificadas por normas internacionales. Nuestro compromiso con el cliente es lo que distigue a la marca ya que la marca presta especial atención a los detalles y el desarrollo de exclusivos diseños. </p>
-    <br>
-    <p class="parrafo_quienes_somos">Desde entonces, la marca se ha convertido en una prestigiosa referencia. Fiel a su legado y valores, es una marca muy valorada por su calidad e inconfundible estilo.</p>
-    <br>
-    <p class="parrafo_quienes_somos"> Hoy en día, con un recorrido de más de 4 años de experiencia integra con excelencia worldclass, todos los procesos de diseño, compras, producción, logística y comercialización.
+<body >
+
+    <%- include('partials/header') %>
+
+    <div class="body-quienes-somos">
+    <section class="banner">
+        <div class=" first-gap">
+
+        <div class="container">
+            <h1 class="">
+                Nosotros
+            </h1>
+
+
+        </div>
+
     </section>
 
-    <section>
-        <div class="seccion_imgroup">
-            <img class="fotos_kapu4" src="/img/Group 5.png">
-        </div>
-    </section>
-    
-    <footer>
+        <section class="container nosotros-content">
+            <p>Kapu nace en el año 2018, cuando un grupo de jóvenes emprendedores estudiantes de programación full stack
+                de Digital House, desarrollaron un e-commerce orientado a un público de jóvenes para que éstos puedieran
+                personalizar sus productos preferidos haciéndolo en productos de la más alta calidad del mercado. La
+                marca Kapu es una marca de excelencia, cuenta con productos de primera línea creados con materias primas
+                de la mejor calidad, todas ellas certificadas por normas internacionales. Nuestro compromiso con el
+                cliente es lo que distigue a la marca ya que la marca presta especial atención a los detalles y el
+                desarrollo de exclusivos diseños. Desde entonces, la marca se ha convertido en una prestigiosa
+                referencia. Fiel a su legado y valores, es una marca muy valorada por su calidad e inconfundible estilo.
+                Hoy en día, con un recorrido de más de 4 años de experiencia integra con excelencia worldclass, todos
+                los procesos de diseño, compras, producción, logística y comercialización.
+                
+            </p>
+        </section>
+
+    </div>
+
+
+
+
         <%-include("partials/footer")%>
-    </footer>
+
+  
 
 </body>
+
 </html>

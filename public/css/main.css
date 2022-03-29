@@ -110,11 +110,12 @@ header{
 .header-search{
     display: flex;
     align-items: center;
-    box-shadow: 5px 5px 8px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
     border-radius: 50px;
     padding: 3px 8px;
     background-color: white;
     margin: 0 5%;
+    height: 30px;
 
 }
 
@@ -611,11 +612,25 @@ textarea {
     width: 200px;
 }
 
-
-
-
-
 /* ------- FIN PAGINA  CONTACTO -------*/
+
+/* ------- INICIO PAGINA  QUIENES SOMOS -------*/
+
+.nosotros-content{
+    padding: 50px 20px 0 20px;
+}
+.nosotros-content p{
+    font-size: 16px;
+    line-height : 30px;
+    text-align: justify;
+ 
+   
+
+}
+
+
+/* ------- FIN PAGINA  QUIENES SOMOS -------*/
+
 
 /* ------- INICIO PAGINA  DETALLE PRODUCTO -------*/
 .max-with-product-detail{
@@ -857,6 +872,8 @@ li{
 
     /* FIN VISTOS RECIENTES */
 
+
+
     /* CATEGORIAS */
 
     .container-categoris{
@@ -893,7 +910,22 @@ li{
     /* CATEGORIAS */
 
     
+/* ------- INICIO PAGINA  QUIENES SOMOS -------*/
 
+.body-quienes-somos{
+    height: 79vh;
+}
+
+.nosotros-content p{
+    font-size: 24px;
+    line-height : 30px;
+    text-align: justify;
+ 
+   
+
+}
+
+/* ------- FIN PAGINA  QUIENES SOMOS -------*/
 
 
 
