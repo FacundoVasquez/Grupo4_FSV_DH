@@ -1,11 +1,11 @@
-const { body } = require("express-validator");
+const {body} = require("express-validator");
 const fs = require ("fs");
 const path = require ("path");
 
 const user = {
-    fileName: "./data/usersDataBase.json",
+    fileName: path.join(__dirname, "../data/usersDataBase.json"),
     
-    getData: function () {
+    getData: function() {
         return JSON.parse(fs.readFileSync(this.fileName,"utf-8"));
     },
 
@@ -31,11 +31,11 @@ const user = {
     
     findByField: function (field, text){
         let allUsers= this.findAll();
-        let userFound = allUsers.find (oneUser => oneUser[field] == text);
+        let userFound = allUsers.find(oneUser => oneUser.field == text);
         return userFound;
     },
 
-    create: function (usersData) {
+    create: function(usersData) {
 
         let allUsers= this.findAll();
         let newUser = {
@@ -53,7 +53,7 @@ const user = {
         fs.writeFileSync(this.fileName, JSON.stringify(finalUsers, null, ""))
         return finalUser;
     }, 
-}
+};
 
 module.exports = user;
 
