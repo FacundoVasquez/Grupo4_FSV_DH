@@ -1,4 +1,4 @@
-const {body} = require("express-validator");
+const { body } = require("express-validator");
 const fs = require ("fs");
 const path = require ("path");
 
@@ -25,13 +25,19 @@ const user = {
 
     findByPK: function (id){
         let allUsers= this.findAll();
-        let userFound = allUsers.find (oneUser => oneUser.id == id);
+        let userFound = allUsers.find(oneUser => oneUser.id == id);
         return userFound;
     },
     
     findByField: function (field, text){
-        let allUsers= this.findAll();
+        let allUsers = this.findAll();
         let userFound = allUsers.find(oneUser => oneUser.field == text);
+        return userFound;
+    },
+
+    findByEmail: function (text){
+        let allUsers = this.findAll();
+        let userFound = allUsers.find(oneUser => oneUser.email == text);
         return userFound;
     },
 

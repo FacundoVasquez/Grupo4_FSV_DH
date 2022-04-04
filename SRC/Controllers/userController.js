@@ -16,40 +16,38 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = { 
       register: (req, res) => {
-        let errors = validationResult(req);
-
-        if(!errors.isEmpty()){
-          return res.render("register", { errors: errors.errors, old:req.body});
-          }else{ 
-          return res.render("register", { data: req.body}); 
-        };
-
+        return res.render("register")
       },
-      
+
       processRegister: (req, res) => {
-        let userByEmail = user.findByField("email", req.body.email)
-      
-        if(userByEmail == req.body.email){
-          return res.render ("register",{
-          errors:{
-            email:{
-              msg:"Este usuario ya se encuentra registrado"
-            }
-          },
-              oldData:req.body
-            }
-          )} else {
-        let userToCreate = {
-        ...req.body,
-          password:bcryptjs.hashSync(req.body.password, 10),
-          password1:bcryptjs.hashSync(req.body.password1, 10),
-        };
+     
+        let errors = validationResult(req);
+  
+          if (!errors.isEmpty()) {
+          
+              return res.render("register", { errors: errors.errors, oldData:req.body});
+              //return res.send(errors.errors);
+              
+  
+          }else { 
+  
+               let userByEmail = user.findByEmail(req.body.email);
+        
+               if(userByEmail !== undefined) {
+                const errorEmail = [{"value":"","msg":"Usuario Registrado","param":"email","location":"body"}];
+                return res.render ("register", {errors: errorEmail, oldData:req.body});
+              }  else {
 
-        const userCreated = user.create(userToCreate);
-
-        return res.redirect("/user/login")
-        };
-      },
+                let userToCreate = {
+                     ...req.body,
+                 
+                     password:bcryptjs.hashSync(req.body.password, 10),
+                     password1:bcryptjs.hashSync(req.body.password1, 10),
+                 }
+   
+                 let userCreated = user.create(userToCreate);
+                 return res.redirect ("/user/login")
+                 }}},
 
       login: (req, res)=>{
         return res.render('login');
