@@ -54,10 +54,10 @@ const controller = {
       },
 
       loginProcess: (req, res) =>{
-        let userToLogin = user.findByField('email', req.body.email)
+        let userToLogin = user.findByField('email', req.body.email);
 
         if(userToLogin){
-          let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+          let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
           if(correctPassword){
             delete userToLogin.password;
             req.session.userLogged = userToLogin;
