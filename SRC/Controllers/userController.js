@@ -82,11 +82,14 @@ const controller = {
         });
       },
      
-      logout: (req, res) =>{
-        res.clearCookie('userEmail')
-        req.session.destroy();
-        return res.redirect('/');
-      },
+      logout: (req, res)=> {
+        req.session.destroy(()=> {
+        req.session = null
+        res.cookie('userEmail', null, {maxAge:-1})
+        return res.redirect('/')
+        });
+      }
+          
 }
 
 module.exports = controller;
