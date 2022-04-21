@@ -14,14 +14,27 @@ const usersPath = path.join(__dirname, "../data/usersDataBase.json");
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
+//base de datos
+
+const db = require("../../database/models")
+
 const controller = { 
       register: (req, res) => {
         return res.render("register")
       },
 
-      processRegister: (req, res) => {
+      processRegister: async(req, res) => {
+
+
+        await db.User.create({
+          name:'req.body.user_name',
+          email:'req.body.email',
+          password:'req.body.password',
+        })
+        return res.redirect ("/user/login")
+      },
      
-        let errors = validationResult(req);
+        /* let errors = validationResult(req);
   
           if (!errors.isEmpty()) {
           
@@ -47,7 +60,7 @@ const controller = {
    
                  let userCreated = user.create(userToCreate);
                  return res.redirect ("/user/login")
-                 }}},
+                 }}}, */
 
       login: (req, res)=>{
         return res.render('login');
@@ -83,10 +96,12 @@ const controller = {
       },
      
       logout: (req, res)=> {
-        req.session.destroy(()=> {
-        req.session = null
+        req.session.userLogged=null;
         res.cookie('userEmail', null, {maxAge:-1})
         return res.redirect('/')
+        req.session.destroy(()=> {
+        req.session = null
+
         });
       }
           
