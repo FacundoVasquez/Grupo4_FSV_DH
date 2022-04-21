@@ -4,7 +4,7 @@ const bcryptjs = require("bcryptjs");
 //Se requieren los módulos necesarios
 const path = require("path");
 const fs = require("fs");
-const user = require("../models/user");
+/*const user = require("../models/user");*/
 const express = require ("express");
 const { validationResult } = require("express-validator")
 const { body } = require("express-validator");
@@ -26,15 +26,15 @@ const controller = {
       processRegister: async(req, res) => {
 
 
-        await db.User.create({
-          name:'req.body.user_name',
-          email:'req.body.email',
-          password:'req.body.password',
+      await db.User.create({
+          name: req.body.user_name,
+          email: req.body.email,
+          password: req.body.password,
         })
         return res.redirect ("/user/login")
       },
      
-        /* let errors = validationResult(req);
+      /*    let errors = validationResult(req);
   
           if (!errors.isEmpty()) {
           

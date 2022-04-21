@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) => {
 
     }
     let confi = {
-        tableName: 'user',
+
         timestamps: false
 
     }
