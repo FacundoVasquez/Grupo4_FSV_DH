@@ -97,12 +97,12 @@ const controller = {
      
       logout: (req, res)=> {
         req.session.userLogged=null;
-        res.cookie('userEmail', null, {maxAge:-1})
-        return res.redirect('/')
-        req.session.destroy(()=> {
-        req.session = null
-
-        });
+        res.cookie('userEmail', null, {maxAge:-1});
+        req.session.destroy(/*()=> {
+          req.session = null
+          }*/);
+        /*console.log(req.session.userLogged);*/
+        return res.redirect('/');
       }
           
 }
