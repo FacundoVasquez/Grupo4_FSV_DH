@@ -62,7 +62,7 @@ const controller = {
                  return res.redirect ("/user/login")
                  }}}, */
 
-      login: (req, res)=>{
+      login: (req, res)=>{                  
         return res.render('login');
       },
 
@@ -96,7 +96,7 @@ const controller = {
       },
      
       logout: (req, res)=> {
-        req.session.userLogged=null;
+        req.session.userLogged = null;
         res.cookie('userEmail', null, {maxAge:-1})
         return res.redirect('/')
         req.session.destroy(()=> {
