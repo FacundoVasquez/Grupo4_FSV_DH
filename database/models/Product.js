@@ -1,48 +1,58 @@
 module.exports = (sequelize, dataTypes) => {
 
-    let alias = 'User'
+    let alias = 'Product'
 
     let col = {
-            user_id: {
+            products_id: {
                 type: dataTypes.INTEGER,
                 primaryKey: true,
                 autoIncrement: true
             },
-            email:{
+            name:{
                 type: dataTypes.STRING,
                 notNull: true,
                 unique: true
 
             } , 
-            password:{
+            price:{
                 type: dataTypes.STRING,
                 notNull: true,
                 
             },
-            name:{
+            discount:{
                 type: dataTypes.STRING,
                 notNull: true,
             },
             img:{
                 type: dataTypes.TEXT
+            },
+            description:{
+                type: dataTypes.TEXT
+            },
+            lead_time:{
+                type: dataTypes.TEXT
+            },
+            size_id:{
+                type: dataTypes.TEXT
+            },
+            color_id:{
+                type: dataTypes.TEXT
+            },
+            category_id:{
+                type: dataTypes.TEXT
             }
 
     }
-    let config = {
+    let confi = {
 
         timestamps: false
 
     }
 
 
-    const User = sequelize.define(alias, col, config);
+    const Product = sequelize.define(alias, col, confi);
 
-    return User;
+    return Product;
 }
-
-
-
-
-
 
 
