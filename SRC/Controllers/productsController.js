@@ -1,6 +1,7 @@
 //Se requieren los módulos necesarios
 const path = require("path");
 const fs = require("fs");
+const {Product} = require("../../database/models");
 
 //Se definen las rutas hacia los JSONs
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
@@ -8,13 +9,14 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
-    index: (req, res) => {
+    index: async (req, res) => {
+		const products = await Product.findAll()
         return res.render("products", {products: products});
     },
     
     detail: (req, res) => {
         const productIdToFind = req.params.id;
-		const product = products.find((p) => p.id == productIdToFind);
+		const product = Product.find((p) => p.id == productIdToFind);
 		//return res.send(product);
 		if(typeof product === "undefined") {
 			return res.send("Producto NO Encontrado");						

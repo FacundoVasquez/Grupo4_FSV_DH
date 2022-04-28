@@ -31,7 +31,7 @@ const user = {
     
     findByField: function (field, text){
         let allUsers = this.findAll();
-        let userFound = allUsers.find(oneUser => oneUser.field == text);
+        let userFound = allUsers.find(oneUser => oneUser[field] == text);
         return userFound;
     },
 

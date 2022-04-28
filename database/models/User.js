@@ -28,19 +28,25 @@ module.exports = (sequelize, dataTypes) => {
             }
 
     }
-    let confi = {
+    let config = {
 
         timestamps: false
 
     }
 
 
-    const User = sequelize.define(alias, col, confi);
+    const User = sequelize.define(alias, col, config);
+
+    User.associate = function(models) {
+        User.hasMany(models.Product, {
+            as:"produts",
+            foreingKey: "product_id"
+        });
 
     return User;
 }
 
-
+}
 
 
 

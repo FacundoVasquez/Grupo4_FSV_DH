@@ -16,7 +16,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 //base de datos
 
-const db = require("../../database/models")
+const {User} = require("../../database/models")
 
 const controller = { 
       register: (req, res) => {
@@ -24,9 +24,7 @@ const controller = {
       },
 
       processRegister: async(req, res) => {
-
-
-      await db.User.create({
+      await User.create({
           name: req.body.user_name,
           email: req.body.email,
           password: req.body.password,
@@ -67,7 +65,7 @@ const controller = {
       },
 
       loginProcess: (req, res) =>{
-        let userToLogin = user.findByField('email', req.body.email);
+        let userToLogin = user.findByEmail(req.body.email);
 
         if(userToLogin){
           let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
@@ -97,12 +95,12 @@ const controller = {
      
       logout: (req, res)=> {
         req.session.userLogged=null;
-        res.cookie('userEmail', null, {maxAge:-1})
-        return res.redirect('/')
-        req.session.destroy(()=> {
-        req.session = null
-
-        });
+        res.cookie('userEmail', null, {maxAge:-1});
+        req.session.destroy(/*()=> {
+          req.session = null
+          }*/);
+        /*console.log(req.session.userLogged);*/
+        return res.redirect('/');
       }
           
 }
