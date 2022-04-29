@@ -26,7 +26,7 @@ module.exports = (sequelize, dataTypes) => {
     Color.associate = function(models) {
         Color.hasMany(models.Product, {
             as:"products",
-            foreignKey: "product_id"
+            foreignKey: "products_id"
         });
 
 
