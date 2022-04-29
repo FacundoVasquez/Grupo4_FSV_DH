@@ -52,27 +52,29 @@ module.exports = (sequelize, dataTypes) => {
 
     const Product = sequelize.define(alias, col, confi);
 
+    Product.associate = function(models) {
+        Product.belongsTo(models.User, {
+            as:"user",
+            foreignKey: "user_id"
+        });
+        Product.belongsTo(models.Category, {
+            as:"category",
+            foreignKey: "category_id"
+        });
+        Product.belongsTo(models.Color,{
+            as:"color",
+            foreignKey: "color_id"
+    
+        });
+        Product.belongsTo(models.Size,{
+            as:"size",
+            foreignKey: "size_id"
+    
+        });
+    }
+
     return Product;
 }
 
-Product.associate = function(models) {
-    Product.belongsTo(models.User, {
-        as:"user",
-        foreingKey: "user_id"
-    });
-    Product.belongsTo(models.Category, {
-        as:"category",
-        foreingKey: "category_id"
-    });
-    Product.belongsTo(models.Color,{
-        as:"color",
-        foreingKey: "color_id"
 
-    });
-    Product.belongsTo(models.Size,{
-        as:"size",
-        foreingKey: "size_id"
-
-    });
-}
 

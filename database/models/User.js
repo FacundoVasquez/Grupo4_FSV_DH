@@ -40,11 +40,12 @@ module.exports = (sequelize, dataTypes) => {
     User.associate = function(models) {
         User.hasMany(models.Product, {
             as:"produts",
-            foreingKey: "product_id"
+            foreignKey: "product_id"
         });
 
-    return User;
 }
+return User;
+
 
 }
 
