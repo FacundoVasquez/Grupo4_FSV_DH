@@ -14,16 +14,18 @@ const controller = {
         return res.render("products", {products: products});
     },
     
-    detail: (req, res) => {
+    detail: async (req, res) => {
         const productIdToFind = req.params.id;
-		const product = Product.find((p) => p.id == productIdToFind);
-		//return res.send(product);
-		if(typeof product === "undefined") {
-			return res.send("Producto NO Encontrado");						
-		} else {
-			return res.render("productDetail", {"product": product});
-		};
-    },
+		const products = await Product.findByPk(productIdToFind)
+			.then(function(producto){
+
+			if(producto === "undefined") {
+				return res.send("Producto NO Encontrado");						
+			} else {
+				return res.render("productDetail", {producto: producto});
+			};
+		})},
+
     
     create: (req, res) => {
         return res.render("productCreate")
