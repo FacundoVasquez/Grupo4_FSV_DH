@@ -74,7 +74,7 @@ const controller = {
     },
 
 	// Update - Form to edit
-	edit: (req, res) => {
+	edit: async(req, res) => {
 		// Encontrar un producto en base a su id
 		// Pasarle a la vista los datos de este producto
 		// Buscar en array de products
@@ -82,7 +82,7 @@ const controller = {
 		// find()
 		// Accedo al id en req.params.id
 		const idProducto = req.params.id;
-		const productToEdit = products.find((product) => product.id == idProducto);
+		const productToEdit = await Product.findByPk(idProducto);
 		if (!productToEdit) {
 			return res.send('ERROR NO EXISTE PRODUCTO')
 		}
