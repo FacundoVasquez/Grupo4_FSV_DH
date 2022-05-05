@@ -92,16 +92,30 @@ const controller = {
 
 
 	// Update - Method to update
-	update: (req, res) => {
-		// Voy a tener que buscar el indice en el array del producto en base a su id
-		const idProducto = req.params.id;
-		const indiceDelProducto = products.findIndex((product) => product.id == idProducto);
+	update: async (req, res) => {
 
-		products[indiceDelProducto] = { ...products[indiceDelProducto], ...req.body }
-		controller.guardarProductos()
+		await Product.update({
+			name: req.body.name,
+			price: req.body.price,
+			discount: req.body.discount,
+			description: req.body.description,
+		  },{
+			  where:{
+				  products_id: req.params.id
+			  }
+		  }),
 
-		return res.send(products)
-		// Do the magic
+		   res.redirect('/product')
+
+		// // Voy a tener que buscar el indice en el array del producto en base a su id
+		// const idProducto = req.params.id;
+		// const indiceDelProducto = await Product.findByPk((product) => product.id == Product.products_id);
+
+		// products[indiceDelProducto] = { ...products[indiceDelProducto], ...req.body }
+		// controller.guardarProductos()
+
+		// return res.send(products)
+		// // Do the magic
 	},
 
     

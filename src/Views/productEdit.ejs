@@ -26,26 +26,26 @@
         <section class="margin-form-start">
             <div class="container">
                 <div class="form-contact">
-                    <form action="/product/<%= productToEdit.products_id %>?_method=PUT" method="POST">
+                    <form action="/product/<%= productToEdit.products_id %>/edit" method="POST">
                         <div class="label-flex section-form">
                             <label for="">Nombre del Producto</label>
-                            <input type="text" value="<%= productToEdit.name %>" id="nombre" placeholder="Nombre del producto">
+                            <input type="text" value="<%= productToEdit.name %>" id="name" placeholder="Nombre del producto">
                         </div>
                         <div class="label-flex section-form">
                             <label for="">Precio del Producto</label>
-                            <input type="number" name="precio"  value="<%= productToEdit.price %>" id="precio" placeholder="Precio $">
+                            <input type="number" name="price"  value="<%= productToEdit.price %>" id="price" placeholder="Precio $">
                         </div>
                         <div class="label-flex file-form">
                             <label for="">Imagen/es del Producto</label>
-                            <input type="file"  name="imagen"  id="imagen">
+                            <input type="file"  name="img"  id="img">
                         </div>
                         <div class="label-flex section-form">
                             <label for="">Descripción</label>
-                            <textarea name=""  id="" cols="30" rows="10" placeholder="Descripción del producto"><%= productToEdit.description %></textarea>
-                        </div>
+                            <textarea name="description"  id="description" cols="30" rows="10" placeholder="Descripción del producto"><%= productToEdit.description %></textarea>
+                        </div> 
                         <div class="label-flex section-form">
                             <label for="">Descuento</label>
-                            <input type="number" name="descuento"  value="<%= productToEdit.discount %>" id="descuento" placeholder="% Descuento">
+                            <input type="number" name="discount"  value="<%= productToEdit.discount %>" id="discount" placeholder="% Descuento">
 
                         </div>
                         <button class=" button large-button bg-green font-color-white " type="submit">Actualizar</button>

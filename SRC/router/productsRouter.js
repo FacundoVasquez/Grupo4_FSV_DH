@@ -24,7 +24,7 @@ router.post('/',upload.single('imagen'),productsController.store);
 router.get("/:id", productsController.detail);  
 
 router.get("/:id/edit", productsController.edit);
-router.put("/:id", upload.single('imagen'),productsController.update);
+router.post("/:id/edit", productsController.update);
 
 
 
