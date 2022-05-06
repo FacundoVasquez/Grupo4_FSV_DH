@@ -17,7 +17,7 @@
 
             </section>
             <section class="form">
-                <form action="/user/:id/edit" method="POST">
+                <form action="/user/<%= userToEdit.user_id %>/edit" method="POST">
                     <div class="seccionform">
                         <label for="user_name">Nombre y Apellido</label>
                         <input type="text" value="<%= userToEdit.name %>" name="user_name" placeholder="Ingresa su nombre y apellido" id="user_name">

@@ -33,6 +33,6 @@ router.post("/register",upload.single("avatar"),validation, userController.proce
 
 router.get("/:id/edit", userController.edit);
 router.post("/:id/edit",upload.single("avatar"),validation, userController.update);
-router.delete('/:id/delete', userController.delete);
+router.post('/:id/delete', userController.delete);
 
 module.exports = router;
