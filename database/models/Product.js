@@ -30,16 +30,25 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.TEXT
             },
             lead_time:{
-                type: dataTypes.TEXT
+                type: dataTypes.TEXT,
+                defaultValue: 1
+
             },
             size_id:{
-                type: dataTypes.TEXT
+                type: dataTypes.TEXT,
+                defaultValue: 1
+
+                
             },
             color_id:{
-                type: dataTypes.TEXT
+                type: dataTypes.TEXT,
+                defaultValue: 1
+
             },
             category_id:{
-                type: dataTypes.TEXT
+                type: dataTypes.TEXT,
+                defaultValue: 1
+
             }
 
     }

@@ -19,12 +19,13 @@ router.get("/", productsController.index);
 router.get("/cart", productsController.productCart);
 
 router.get("/create", productsController.create);
-router.post('/',upload.single('imagen'),productsController.store);
+router.post('/create',productsController.store);
 
 router.get("/:id", productsController.detail);  
 
 router.get("/:id/edit", productsController.edit);
 router.post("/:id/edit", productsController.update);
+router.post('/:id/delete', productsController.delete);
 
 
 

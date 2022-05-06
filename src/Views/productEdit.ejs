@@ -48,8 +48,10 @@
                             <input type="number" name="discount"  value="<%= productToEdit.discount %>" id="discount" placeholder="% Descuento">
 
                         </div>
-                        <button class=" button large-button bg-green font-color-white " type="submit">Actualizar</button>
+                        <button class=" button large-button bg-green font-color-white " type="submit">Editar Producto</button>
                     </form>
+                    <form action="/product/<%= productToEdit.products_id %>/delete" method="POST">
+                        <button class=" button large-button bg-green font-color-white " type="submit">Borrar Producto</button></form>
                 </div>
             </div>
         </section>

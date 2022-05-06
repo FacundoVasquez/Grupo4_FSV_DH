@@ -28,26 +28,26 @@
             <section class="margin-form-start">
                 <div class="container">
                     <div class="form-contact">
-                        <form action="" method="POST">
+                        <form action="/product/create" method="POST">
                             <div class="label-flex section-form">
                                 <label for="">Nombre del Producto</label>
-                                <input type="text" value="" id="nombre" placeholder="Nombre del producto">
+                                <input type="text" value="" name="name" id="name" placeholder="Nombre del producto">
                             </div>
                             <div class="label-flex section-form">
                                 <label for="">Precio del Producto</label>
-                                <input type="number" name="precio"  value="" id="precio" placeholder="Precio $">
+                                <input type="number" name="price"  value="" id="price" placeholder="Precio $">
                             </div>
                             <div class="label-flex file-form">
                                 <label for="">Imagen/es del Producto</label>
-                                <input type="file"  name="imagen"  id="imagen">
+                                <input type="file"  name="img"  id="img">
                             </div>
                             <div class="label-flex section-form">
                                 <label for="">Descripción</label>
-                                <textarea name="" id="" cols="30" rows="10" placeholder="Descripción del producto"></textarea>
+                                <textarea name="" id="descripcion" cols="30" rows="10" placeholder="Descripción del producto"></textarea>
                             </div>
                             <div class="label-flex section-form">
                                 <label for="">Descuento</label>
-                                <input type="number" name="descuento"  value="" id="descuento" placeholder="% Descuento">
+                                <input type="number" name="discount"  value="" id="discount" placeholder="% Descuento">
                             </div>
                             <button class=" button large-button bg-green font-color-white " type="submit">Crear</button>
                         </form>

@@ -31,42 +31,46 @@ const controller = {
         return res.render("productCreate")
     },
 
-    store:  function (req, res) {
-		// req.file es una nueva clave que multer le agrega al objeto req 
-		// con todos los datos resultantes de procesar el archivo
+    store: async(req, res) => {
+		await Product.create({
+			name: req.body.name,
+			price: req.body.price,
+			discount: req.body.discount,
+			description: req.body.description,
+		  })
+		  return res.redirect ("/product")
+		},
+		// // req.file es una nueva clave que multer le agrega al objeto req 
+		// // con todos los datos resultantes de procesar el archivo
 
-		// Pushear al array de productos existente un nuevo producto
-		// Un nuevo objeto literal
-
-
-		// Convertir price a número
-		// Agregarle ID e Image
-		const productToCreate = req.body;
-		// Number('123') = 123;
-		productToCreate.precio = Number(productToCreate.precio);
-		productToCreate.ETA = Number(productToCreate.ETA);
-		productToCreate.imagen = req.file.filename;
-        if (productToCreate.descuento == '') {
-			productToCreate.descuento = 0;
-		} else {
-			productToCreate.descuento = Number(productToCreate.descuento);
-		}
-
-		productToCreate.id = controller.asignarIdAProductoEnBaseAlUltimo();
-
-		// Agregar un elemento a un array 
-		// Método Push
-		// Array.push(nuevoElemento)
-		products.push(productToCreate);
-
-		controller.guardarProductos()
-		// Guardar el archivo json con el nuevo array
+		// // Pushear al array de productos existente un nuevo producto
+		// // Un nuevo objeto literal
 
 
-		return res.redirect("/product")
+		// // Convertir price a número
+		// // Agregarle ID e Image
+		// const productToCreate = req.body;
+		// // Number('123') = 123;
+		// productToCreate.precio = Number(productToCreate.precio);
+		// productToCreate.ETA = Number(productToCreate.ETA);
+		// productToCreate.imagen = req.file.filename;
+        // if (productToCreate.descuento == '') {
+		// 	productToCreate.descuento = 0;
+		// } else {
+		// 	productToCreate.descuento = Number(productToCreate.descuento);
+		// }
+
+		// productToCreate.id = controller.asignarIdAProductoEnBaseAlUltimo();
+
+		// // Agregar un elemento a un array 
+		// // Método Push
+		// // Array.push(nuevoElemento)
+		// products.push(productToCreate);
+
+		// controller.guardarProductos()
+		// // Guardar el archivo json con el nuevo array
+
 		
-
-    },
 		
 
     productCart: (req, res) => {
@@ -120,7 +124,14 @@ const controller = {
 
     
     // Delete - Delete one product from DB
-	destroy: (req, res) => {
+	delete: async (req, res) => {
+		await Product.destroy({
+			where:{
+				products_id: req.params.id
+			}
+		}),
+		res.redirect('/')
+
 		// Do the magic
 	},
 
