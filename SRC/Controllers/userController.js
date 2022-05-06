@@ -31,7 +31,51 @@ const controller = {
         })
         return res.redirect ("/user/login")
       },
-     
+
+      edit: async(req, res) => {
+        // Encontrar un usuario en base a su id
+        // Pasarle a la vista los datos de este usuario
+        // Buscar en array de usuarios
+        // El elemento cuyo id sea el enviado por parámetros
+        // find()
+        // Accedo al id en req.params.id
+        const idUser = req.params.id;
+        const userToEdit = await User.findByPk(idUser);
+        if (!userToEdit) {
+          return res.send('USUARIO NO REGISTRADO')
+        }
+    
+        return res.render('userEdit', {userToEdit})
+      },
+    
+    
+      // Update - Method to update
+      update: async (req, res) => {
+    
+      await User.update({
+        name: req.body.user_name,
+        email: req.body.email,
+        password: req.body.password,
+          },
+          {
+            where:{
+              user_id: req.params.id,
+            }
+          }),
+    
+           res.redirect('/user/login')
+           },
+    
+      delete: async (req, res) => {
+            await User.destroy({
+              where:{
+                user_id: req.params.id
+              }
+            }),
+            res.redirect('/user/login')
+        
+          },
+        
       /*    let errors = validationResult(req);
   
           if (!errors.isEmpty()) {

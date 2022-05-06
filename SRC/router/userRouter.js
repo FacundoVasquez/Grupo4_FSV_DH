@@ -31,4 +31,8 @@ router.get("/logout/", userController.logout)   //destruir sesion
 router.get("/register", guestMiddleware, userController.register);
 router.post("/register",upload.single("avatar"),validation, userController.processRegister);
 
+router.get("/:id/edit", userController.edit);
+router.post("/:id/edit",upload.single("avatar"),validation, userController.update);
+router.delete('/:id/delete', userController.delete);
+
 module.exports = router;
