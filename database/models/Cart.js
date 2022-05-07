@@ -14,7 +14,7 @@ module.exports = (sequelize, dataTypes) => {
 
             },
             date:{
-                type: dataTypes.date,
+                type: dataTypes.DATE,
                 notNull: true
 
             },
@@ -44,7 +44,7 @@ module.exports = (sequelize, dataTypes) => {
             as:"user",
             foreignKey: "user_id"
         });
-        Cart.hasMany(models.Products, {
+        Cart.hasMany(models.Product, {
             as:"products",
             foreignKey: "products_id"
         });

@@ -8,28 +8,28 @@ module.exports = (sequelize, dataTypes) => {
                 primaryKey: true,
                 autoIncrement: true
             },
+
             method:{
                 type: dataTypes.STRING,
                 notNull: true
-
             },
             
         }
-    }
+    
     let config = {
 
         timestamps: false
 
     }
 
-
     const Payment = sequelize.define(alias, col, config);
 
-    Payment.associate = function(models) {
-        Payment.belongsTo(models.Cart, {
-            as:"cart",
-            foreignKey: "cart_id"
-        });
+        Payment.associate = function(models) {
+            Payment.belongsTo(models.Cart, {
+                as:"cart",
+                foreignKey: "cart_id"
+            });
+    }
+return Payment;
 
-}
-return Cart;
+};
