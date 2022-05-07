@@ -3,7 +3,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Orden'
 
     let col = {
-            orden_id: {
+            orden_id:{
                 type: dataTypes.INTEGER,
                 primaryKey: true,
                 autoIncrement: true
