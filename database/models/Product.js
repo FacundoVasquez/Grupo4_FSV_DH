@@ -76,6 +76,17 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "size_id"
     
         });
+        Product.hasMany(models.Order,{
+            as:"order",
+            foreignKey: "order_id"
+    
+        });
+        Product.belongsTo(models.Cart,{
+            as:"cart",
+            foreignKey: "cart_id"
+    
+        });
+
     }
 
     return Product;
