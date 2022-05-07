@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
                 primaryKey: true,
                 autoIncrement: true
             },
-            order_id:{
+            orden_id:{
                 type: dataTypes.INTEGER,
                 notNull: true
 
