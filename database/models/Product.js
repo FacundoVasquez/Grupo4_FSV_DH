@@ -49,7 +49,14 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.TEXT,
                 defaultValue: 1
 
+            },
+            features:{
+                type:dataTypes.STRING,
+                notNull: true,
+                defaultValue: false
+
             }
+
 
     }
     let confi = {

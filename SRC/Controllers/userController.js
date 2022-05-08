@@ -27,9 +27,9 @@ const controller = {
       await User.create({
           name: req.body.user_name,
           email: req.body.email,
-          password: req.body.password,
+          password: bcryptjs.hashSync(req.body.password, 10),
         })
-        return res.redirect ("/user/login")
+          return res.redirect ("/user/login")
       },
 
       edit: async(req, res) => {
@@ -108,14 +108,14 @@ const controller = {
         return res.render('login');
       },
 
-      loginProcess: (req, res) =>{
-        let userToLogin = user.findByEmail(req.body.email);
+      loginProcess: async (req, res) =>{
+        let userToLogin =  await User.findAll(req.body.email);
 
         if(userToLogin){
-          let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-          if(correctPassword){
-            delete userToLogin.password;
-            req.session.userLogged = userToLogin;
+         let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+         if(correctPassword){
+          delete userToLogin.password;
+           req.session.userLogged = userToLogin;
           if(req.body.remember_user){
             res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60)*2})
           }
@@ -132,8 +132,11 @@ const controller = {
       },
 
       profile: (req, res)=>{
+        const user = req.session.userLogged;
+        //console.log(user)
+
         return res.render('userProfile', {
-          user: req.session.userLogged
+          user: user
         });
       },
      

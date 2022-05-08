@@ -26,7 +26,7 @@ router.post("/login", userController.loginProcess);     //procesar formulario
 
 router.get("/profile/", authMiddleware, userController.profile);     //perfil del usuario
 
-router.get("/logout/", userController.logout)   //destruir sesion
+router.get("/logout/", userController.logout)   //destruir sesion   
 
 router.get("/register", guestMiddleware, userController.register);
 router.post("/register",upload.single("avatar"),validation, userController.processRegister);
