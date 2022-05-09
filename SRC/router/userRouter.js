@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const userController = require("../controllers/userController");
 const validation = require('../middleware/validation');
+const emailValidation = require('../middleware/emailValidation');
 const path = require("path");
 const multer = require("multer");
 const { check } = require('express-validator');
@@ -29,7 +30,7 @@ router.get("/profile/", authMiddleware, userController.profile);     //perfil de
 router.get("/logout/", userController.logout)   //destruir sesion   
 
 router.get("/register", guestMiddleware, userController.register);
-router.post("/register",upload.single("avatar"),validation, userController.processRegister);
+router.post("/register",upload.single("avatar"),validation,emailValidation, userController.processRegister);
 
 router.get("/:id/edit", userController.edit);
 router.post("/:id/edit",upload.single("avatar"),validation, userController.update);

@@ -20,18 +20,25 @@ const {User} = require("../../database/models")
 
 const controller = { 
       register: (req, res) => {
+        
         return res.render("register")
       },
 
       processRegister: async(req, res) => {
-      await User.create({
-          name: req.body.user_name,
-          email: req.body.email,
-          password: bcryptjs.hashSync(req.body.password, 10),
-        })
-          return res.redirect ("/user/login")
-      },
+        let errors = validationResult(req);
+        if (!errors.isEmpty()) {
+        return res.render("register", { errors: errors.errors, oldData:req.body});
+            
+        }else { 
 
+                  User.create({
+                  name: req.body.user_name,
+                  email: req.body.email,
+                  password: bcryptjs.hashSync(req.body.password, 10),
+                })
+                return res.redirect ("/user/login")
+              }
+            },
       edit: async(req, res) => {
         // Encontrar un usuario en base a su id
         // Pasarle a la vista los datos de este usuario
