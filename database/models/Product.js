@@ -50,6 +50,7 @@ module.exports = (sequelize, dataTypes) => {
                 defaultValue: 1
 
             },
+            
             features:{
                 type:dataTypes.STRING,
                 notNull: true,

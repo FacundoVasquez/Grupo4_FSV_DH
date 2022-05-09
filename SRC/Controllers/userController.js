@@ -10,8 +10,8 @@ const { validationResult } = require("express-validator")
 const { body } = require("express-validator");
 
 //Se definen las rutas hacia los JSONs
-const usersPath = path.join(__dirname, "../data/usersDataBase.json");
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+// const usersPath = path.join(__dirname, "../data/usersDataBase.json");
+// const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 //base de datos
@@ -109,18 +109,22 @@ const controller = {
       },
 
       loginProcess: async (req, res) =>{
-        let userToLogin =  await User.findAll(req.body.email);
+        let userToLogin =  await User.findOne({ where: {email: req.body.email} });
 
         if(userToLogin){
          let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-         if(correctPassword){
-          delete userToLogin.password;
+        
+          if(correctPassword){
+           delete userToLogin.password;
            req.session.userLogged = userToLogin;
-          if(req.body.remember_user){
-            res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60)*2})
-          }
+        
+              if(req.body.remember_user){
+                res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60)*2})
+              };
+
             return res.redirect('/user/profile');            
           }
+
           return res.render('login', {
             errors: {
               email:{
@@ -128,7 +132,7 @@ const controller = {
               }
             }
           });
-        }
+        };
       },
 
       profile: (req, res)=>{
