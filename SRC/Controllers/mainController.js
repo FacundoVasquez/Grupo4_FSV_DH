@@ -1,6 +1,9 @@
 //Se requieren los módulos necesarios
 const path = require("path");
 const fs = require("fs");
+const {Product} = require("../../database/models");
+const db = require('../../database/models')
+const Op = db.Sequelize.Op;
 
 
 //Se definen las rutas hacia los JSONs
@@ -10,8 +13,14 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 const controller = {
-  index: (req, res) => {
-     return res.render("index")
+  index: async (req, res) => {
+    const destacados = await Product.findAll({
+      where:{
+        features : 'true'
+      }
+    })
+    console.log(destacados)
+     return res.render("index",{ destacados : destacados})
     },
   
   contacto: (req, res) => {

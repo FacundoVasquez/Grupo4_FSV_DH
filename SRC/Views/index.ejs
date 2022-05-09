@@ -36,6 +36,20 @@
             <div class="margine">
                 <h1 class="title-2">Destacados</h1>
                 <div class="flex">
+                    <% for(let i=0; i < destacados.length; i++){ %>
+                    <div class="product-info center-img">
+                        <img src="img/AC mockup.png" alt="">
+                       
+                        <div class="prod-bg">
+                            <h3><%= destacados[i].name %></h3>
+                            <p><%= destacados[i].price %> </p>
+                            <button class="button large-button">
+                                <a class="font-color-green" href="/product/5">Personalizar</a>
+                            </button>
+                        </div>
+                       
+                    </div>
+                    <% } %>
                     <!--
                     <div class="product-info center-img">
                         <img src="img/AC mockup.png" alt="">
