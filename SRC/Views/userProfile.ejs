@@ -12,7 +12,14 @@
     <header>
         <%- include('partials/header') %>
     </header>
-    <h1> hola <%= user %></h1>
+
+    <h1>
+         hola <%= user.name %>
+    </h1>
+    <img src="/public/img/users/<%= user.img %>" >
+    <div>
+        <%= user.email %>
+    </div>
 
 <body>
     

@@ -1,22 +1,27 @@
 
 const express = require("express")
-const { check } = require('express-validator');
-const { body } = require('express-validator');
-const {User} = require("../../database/models")
+const { validationResult } = require("express-validator");
+const { check, body } = require("express-validator")
+const { User } = require("../../database/models")
 
 
 const emailValidation = function (req, res, next) {
-    
-    let userByEmail = User.findAll({
+
+    let errores = validationResult(req)
+    let userByEmail = User.findOne({
         where:{email:req.body.email}
-    });
+
+    }).then((result)=>{
+        
+    if (userByEmail) {
     
-    if (userByEmail === undefined) {
+        /*const errorEmail = [{"value":"","msg":"Usuario Registrado","param":"email","location":"body", }];*/
+        
+        return res.render ("register", {errores:{email:{ msg: "Usuario Registrado"}}, oldData:req.body});
+
+     }
+    })
     
-    const errorEmail = [{"value":"","message":"Usuario Registrado","param":"email","location":"body", }];
-    
-    return res.render ("register", {errors: errorEmail, message: 'user_email_UNIQUE must be unique'});
-    }
     next()
 }
 

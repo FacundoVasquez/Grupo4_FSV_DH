@@ -83,67 +83,48 @@ const controller = {
         
           },
         
-      /*    let errors = validationResult(req);
-  
-          if (!errors.isEmpty()) {
-          
-              return res.render("register", { errors: errors.errors, oldData:req.body});
-              //return res.send(errors.errors);
-              
-  
-          }else { 
-  
-               let userByEmail = user.findByEmail(req.body.email);
-        
-               if(userByEmail !== undefined) {
-                const errorEmail = [{"value":"","msg":"Usuario Registrado","param":"email","location":"body"}];
-                return res.render ("register", {errors: errorEmail, oldData:req.body});
-              }  else {
-
-                let userToCreate = {
-                     ...req.body,
-                 
-                     password:bcryptjs.hashSync(req.body.password, 10),
-                     password1:bcryptjs.hashSync(req.body.password1, 10),
-                 }
-   
-                 let userCreated = user.create(userToCreate);
-                 return res.redirect ("/user/login")
-                 }}}, */
-
       login: (req, res)=>{
         return res.render('login');
       },
 
       loginProcess: async (req, res) =>{
-        let userToLogin =  await User.findAll(req.body.email);
 
-        if(userToLogin){
-         let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-         if(correctPassword){
-          delete userToLogin.password;
-           req.session.userLogged = userToLogin;
-          if(req.body.remember_user){
-            res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60)*2})
-          }
-            return res.redirect('/user/profile');            
-          }
-          return res.render('login', {
-            errors: {
-              email:{
-                msg: 'credenciales inválidas'
+        let userToLogin =  User.findOne({
+            where: {email: req.body.email}
+          })
+            .then(() => {
+
+            if(userToLogin){
+              let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+              
+              if(correctPassword){
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin
+
+                
               }
+              return res.redirect('/user/profile');
             }
-          });
-        }
-      },
-
+              else {
+              return res.render('login', {
+                errors: {
+                  email:{
+                    msg: 'las contraseñas no coinciden'
+                  }
+                }
+              
+              });
+            
+            }
+          })
+        },
+              /*if(req.body.remember_user){
+              res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60)*2})
+               */
+        
       profile: (req, res)=>{
-        const user = req.session.userLogged;
-        //console.log(user)
-
         return res.render('userProfile', {
-          user: user
+          user: req.session.userLogged
         });
       },
      
