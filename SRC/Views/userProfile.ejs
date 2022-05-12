@@ -11,17 +11,22 @@
     
     <header>
         <%- include('partials/header') %>
+    
+    
     </header>
 
-    <h1>
-         hola <%= user.name %>
-    </h1>
-    <img src="/public/img/users/<%= user.img %>" >
-    <div>
-        <%= user.email %>
-    </div>
+    <h1 style="padding-top: 180px; color: black;">Hola Mundo</h1>
+              
+       
+    <h3>
+        hola <%= usuario.name %>
+   </h3>
+   <img src="/public/img/user/<%= usuario.img %>" >
+   <div>
+    <p> <%= usuario.email %></p>
+   </div>       
 
-<body>
+
     
 </body>
 </html>

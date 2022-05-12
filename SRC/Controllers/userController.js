@@ -87,23 +87,18 @@ const controller = {
         return res.render('login');
       },
 
-      loginProcess: async (req, res) =>{
+      loginProcess: (req, res) =>{
 
-        let userToLogin =  User.findOne({
+        User.findOne({
             where: {email: req.body.email}
           })
-            .then(() => {
-
-            if(userToLogin){
-              let correctPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-              
+            .then((usuario) => {
+              let correctPassword = bcryptjs.compareSync(req.body.password, usuario.password);
               if(correctPassword){
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin
-
-                
-              }
-              return res.redirect('/user/profile');
+                delete usuario.password;
+                req.session.userLogged = usuario
+              
+              return res.render('userProfile', {usuario});
             }
               else {
               return res.render('login', {
@@ -112,12 +107,11 @@ const controller = {
                     msg: 'las contraseñas no coinciden'
                   }
                 }
-              
-              });
-            
-            }
-          })
-        },
+              })
+              }
+          
+              })
+      },
               /*if(req.body.remember_user){
               res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60)*2})
                */
