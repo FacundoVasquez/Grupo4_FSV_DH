@@ -23,6 +23,7 @@
             
                     <% }) %>
                     <% } %>
+                   
             
 
             </section>
@@ -30,11 +31,11 @@
                 <form action="/user/register" method="POST">
                     <div class="seccionform">
                         <label for="user_name">Nombre y Apellido</label>
-                        <input type="text" name="user_name" placeholder="Ingresa su nombre y apellido" id="user_name">
+                        <input type="text" name="user_name" placeholder="Ingresa su nombre y apellido" value="<%= locals.old && old.user_name%>" id="user_name">
                     </div>
                     <div class="seccionform">
                         <label for="email">E-mail</label>
-                        <input type="email" name="email" placeholder="Ingresa tu e-mail" id="email">
+                        <input type="email" name="email" placeholder="Ingresa tu e-mail" value="<%= locals.old && old.email%>" id="email">
                        </div>
                     <div class="seccionform">
                         <label for="password">Contraseña</label>
@@ -70,7 +71,7 @@
                         <button class="google" type="submit"><i class="fab fa-google"> Continuar en google</i></button>
                     </form>
                 </div>
-
+                
             </section>
         </div>
         <div class="modelo">
