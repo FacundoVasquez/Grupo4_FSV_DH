@@ -27,7 +27,7 @@ const controller = {
       processRegister: async(req, res) => {
         let errors = validationResult(req);
         if (!errors.isEmpty()) {
-        return res.render("register", { errors: errors.errors, oldData:req.body});
+        return res.render("register", { errors: errors.errors, old: req.body});
             
         }else { 
 

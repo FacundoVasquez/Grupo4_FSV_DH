@@ -11,20 +11,19 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const controller = {
     index: async (req, res) => {
 		const products = await Product.findAll()
-        return res.render("products", {products: products});
+        return res.render("products", {products});
     },
     
     detail: async (req, res) => {
         const productIdToFind = req.params.id;
-		const products = await Product.findByPk(productIdToFind)
-			.then(function(producto){
-
-			if(producto === "undefined") {
+		const products = await Product.findByPk(productIdToFind);
+			
+			if(products === "undefined") {
 				return res.send("Producto NO Encontrado");						
 			} else {
-				return res.render("productDetail", {producto: producto});
+				return res.render("productDetail", {producto});
 			};
-		})},
+		},
 
     
     create: (req, res) => {

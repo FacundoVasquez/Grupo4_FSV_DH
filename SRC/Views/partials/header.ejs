@@ -20,26 +20,7 @@
                 <input type="serch" placeholder="Buscá tu producto">
                 <img class="icon-search" src="/img/Grupo 82.svg" />
             </div>
-            <% if (locals.isLogged) { %>
-                <div class="flex-user-cart-icon">
-                <div class="dropdown is-hoverable">
-                    <div class="dropdown-trigger">
-                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                        <span>usuario</span>
-                        <span class="icon is-small">
-                          <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                      </button>
-                    </div>
-                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                      <div class="dropdown-content">
-                        <a href="/user/profile" class="dropdown-item">Ver perfil</a>
-                        <a href="/user/login" class="dropdown-item">Salir</a>
-                      </div>
-                    </div>
-                  </div>
-                <% } else { %>
-                    <div class="flex-user-cart-icon">
+            <% if (!locals.isLogged) { %><div class="flex-user-cart-icon">
                         <div class="dropdown is-hoverable">
                             <div class="dropdown-trigger">
                               <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
@@ -56,6 +37,26 @@
                               </div>
                             </div>
                           </div>
+                
+                <% } else { %>
+                  <div class="flex-user-cart-icon">
+                <div class="dropdown is-hoverable">
+                    <div class="dropdown-trigger">
+                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span><%= usuario.name %></span>
+                        <span class="icon is-small">
+                          <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content">
+                        <a href="/user/profile" class="dropdown-item">Ver perfil</a>
+                        <a href="/user/login" class="dropdown-item">Salir</a>
+                      </div>
+                    </div>
+                  </div>
+                    
                           <% } %>
             
             

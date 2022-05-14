@@ -1,28 +1,30 @@
-
 const express = require("express")
 const { validationResult } = require("express-validator");
 const { check, body } = require("express-validator")
-const { User } = require("../../database/models")
+const {User} = require("../../database/models")
 
 
 const emailValidation = function (req, res, next) {
 
     let errores = validationResult(req)
-    let userByEmail = User.findOne({
+    User.findOne({
         where:{email:req.body.email}
 
-    }).then((result)=>{
+    })
+    .then((result)=>{
         
-    if (userByEmail) {
+    if (result) {
     
         /*const errorEmail = [{"value":"","msg":"Usuario Registrado","param":"email","location":"body", }];*/
-        
-        return res.render ("register", {errores:{email:{ msg: "Usuario Registrado"}}, oldData:req.body});
+        console.log(result)
+        return res.render ("register", {errores:{email:{ msg: "Usuario Registrado"}}, old:req.body});
 
-     }
+     }else{next()};
+
+     
     })
     
-    next()
+    
 }
 
 
