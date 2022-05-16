@@ -10,6 +10,7 @@ const guestMiddleware = require('../middleware/guestMiddleware');
 const authMiddleware = require('../middleware/authMiddleware');
 
 //Multer foto registro
+
 const storage = multer.diskStorage({
     destination:function(req, file, cb) {
         cb(null, path.join(__dirname, "../../public/img/users"))
