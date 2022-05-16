@@ -17,8 +17,10 @@
             </nav>
 
             <div class="header-search">
-                <input type="serch" placeholder="Buscá tu producto">
-                <img class="icon-search" src="/img/Grupo 82.svg" />
+                <form action="/search" method="GET">
+                <input type="search" placeholder="Buscá tu producto" id="search">
+                <!--   <img class="icon-search" src="/img/Grupo 82.svg" /> -->
+                </form>
             </div>
             <% if (!locals.isLogged) { %><div class="flex-user-cart-icon">
                         <div class="dropdown is-hoverable">
@@ -32,7 +34,7 @@
                             </div>
                             <div class="dropdown-menu" id="dropdown-menu" role="menu">
                               <div class="dropdown-content">
-                                <a href="/user/register" class="dropdown-item">Registarte</a>
+                                <a href="/user/register" class="dropdown-item">Registrate</a>
                                 <a href="/user/login" class="dropdown-item">Ingresá a tu cuenta</a>
                               </div>
                             </div>

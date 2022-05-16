@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Listado de productos' }) %>
+
+
+	<body>
+
+		<header>
+			<%- include('partials/header') %>
+		</header>
+			<div class="product-cards" id="data-product-cards-container"></div>
+			<template id="data-product-template">
+				<div class="card">
+					<div class="header" data-header></div>
+					<div class="body" data-body></div>
+				</div>
+			</template>
+	</body>
+			<body>
+				
+		<%-include("./partials/footer")%>
+
+	</body>
+
+</html>

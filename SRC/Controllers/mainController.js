@@ -22,6 +22,7 @@ const controller = {
     console.log(destacados)
      return res.render("index",{ destacados : destacados})
     },
+
   
   contacto: (req, res) => {
       return res.render("contacto")
