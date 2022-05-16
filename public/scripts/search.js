@@ -1,5 +1,6 @@
 const { body } = require("express-validator")
 
+
 const productCardTemplate = document.querySelector("[data-product-template]")
 const productCardContainer = document.querySelector("[data-product-cards-container]")
 const searchInput = document.querySelector("[data-search]")

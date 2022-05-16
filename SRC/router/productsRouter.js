@@ -15,6 +15,7 @@ const storage=multer.diskStorage({
 const upload=multer({storage:storage});
 
 router.get("/", productsController.index);
+router.get("/search", productsController.search);
 
 router.get("/cart", productsController.productCart);
 

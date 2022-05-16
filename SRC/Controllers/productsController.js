@@ -2,6 +2,8 @@
 const path = require("path");
 const fs = require("fs");
 const {Product} = require("../../database/models");
+const {Op} = require('sequelize');
+ 
 
 //Se definen las rutas hacia los JSONs
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
@@ -12,6 +14,17 @@ const controller = {
     index: async (req, res) => {
 		const products = await Product.findAll()
         return res.render("products", {products});
+    },
+
+	search: (req, res)=>{
+        Product.findAll({
+            where:{
+                name:{ [Op.like] : '%' + req.query.term +'%'}
+            }
+        })
+        .then(productos =>{
+			return res.render("products", {products: productos});
+        })
     },
     
     detail: async (req, res) => {

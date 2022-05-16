@@ -6,7 +6,9 @@ const {User} = require("../../database/models")
 
 const emailValidation = function (req, res, next) {
 
-    let errores = validationResult(req)
+    let errors = validationResult(req)
+    //Se puede partir la validación de errores
+
     User.findOne({
         where:{email:req.body.email}
 
@@ -17,7 +19,7 @@ const emailValidation = function (req, res, next) {
     
         /*const errorEmail = [{"value":"","msg":"Usuario Registrado","param":"email","location":"body", }];*/
         console.log(result)
-        return res.render ("register", {errores:{email:{ msg: "Usuario Registrado"}}, old:req.body});
+        return res.render ("register", {errors:[{msg:"e-Mail ya existe"}], old:req.body});
 
      }else{next()};
 
