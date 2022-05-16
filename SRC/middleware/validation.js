@@ -8,7 +8,7 @@ check("password").notEmpty().withMessage("El campo contraseña no puede estar va
     minLowercase: 1,
     minUppercase: 1,
     minNumbers: 1
-}).withMessage("Password must be greater than 8 and contain at least one uppercase letter, one lowercase letter, one number, y caracter especial").bail(),
+}).withMessage("La contraseña debe tener al menos 8 caracteres, con al menos una mayúscula, una minúscula, un número y un caracter especial").bail(),
 
 check("password1").notEmpty().withMessage("El campo confirmación de contraseña no puede estar vacío").bail().isStrongPassword({
     minLength: 8,
