@@ -29,12 +29,12 @@ const controller = {
     
     detail: async (req, res) => {
         const productIdToFind = req.params.id;
-		const products = await Product.findByPk(productIdToFind);
+		const producto = await Product.findByPk(productIdToFind);
 			
-			if(products === "undefined") {
+			if(producto === "undefined") {
 				return res.send("Producto NO Encontrado");						
 			} else {
-				return res.render("productDetail", {producto});
+				return res.render("productDetail", { producto });
 			};
 		},
 
@@ -49,8 +49,9 @@ const controller = {
 			price: req.body.price,
 			discount: req.body.discount,
 			description: req.body.description,
+			img: req.file.filename,
 		  })
-		  return res.redirect ("/product")
+		  return res.redirect("product")
 		},
 		// // req.file es una nueva clave que multer le agrega al objeto req 
 		// // con todos los datos resultantes de procesar el archivo
@@ -86,8 +87,9 @@ const controller = {
 		
 
     productCart: (req, res) => {
-        return res.redirect ("/cart")
-    },
+		 
+        return res.render("productCart")
+	},
 
 	// Update - Form to edit
 	edit: async(req, res) => {

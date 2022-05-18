@@ -24,10 +24,10 @@ module.exports = (sequelize, dataTypes) => {
                 notNull: true,
             },
             img:{
-                type: dataTypes.TEXT
+                type: dataTypes.STRING,
             },
             description:{
-                type: dataTypes.TEXT
+                type: dataTypes.TEXT,
             },
             lead_time:{
                 type: dataTypes.TEXT,

@@ -14,8 +14,9 @@
   <main>
     <section class="product-container">
       <div class="product-image">
-        <img src="/img/products/<%= producto.img %>" alt="remera" width="50%"/>
-        <div id="divTopText" class="div-top-text"> <%= producto.description %> </div>
+        <img src = "/uploads/<%= producto.img %>" >
+        <div id="divTopText" class="div-top-text"> <%= producto.name %> </div> 
+        <div id="divTopText1" class="div-top-text1"> <%= producto.description %> </div>
       </div>
 
       <div class="carrousel-container">
@@ -34,17 +35,17 @@
       </div>
 
       <div class="product-form">
-        <form method="post">
+        <form method="POST">
           <div class="size-container">
-            <button type="button" class="size-button">S</button>
-            <button type="button" class="size-button">M</button>
-            <button type="button" class="size-button">L</button>
-            <button type="button" class="size-button">XL</button>
+            <button type="button" name="button-size" class="size-button" id="s">S</button>
+            <button type="button" name="button-size" class="size-button" id="m">M</button>
+            <button type="button" name="button-size" class="size-button" id="l">L</button>
+            <button type="button" name="button-size" class="size-button" id="xl">XL</button>
           </div>
 
           <div class="file">
             <label for="cargar-archivo"></label>
-            <input type="file" accept="image/*" class="up-file" name="archivo">
+            <input type="file" accept="image/*" class="up-file" name="img">
             
             <label for="top-text">Tu frase acá</label>
             <input type="text" id="topText" value=" "><label for="option">Elige la fuente</label>
