@@ -5,6 +5,8 @@
 <%- include('partials/head', {title: 'Register'}) %>
 
 <link href="/css/registerStyle.css" rel="stylesheet">
+<script src="/scripts/validacion.js"></script>
+
  
 
 <body>
@@ -28,10 +30,11 @@
 
             </section>
             <section class="form">
-                <form action="/user/register" method="POST">
+                <form action="/user/register" method="POST" class="register">
                     <div class="seccionform">
                         <label for="user_name">Nombre y Apellido</label>
-                        <input type="text" name="user_name" placeholder="Ingresa su nombre y apellido" value="<%= locals.old && old.user_name%>" id="user_name">
+                        <input  type="text" name="user_name" placeholder="Ingresa su nombre y apellido" value="<%= locals.old && old.user_name%>" id="user_name">
+                        <p class="error"></p>
                     </div>
                     <div class="seccionform">
                         <label for="email">E-mail</label>
