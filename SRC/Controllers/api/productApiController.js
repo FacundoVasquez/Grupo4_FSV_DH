@@ -1,10 +1,8 @@
-
-const {Product} = require("../database/models");
+const {Product} = require("../../../database/models");
 const {Op} = require('sequelize')
 
-const controller = {
 
-
+const productApiController = {
     list:(req,res) => {
 Product.findAll()
 .then(products=> {
@@ -83,4 +81,4 @@ search: (req, res)=>{
 
 }
 
-module.exports = controller;
+module.exports = productApiController;
