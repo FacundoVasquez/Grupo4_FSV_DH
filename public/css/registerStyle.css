@@ -65,7 +65,7 @@ input #file-upload-button{
     height: 43px;
     text-indent: 10px;
 }
-.error{
+.errores{
     color: red;
     font-size: 12px;
 }
