@@ -36,20 +36,25 @@
             <div class="margine">
                 <h1 class="title-2">Destacados</h1>
                 <div class="flex">
-                    <% for(let i=0; i < destacados.length; i++){ %>
+                    <% destacados.forEach(destacados =>{ %>
                     <div class="product-info center-img">
                         <img src="img/AC mockup.png" alt="">
                        
                         <div class="prod-bg">
-                            <h3><%= destacados[i].name %></h3>
-                            <p><%= destacados[i].price %> </p>
+                            <h3><%= destacados.name %></h3>
+                            <p><%= destacados.price %> </p>
+                            <% if (destacados.discount) {%>
+                                <span class="descuento">
+                                    <%= destacados.discount %>% OFF
+                                </span>
+                                <% } %>
                             <button class="button large-button">
-                                <a class="font-color-green" href="/product/<%= destacados[i].products_id %>">Personalizar</a>
+                                <a class="font-color-green" href="/product/<%= destacados.products_id %>">Personalizar</a>
                             </button>
                         </div>
                        
                     </div>
-                    <% } %>
+                    <% }) %>
                 </div>
             </div>
 

@@ -285,7 +285,7 @@ header{
 
 /* FIN SECCION TITULARES*/
 
-/* SECCION VISTOS RECIENTEMENTE*/
+/* SECCION destacados*/
 
 .product-seen{
     padding: 50px 0;
@@ -317,6 +317,7 @@ header{
 
 }
 .product-info{
+    position: relative;
     margin: 20px 20px;
     border-style: solid;
     border-radius: 20px;
@@ -324,12 +325,8 @@ header{
     border-width: 3px;
 }
 
-.product-info:hover{
-    box-shadow: 5px 5px 8px 0px rgba(0,0,0,0.3);
 
 
-
-}
 .img-product-box{
     width: 200px;
     height: 200px;
@@ -377,7 +374,19 @@ button:active{
     color: var(--color-white);
 }
 
-/* FIN SECCION VISTOS RECIENTES*/
+.descuento{
+    position: absolute;
+    top: 20px;
+    right: 5%;
+    font-size: 12px;
+    font-weight: 800;
+    background-color:var(--color-amarillo);
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+
+/* FIN SECCION destacados*/
 
 /* INICIO SECCION CATEGORIAS*/
 
