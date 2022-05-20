@@ -16,6 +16,9 @@ const upload=multer({storage:storage});
 
 router.get("/", productsController.index);
 router.get("/search", productsController.search);
+router.get('/indumentaria',productsController.indumentaria);
+router.get('/botellas',productsController.botellas);
+router.get('/accesorios',productsController.accesorios);
 
 router.get("/cart", productsController.productCart);
 
