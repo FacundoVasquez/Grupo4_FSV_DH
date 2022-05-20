@@ -4,7 +4,11 @@ let formulario = document.querySelector('.register');
 let errores = []
 let campoNombre = document.querySelector('#user_name');
 let campoEmail = document.querySelector('#email');
-let campoPassword = document.querySelector('#password')
+let campoPassword = document.querySelector('#password');
+let campoPassword1 = document.querySelector('#password1');
+let exprecionREmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i ;
+
+let pErrorPassword1 = document.querySelector('p.passwordE1')
 let pErrorPassword = document.querySelector('p.passwordE')
 let pErrorName = document.querySelector('p.error');
 let pErrorMail = document.querySelector('p.emailE')
@@ -16,7 +20,7 @@ let pErrorMail = document.querySelector('p.emailE')
             pErrorName.innerHTML = "El nombre no puede estar vacio y debe tener al menos 3 caracteres";
         }
     });
-    campoNombre.addEventListener("keyup",function(){
+    campoNombre.addEventListener("focusout",function(){
       if(campoNombre.value.length < 3){
           pErrorName.innerHTML = "El nombre no puede estar vacio y debe tener al menos 3 caracteres";
           errores.push("El nombre no puede estar vacio y debe tener al menos 3 caracteres")
@@ -27,7 +31,7 @@ let pErrorMail = document.querySelector('p.emailE')
         });
 //validacion de email
     campoEmail.addEventListener("focusout",function(){
-            if(campoEmail.value == ''){
+            if(!(exprecionREmail.test(campoEmail.value))){
                 pErrorMail.innerHTML = "El email no puede estar vacio y debe ser un email valido";
                 errores.push("El email no puede estar vacio y debe ser un email valido")
             } else{
@@ -51,7 +55,19 @@ let pErrorMail = document.querySelector('p.emailE')
         }
         });
 
+    campoPassword1.addEventListener("focusout",function(){
+        if(!(campoPassword1.value == campoPassword.value)){
+             pErrorPassword1.innerHTML = "Las constraseñas deben ser iguales";
+             errores.push("Las constraseñas deben ser iguales")
+         } else{
+             pErrorPassword1.innerHTML = "";
+             errores.length = 0;
+        }
+      });
+
+
 formulario.addEventListener('submit',(e)=>{
+
             if(errores.length > 0){
                 e.preventDefault()
             }
