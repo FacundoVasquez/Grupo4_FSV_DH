@@ -17,7 +17,7 @@ check("password1").notEmpty().withMessage("El campo confirmación de contraseña
     minNumbers: 1
 }).bail(),
 
-check("password").equals("password1").withMessage("Las contraseñas no coinciden"),
+/*check("password").equals("password1").withMessage("Las contraseñas no coinciden"),*/
 
 ];
 

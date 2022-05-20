@@ -13,7 +13,7 @@ const authMiddleware = require('../middleware/authMiddleware');
 
 const storage = multer.diskStorage({
     destination:function(req, file, cb) {
-        cb(null, path.join(__dirname, "../../public/img/users"))
+        cb(null, path.join(__dirname, "../../public/uploads/userUploads"))
     },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname))},   
@@ -31,7 +31,7 @@ router.get("/profile/", authMiddleware, userController.profile);     //perfil de
 router.get("/logout/", userController.logout)   //destruir sesion   
 
 router.get("/register", guestMiddleware, userController.register);
-router.post("/register",upload.single("avatar"),validation,emailValidation, userController.processRegister);
+router.post("/register", upload.single("img"), validation, emailValidation, userController.processRegister);
 
 router.get("/:id/edit", userController.edit);
 router.post("/:id/edit",upload.single("avatar"),validation, userController.update);
