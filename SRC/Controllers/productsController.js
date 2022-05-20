@@ -53,38 +53,6 @@ const controller = {
 		  })
 		  return res.redirect("product")
 		},
-		// // req.file es una nueva clave que multer le agrega al objeto req 
-		// // con todos los datos resultantes de procesar el archivo
-
-		// // Pushear al array de productos existente un nuevo producto
-		// // Un nuevo objeto literal
-
-
-		// // Convertir price a número
-		// // Agregarle ID e Image
-		// const productToCreate = req.body;
-		// // Number('123') = 123;
-		// productToCreate.precio = Number(productToCreate.precio);
-		// productToCreate.ETA = Number(productToCreate.ETA);
-		// productToCreate.imagen = req.file.filename;
-        // if (productToCreate.descuento == '') {
-		// 	productToCreate.descuento = 0;
-		// } else {
-		// 	productToCreate.descuento = Number(productToCreate.descuento);
-		// }
-
-		// productToCreate.id = controller.asignarIdAProductoEnBaseAlUltimo();
-
-		// // Agregar un elemento a un array 
-		// // Método Push
-		// // Array.push(nuevoElemento)
-		// products.push(productToCreate);
-
-		// controller.guardarProductos()
-		// // Guardar el archivo json con el nuevo array
-
-		
-		
 
     productCart: (req, res) => {
 		 
@@ -93,12 +61,6 @@ const controller = {
 
 	// Update - Form to edit
 	edit: async(req, res) => {
-		// Encontrar un producto en base a su id
-		// Pasarle a la vista los datos de este producto
-		// Buscar en array de products
-		// El elemento cuyo id sea el enviado por parámetros
-		// find()
-		// Accedo al id en req.params.id
 		const idProducto = req.params.id;
 		const productToEdit = await Product.findByPk(idProducto);
 		if (!productToEdit) {
@@ -124,16 +86,6 @@ const controller = {
 		  }),
 
 		   res.redirect('/product')
-
-		// // Voy a tener que buscar el indice en el array del producto en base a su id
-		// const idProducto = req.params.id;
-		// const indiceDelProducto = await Product.findByPk((product) => product.id == Product.products_id);
-
-		// products[indiceDelProducto] = { ...products[indiceDelProducto], ...req.body }
-		// controller.guardarProductos()
-
-		// return res.send(products)
-		// // Do the magic
 	},
 
     
@@ -148,14 +100,38 @@ const controller = {
 
 		// Do the magic
 	},
+	indumentaria: (req, res)=>{
+        Product.findAll({
+            where:{
+				category_id : 1,
+            }
+        })
+        .then(productos =>{
+			return res.render("products", {products: productos});
+        })
+    },
+	accesorios: (req, res)=>{
+        Product.findAll({
+            where:{
+				category_id : 2,
+            }
+        })
+        .then(productos =>{
+			return res.render("products", {products: productos});
+        })
+    },
+	botellas: (req, res)=>{
+        Product.findAll({
+            where:{
+				category_id : 3,
+            }
+        })
+        .then(productos =>{
+			return res.render("products", {products: productos});
+        })
+    },
 
-	guardarProductos() {
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-	},
 
-	asignarIdAProductoEnBaseAlUltimo: function () {
-		return products[products.length - 1].id + 1;
-	}
     
     
 };
