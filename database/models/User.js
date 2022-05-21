@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    let alias = 'User'
+    let alias = 'Users'
 
     let col = {
             user_id: {
@@ -35,7 +35,7 @@ module.exports = (sequelize, dataTypes) => {
     }
 
 
-    const User = sequelize.define(alias, col, config);
+    const Users = sequelize.define(alias, col, config);
 /*
     User.associate = function(models) {
         User.belongsTo(models.Cart, {
@@ -49,7 +49,7 @@ module.exports = (sequelize, dataTypes) => {
     
 
 }*/
-return User;
+return Users;
 
 
 }

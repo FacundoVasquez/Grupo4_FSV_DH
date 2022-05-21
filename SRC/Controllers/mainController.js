@@ -19,7 +19,7 @@ const controller = {
         features : 'true'
       }
     })
-    console.log(destacados)
+    // console.log(destacados)
      return res.render("index",{ destacados : destacados})
     },
 

@@ -18,12 +18,14 @@
     <h1 style="padding-top: 180px; color: black;">Hola Mundo</h1>
               
        
-    <h3>
-        hola <%= usuario.name %>
+   <h3>
+        Hola, <%= locals.userLogged.name %>
    </h3>
-   <img src="/public/img/user/<%= usuario.img %>" >
+   
+   <img src="/public/img/user/<%= locals.userLogged.img %>" >
+   
    <div>
-    <p> <%= usuario.email %></p>
+    <p> <%= locals.userLogged.email %></p>
    </div>       
 
 
