@@ -60,11 +60,11 @@ const controller = {
     
       // Update - Method to update
       update: async (req, res) => {
-    
+        console.log(req.file)
       await Users.update({
         name: req.body.user_name,
         email: req.body.email,
-        password: req.body.password,
+        img: req.file.filename,
           },
           {
             where:{

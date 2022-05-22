@@ -16,18 +16,17 @@
 
         <section class="first-gap user-profile">
             <div class="container">
-                <div class="flex user_info">
+                <div class="user_info">
                     <div class="profile_pic_container">
-                       x<img src= "../../public/img/uploads/userUploads/<%= locals.userLogged.img %>" >
+                       <img class="img_profile" src= "/uploads/userUploads/<%= locals.userLogged.img %>" >
                     </div>
                     <div>
                         <h3 class="profile_name"><%= locals.userLogged.name %></h3>
-                        <h3 class="profile_last_name">Drago</h3>
                         <p class="profile_email"> <%= locals.userLogged.email %></p>
                     </div>
                 </div>
             </div>
-            <button class="button text-white bg-green button_position"><a href="#">Editar perfil</a></button>
+            <a class="text-green  button_position" href="/user/<%= locals.userLogged.user_id%>/edit">Editar perfil</a>
         </section>
 
     </main>

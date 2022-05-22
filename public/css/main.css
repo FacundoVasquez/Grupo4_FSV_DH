@@ -444,10 +444,12 @@ button:active{
 .user-profile{
     position: relative;
     height: 80vh;
-    justify-items: center;
-}
-.profile_pic_container{
+    text-align: center;
+    margin-bottom: 80px;
 
+}
+.user_info{
+    padding: 40px 0 0 0;
 }
 
 .user-profile h3{
@@ -455,21 +457,30 @@ button:active{
     font-size: 2rem;
     color: var(--color-verde);
     font-weight: 700;
+    padding-top: 20px;
     
 }
-
-.profile_pic{
-    width: 300px;
-    height: 300px;
-    border: 2px solid var(--color-verde);
-    border-radius: 200px;
-    object-fit:cover;
-
+.img_profile{
+    width: 200px;
+    height: 200px;
+    border: 3px solid var(--color-verde);
+    border-radius: 100px;
+    margin: auto;
+    object-fit: cover;
+    object-fit: cover;
 }
+
 .button_position{
+    font-size: 12px;
     position: absolute;
-    top: 150px;
+    top: 200px;
     left: 70%;
+}
+.profile_email{
+
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-verde);
+    font-size: 16px;
 }
 
 /* FIN SECCION PERFIL DEL USUARIO*/
