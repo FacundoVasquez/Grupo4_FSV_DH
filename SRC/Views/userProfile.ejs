@@ -18,14 +18,12 @@
             <div class="container">
                 <div class="flex user_info">
                     <div class="profile_pic_container">
-                        <img class="profile_pic"
-                            src="https://img.blogs.es/anexom/wp-content/uploads/2021/12/perfil-1024x754.jpg"
-                            alt="imagen perfil">
+                       x<img src= "../../public/img/uploads/userUploads/<%= locals.userLogged.img %>" >
                     </div>
                     <div>
-                        <h3 class="profile_name">Federico</h3>
+                        <h3 class="profile_name"><%= locals.userLogged.name %></h3>
                         <h3 class="profile_last_name">Drago</h3>
-                        <p class="profile_email">fede@gmail.com</p>
+                        <p class="profile_email"> <%= locals.userLogged.email %></p>
                     </div>
                 </div>
             </div>
@@ -35,21 +33,6 @@
     </main>
     <%-include("partials/footer")%>
 
-
-
-<<<<<<< HEAD
-=======
-    <h1 style="padding-top: 180px; color: black;">Hola Mundo</h1>
-              
-       
-   <h3>
-        Hola, <%= locals.userLogged.name %>
-   </h3>
-   <img src= "../../public/img/uploads/userUploads/<%= locals.userLogged.img %>" >
-   <div>
-    <p> <%= locals.userLogged.email %></p>
-   </div>       
->>>>>>> 5079456ee4000720ebadaffbca4461f990cb20b4
 
 
 </body>
