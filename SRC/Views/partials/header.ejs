@@ -9,6 +9,46 @@
                 <i><img class="icon-menu" src="/img/Grupo 1.svg" /></i>
             </label>
             <nav class="menu-desplegable">
+              
+              <% if (!locals.isLogged) { %><div class="flex-user-cart-icon">
+                <div class="dropdown is-hoverable">
+                    <div class="dropdown-trigger">
+                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span>Ingresar</span>
+                        <span class="icon is-small">
+                          <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                      <div class="dropdown-content">
+                        <a href="/user/register" class="dropdown-item">Registrate</a>
+                        <a href="/user/login" class="dropdown-item">Ingresá a tu cuenta</a>
+                      </div>
+                    </div>
+                  </div>
+        
+        <% } else { %>
+          <div class="flex-user-cart-icon">
+        <div class="dropdown is-hoverable">
+            <div class="dropdown-trigger">
+              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                <span><%= locals.userLogged.name %></span>
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+              <div class="dropdown-content">
+                <a href="/user/userProfile" class="dropdown-item">Ver perfil</a>
+                <a href="/user/logout" class="dropdown-item">Salir</a>
+              </div>
+            </div>
+          </div>
+            
+                  <% } %>
+    
                 <ul>
                     <li> <a href="/product">Productos</a></li>
                     <li> <a href="/quienesSomos">Nosotros</a></li>
@@ -22,45 +62,7 @@
                 <!--   <img class="icon-search" src="/img/Grupo 82.svg" /> -->
                 </form>
             </div>
-            <% if (!locals.isLogged) { %><div class="flex-user-cart-icon">
-                        <div class="dropdown is-hoverable">
-                            <div class="dropdown-trigger">
-                              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <span>Ingresar</span>
-                                <span class="icon is-small">
-                                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                              </button>
-                            </div>
-                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                              <div class="dropdown-content">
-                                <a href="/user/register" class="dropdown-item">Registrate</a>
-                                <a href="/user/login" class="dropdown-item">Ingresá a tu cuenta</a>
-                              </div>
-                            </div>
-                          </div>
-                
-                <% } else { %>
-                  <div class="flex-user-cart-icon">
-                <div class="dropdown is-hoverable">
-                    <div class="dropdown-trigger">
-                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                        <span><%= locals.userLogged.name %></span>
-                        <span class="icon is-small">
-                          <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                      </button>
-                    </div>
-                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                      <div class="dropdown-content">
-                        <a href="/user/userProfile" class="dropdown-item">Ver perfil</a>
-                        <a href="/user/logout" class="dropdown-item">Salir</a>
-                      </div>
-                    </div>
-                  </div>
-                    
-                          <% } %>
-            
+           
             
                <a id="a-user-profile" href="/product/cart">
                    <img class="icon-menu cart" src="/img/Grupo 81.svg" />
