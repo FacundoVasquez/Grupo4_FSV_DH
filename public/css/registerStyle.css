@@ -65,6 +65,13 @@ input #file-upload-button{
     height: 43px;
     text-indent: 10px;
 }
+.errores{
+    color: red;
+    font-size: 12px;
+}
+.input_error{
+    border:1px solid red!important;
+}
 .pass-eye {
     position: relative;
 

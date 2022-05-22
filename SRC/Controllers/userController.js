@@ -36,6 +36,7 @@ const controller = {
                   name: req.body.user_name,
                   email: req.body.email,
                   password: bcryptjs.hashSync(req.body.password, 10),
+                  img: req.file.filename,
                 })
                 return res.redirect ("/user/login")
               }

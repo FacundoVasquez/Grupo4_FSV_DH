@@ -24,8 +24,8 @@ module.exports = (sequelize, dataTypes) => {
                 notNull: true,
             },
             img:{
-                type: dataTypes.TEXT
-            }
+                type: dataTypes.STRING,
+            },
 
     }
     let config = {

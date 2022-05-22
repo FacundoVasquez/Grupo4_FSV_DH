@@ -19,8 +19,9 @@ const controller = {
         features : 'true'
       }
     })
-    // console.log(destacados)
+
      return res.render("index",{ destacados : destacados})
+    
     },
 
   
@@ -36,8 +37,6 @@ const controller = {
       return res.render("productDetail")
     },//Controlador de la vista detalle producto
 
-    
-     
 }
 
 module.exports = controller;

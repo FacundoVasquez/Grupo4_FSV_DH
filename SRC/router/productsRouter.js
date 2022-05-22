@@ -6,7 +6,7 @@ const path = require("path");
 
 const storage=multer.diskStorage({
     destination:function(req, file, cb) {
-        cb(null, path.join(__dirname, "../../public/img/products"))
+        cb(null, path.join(__dirname, "../../public/uploads"))
     },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + '_' + Date.now() + path.extname(file.originalname))},   
@@ -16,11 +16,14 @@ const upload=multer({storage:storage});
 
 router.get("/", productsController.index);
 router.get("/search", productsController.search);
+router.get('/indumentaria',productsController.indumentaria);
+router.get('/botellas',productsController.botellas);
+router.get('/accesorios',productsController.accesorios);
 
 router.get("/cart", productsController.productCart);
 
 router.get("/create", productsController.create);
-router.post('/create',productsController.store);
+router.post('/create', upload.single("img"), productsController.store);
 
 router.get("/:id", productsController.detail);  
 
