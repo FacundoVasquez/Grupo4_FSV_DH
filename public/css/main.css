@@ -438,6 +438,42 @@ button:active{
 
 /* FIN SECCION CATEGORIAS*/
 
+/* COMIENZO SECCION PERFIL DEL USUARIO*/
+
+
+.user-profile{
+    position: relative;
+    height: 80vh;
+    justify-items: center;
+}
+.profile_pic_container{
+
+}
+
+.user-profile h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: var(--color-verde);
+    font-weight: 700;
+    
+}
+
+.profile_pic{
+    width: 300px;
+    height: 300px;
+    border: 2px solid var(--color-verde);
+    border-radius: 200px;
+    object-fit:cover;
+
+}
+.button_position{
+    position: absolute;
+    top: 150px;
+    left: 70%;
+}
+
+/* FIN SECCION PERFIL DEL USUARIO*/
+
 /* INICIO FOOTER*/
 
 footer{
@@ -497,6 +533,7 @@ footer img{
 .container{
     max-width: 1400px;
     margin: auto;
+    position: relative;
 }
 
 .banner{
@@ -1013,9 +1050,6 @@ footer img{
     .button-mg-botom{
         margin-bottom: 50px;
 
-    }
-    .title-categori{
-        font-size: 8vh;
     }
 
 }

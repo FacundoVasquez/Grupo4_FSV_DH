@@ -4,19 +4,20 @@ const bcryptjs = require("bcryptjs");
 //Se requieren los módulos necesarios
 const path = require("path");
 const fs = require("fs");
-/*const user = require("../models/user");*/
+//const user = require("../models/user");
 const express = require ("express");
 const { validationResult } = require("express-validator")
 const { body } = require("express-validator");
 
 //Se definen las rutas hacia los JSONs
-const usersPath = path.join(__dirname, "../data/usersDataBase.json");
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+// const usersPath = path.join(__dirname, "../data/usersDataBase.json");
+// const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 //base de datos
 
-const {User} = require("../../database/models")
+const {Users} = require("../../database/models");
+const User = require("../../database/models/User");
 
 const controller = { 
       register: (req, res) => {
@@ -31,7 +32,7 @@ const controller = {
             
         }else { 
 
-                  User.create({
+                  Users.create({
                   name: req.body.user_name,
                   email: req.body.email,
                   password: bcryptjs.hashSync(req.body.password, 10),
@@ -48,7 +49,7 @@ const controller = {
         // find()
         // Accedo al id en req.params.id
         const idUser = req.params.id;
-        const userToEdit = await User.findByPk(idUser);
+        const userToEdit = await Users.findByPk(idUser);
         if (!userToEdit) {
           return res.send('USUARIO NO REGISTRADO')
         }
@@ -60,7 +61,7 @@ const controller = {
       // Update - Method to update
       update: async (req, res) => {
     
-      await User.update({
+      await Users.update({
         name: req.body.user_name,
         email: req.body.email,
         password: req.body.password,
@@ -75,7 +76,7 @@ const controller = {
            },
     
       delete: async (req, res) => {
-            await User.destroy({
+            await Users.destroy({
               where:{
                 user_id: req.params.id
               }
@@ -90,16 +91,26 @@ const controller = {
 
       loginProcess: (req, res) =>{
 
-        User.findOne({
-            where: {email: req.body.email}
+        Users.findOne({
+          where: {email: req.body.email} 
           })
+          // console.log(req.body.email)
             .then((usuario) => {
+              
+              console.log(usuario);
+
+              if(!usuario){
+                console.log(usuario);
+                return res.send('USUARIO NO REGISTRADO')
+              };
+
               let correctPassword = bcryptjs.compareSync(req.body.password, usuario.password);
+              console.log(correctPassword);
               if(correctPassword){
                 delete usuario.password;
-                req.session.userLogged = usuario
-              
-              return res.render('userProfile', {usuario});
+                req.session.userLogged = usuario;
+
+              return res.redirect('/');
             }
               else {
               return res.render('login', {
@@ -118,17 +129,15 @@ const controller = {
                */
         
       profile: (req, res)=>{
-        return res.render('userProfile', {
-          user: req.session.userLogged
-        });
+        // console.log(req.session.userLogged);
+        // const user = locals.userLogged;
+        return res.render('userProfile');
       },
      
       logout: (req, res)=> {
         req.session.userLogged=null;
         res.cookie('userEmail', null, {maxAge:-1});
-        req.session.destroy(/*()=> {
-          req.session = null
-          }*/);
+        req.session.destroy();
         /*console.log(req.session.userLogged);*/
         return res.redirect('/');
       }

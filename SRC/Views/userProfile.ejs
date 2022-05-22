@@ -3,30 +3,55 @@
 <!-- Include Head -->
 
 <head>
-    <%- include('partials/head', {title: 'Inicio'}) %>
-    <link href="css/indexStyle.css" rel="stylesheet">
+    <%- include('partials/head', {title: 'Inicio' }) %>
+        <link href="css/indexStyle.css" rel="stylesheet">
 </head>
 
 <body>
-    
+
     <header>
         <%- include('partials/header') %>
-    
-    
     </header>
+    <main>
 
+        <section class="first-gap user-profile">
+            <div class="container">
+                <div class="flex user_info">
+                    <div class="profile_pic_container">
+                        <img class="profile_pic"
+                            src="https://img.blogs.es/anexom/wp-content/uploads/2021/12/perfil-1024x754.jpg"
+                            alt="imagen perfil">
+                    </div>
+                    <div>
+                        <h3 class="profile_name">Federico</h3>
+                        <h3 class="profile_last_name">Drago</h3>
+                        <p class="profile_email">fede@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <button class="button text-white bg-green button_position"><a href="#">Editar perfil</a></button>
+        </section>
+
+    </main>
+    <%-include("partials/footer")%>
+
+
+
+<<<<<<< HEAD
+=======
     <h1 style="padding-top: 180px; color: black;">Hola Mundo</h1>
               
        
-    <h3>
-        hola <%= usuario.name %>
+   <h3>
+        Hola, <%= locals.userLogged.name %>
    </h3>
-   <img src= "/uploads/userUploads/<%= usuario.img %>" >
+   <img src= "../../public/img/uploads/userUploads/<%= locals.userLogged.img %>" >
    <div>
-    <p> <%= usuario.email %></p>
+    <p> <%= locals.userLogged.email %></p>
    </div>       
+>>>>>>> 5079456ee4000720ebadaffbca4461f990cb20b4
 
 
-    
 </body>
+
 </html>
