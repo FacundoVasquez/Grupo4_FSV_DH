@@ -1,8 +1,11 @@
 const {Product} = require("../../database/models");
+// const Product = require("../../database/models/Product");
 const divTopText = document.getElementById('divTopText');
 const fontColor = document.getElementById ('color-text');
 const fontType = document.getElementById('option');
-const fontSize = document.getElementById ('fontSize');
+const fontSize = document.getElementById ('font-size');
+
+
 
 //TEXTO
 topText.addEventListener('keyup', ()=> {
