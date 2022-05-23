@@ -1,4 +1,4 @@
-const {Product} = require("../../database/models");
+//const {Product} = require("../../database/models");
 const divTopText = document.getElementById('divTopText');
 const fontColor = document.getElementById ('color-text');
 const fontType = document.getElementById('option');
@@ -26,44 +26,11 @@ fontSize.addEventListener('change', () =>{
     divTopText.style.fontSize = `${fontSize.value}px`;
 });
 
-//Vista detalle de producto - Size
+//BOTONES TALLES
 const queryId = (id) => document.getElementById(id)
 const queryClass = (className) => document.getElementsByClassName(className)
 let size = undefined
 
-/*const getFetch = new Promise ((resolve, rejected)=>{
-      let condition = true
-      const products = Product.findAll()
-      .then(products)
-        
-      if(condition){
-          resolve(products)
-      }else{
-          rejected('error')
-      }
-  })*/
-
-const requestProduct = () =>{
-    getFetch
-    .then(res =>cardProduct(res))
-}
-requestProduct()
-
-const cardProduct = Product.findAll()
-      .then((products) => {
-    queryId("productosCarrito").innerHTML
-    for (const{name, price, img} of products){
-        queryId("productosCarrito").innerHTML = `
-        <div class="info-producto">
-        <h3>${name}</h3>
-        <img src="${img}">
-        <span class="precio">${price}</span>
-        `
-    }
-})
-
-
-//botones talles
 queryId("s").addEventListener("click", () =>{
     size = "s"
     s.style.backgroundColor = ("#328093")
@@ -80,3 +47,25 @@ queryId("xl").addEventListener("click", () =>{
     size = "xl"
     xl.style.backgroundColor = ("#328093")
 })
+/* REVISAR ESTO
+//Vista detalle de producto - Size
+
+const requestProduct = () =>{
+    getFetch
+    .then(res =>cardProduct(res))
+}
+requestProduct()
+
+const cardProduct = Product.findAll()
+fetch('http://localhost:3000/api')    
+.then((products) => {
+    queryId("productosCarrito").innerHTML
+    for (const{name, price, img} of products){
+        queryId("productosCarrito").innerHTML = `
+        <div class="info-producto">
+        <h3>${name}</h3>
+        <img src="${img}">
+        <span class="precio">${price}</span>
+        `
+    }
+})*/
