@@ -31,7 +31,7 @@ const controller = {
         const productIdToFind = req.params.id;
 		const producto = await Product.findByPk(productIdToFind);
 			
-			if(producto === "undefined") {
+			if(!producto) {
 				return res.send("Producto NO Encontrado");						
 			} else {
 				return res.render("productDetail", { producto });
