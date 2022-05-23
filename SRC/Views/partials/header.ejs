@@ -9,12 +9,16 @@
                 <i><img class="icon-menu" src="/img/Grupo 1.svg" /></i>
             </label>
             <nav class="menu-desplegable">
-              
+              <ul>
+                <li> <a href="/product">Productos</a></li>
+                <li> <a href="/quienesSomos">Nosotros</a></li>
+                <li> <a href="/contacto">Contacto</a></li>
+                <li>
               <% if (!locals.isLogged) { %><div class="flex-user-cart-icon">
                 <div class="dropdown is-hoverable">
                     <div class="dropdown-trigger">
-                      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                        <span>Ingresar</span>
+                      <button class="button_ingreso" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <span style="color:#328093;">Ingresar</span>
                         <span class="icon is-small">
                           <i class="fas fa-angle-down" aria-hidden="true"></i>
                         </span>
@@ -46,13 +50,10 @@
               </div>
             </div>
           </div>
+        </li>
             
                   <% } %>
     
-                <ul>
-                    <li> <a href="/product">Productos</a></li>
-                    <li> <a href="/quienesSomos">Nosotros</a></li>
-                    <li> <a href="/contacto">Contacto</a></li>
                 </ul>
             </nav>
 
