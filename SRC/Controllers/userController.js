@@ -61,22 +61,22 @@ const controller = {
       // Update - Method to update
       update: async (req, res) => {
         
-        if (req.body.img  === undefined) {
+      if (req.body.img  === undefined) {
         
-      await Users.update({
+          await Users.update({
 
-        name: req.body.user_name,
-        email: req.body.email,
-        
-          },
-          {
-            where:{
-              user_id: req.params.id,
-            }
-          }),
+            name: req.body.user_name,
+            email: req.body.email,
+            
+              },
+              {
+                where:{
+                  user_id: req.params.id,
+                }
+              }),
     
-           res.render('userProfile')
-           }else{ 
+               res.render('userProfile')
+      }else{ 
             await Users.update({
               name: req.body.user_name,
               email: req.body.email,
@@ -89,8 +89,8 @@ const controller = {
                 }),
           
                  res.render('userProfile')
-           }
-          },
+      }
+    },
     
       delete: async (req, res) => {
             await Users.destroy({
@@ -98,7 +98,7 @@ const controller = {
                 user_id: req.params.id
               }
             }),
-            res.redirect('/user/login')
+            res.redirect('/')
         
           },
         

@@ -34,7 +34,7 @@ router.get("/register", guestMiddleware, userController.register);
 router.post("/register", upload.single("img"), validation, emailValidation, userController.processRegister);
 
 router.get("/:id/edit", userController.edit);
-router.post("/:id/edit", upload.single("img"), userController.update)  
+router.post("/:id/edit", upload.single("img"), validation, userController.update)  
 router.post('/:id/delete', userController.delete);
 
 module.exports = router;
