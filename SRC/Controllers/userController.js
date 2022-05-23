@@ -60,11 +60,14 @@ const controller = {
     
       // Update - Method to update
       update: async (req, res) => {
-        console.log(req.file)
+        
+        if (req.body.img  === undefined) {
+        
       await Users.update({
+
         name: req.body.user_name,
         email: req.body.email,
-        img: req.file.filename,
+        
           },
           {
             where:{
@@ -72,8 +75,22 @@ const controller = {
             }
           }),
     
-           res.redirect('/user/login')
-           },
+           res.render('userProfile')
+           }else{ 
+            await Users.update({
+              name: req.body.user_name,
+              email: req.body.email,
+              img: req.file.filename,
+                },
+                {
+                  where:{
+                    user_id: req.params.id,
+                  }
+                }),
+          
+                 res.render('userProfile')
+           }
+          },
     
       delete: async (req, res) => {
             await Users.destroy({

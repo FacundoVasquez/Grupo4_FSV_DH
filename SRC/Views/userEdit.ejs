@@ -17,7 +17,7 @@
 
             </section>
             <section class="form">
-                <form action="/user/<%= userToEdit.user_id %>/edit" method="POST">
+                <form action="/user/<%= userToEdit.user_id %>/edit" method="POST" enctype='multipart/form-data'>
                     <div class="seccionform">
                         <label for="user_name">Nombre y Apellido</label>
                         <input type="text" value="<%= userToEdit.name %>" name="user_name" placeholder="Ingresa su nombre y apellido" id="user_name">
@@ -26,18 +26,18 @@
                         <label for="email">E-mail</label>
                         <input type="email" value="<%= userToEdit.email %>" name="email" placeholder="Ingresa tu e-mail" id="email">
                     </div>
-                    <div class="seccionform">
-                        <label for="password">Contraseña</label>
+                  <div class="seccionform">
+                      <label for="password">Contraseña</label>
                         <div class="pass-eye">
-                        <input type="password" value="<%= userToEdit.password %>" name="password" placeholder="Ingresa tu contraseña" id="password" require minlength="6">
+                        <input type="password" name="password" placeholder="Ingresa tu contraseña" id="password" require minlength="6">
                         <i class="fa fa-eye showpwd" onClick="showPwd('password', this)">  </i>
                     </div>
                     </div>
                         <div class="seccionform">
                         <label for="img">Foto perfil usuario</label>
-                        <input class="avatar" type="file" value="<%= userToEdit.img %>" name="avatar" placeholder="Selecciona una imagen" id="img">
+                        <input class="avatar" type="file" value ="<%= userToEdit.img %>" name="img" placeholder="Selecciona una imagen" id="img">
                     </div>
- 
+                    
                     <button class=" button large-button bg-green font-color-white " type="submit">Editar usuario</button>
                 </form>
                 <form action="/user/<%= userToEdit.user_id %>/delete" method="POST">
