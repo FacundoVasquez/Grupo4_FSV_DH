@@ -6,7 +6,7 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const userLoggedMiddleware = require('./middleware/userLoggedMiddleware')
-
+const cors = require('cors')
 
 //Se configura la ruta de la carpeta pública y views
 const publicPath = path.resolve(__dirname,"../public");
@@ -16,6 +16,7 @@ const viewPath = path.join(__dirname, 'Views');
 app.set('views', viewPath);
 app.set("view engine", "ejs"); 
 app.use(express.static(publicPath));
+app.use(cors())
 
 // Permite trabajar con los datos que se envian desde el FORM
 app.use(express.urlencoded ({extended:false}));
