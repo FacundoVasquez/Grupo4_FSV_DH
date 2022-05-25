@@ -43,7 +43,9 @@ a{
     text-decoration: none;
     color: inherit;
 }
-
+a:hover{
+    color: inherit
+}
 .font-color-green{
     color: var(--color-verde);
 }
@@ -340,9 +342,6 @@ header{
     border-color: var(--color-verde);
     border-width: 3px;
 }
-
-
-
 .img-product-box{
     width: 200px;
     height: 200px;
@@ -940,6 +939,7 @@ li{
     .title-2{
         font-size: 9vh;
     }
+
     .product-info img{
         width: auto;
         height: 200px;

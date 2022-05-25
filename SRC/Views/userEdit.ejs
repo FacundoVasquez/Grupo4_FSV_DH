@@ -2,50 +2,63 @@
 <html lang="es">
 
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Editar usuario'}) %>
+<%- include('partials/head', {title: 'Editar usuario' }) %>
 
-<link href="/css/registerStyle.css" rel="stylesheet">
- 
-
-<body>
-    <div class="flex-container">
-        <div class="register">
-            <section class="header">
-
-                <div class="logo"><a href="/"><img src="/img/logo-kapu-01.png" alt="logo"></a></div>
-                <h1>Editar usuario</h1>            
-
-            </section>
-            <section class="form">
-                <form action="/user/<%= userToEdit.user_id %>/edit" method="POST" enctype='multipart/form-data'>
-                    <div class="seccionform">
-                        <label for="user_name">Nombre y Apellido</label>
-                        <input type="text" value="<%= userToEdit.name %>" name="user_name" placeholder="Ingresa su nombre y apellido" id="user_name">
-                    </div>
-                    <div class="seccionform">
-                        <label for="email">E-mail</label>
-                        <input type="email" value="<%= userToEdit.email %>" name="email" placeholder="Ingresa tu e-mail" id="email">
-                    </div>
-                  <div class="seccionform">
-                      <label for="password">Contraseña</label>
-                        <div class="pass-eye">
-                        <input type="password" name="password" placeholder="Ingresa tu contraseña" id="password" require minlength="6">
-                        <i class="fa fa-eye showpwd" onClick="showPwd('password', this)">  </i>
-                    </div>
-                    </div>
-                        <div class="seccionform">
-                        <label for="img">Foto perfil usuario</label>
-                        <input class="avatar" type="file" name="img" placeholder="Selecciona una imagen" id="img">
-                    </div>
-                    
-                    <button class=" button large-button bg-green font-color-white " type="submit">Editar usuario</button>
-                </form>
-                <form action="/user/<%= userToEdit.user_id %>/delete" method="POST">
-                    <button class=" button large-button bg-green font-color-white " type="submit">Borrar usuario</button></form>
+    <link href="/css/registerStyle.css" rel="stylesheet">
 
 
+    <body>
+        <header>
+            <%- include('partials/header') %>
+        </header>
+        <section class="banner">
+            <div class=" first-gap">
 
-                <!--
+                <div class="container">
+                    <h1 class="">
+                        Esitá tu perfil
+                    </h1>
+                </div>
+
+        </section>
+        <section class="margin-form-start">
+            <div class="container">
+                <div class="form-contact">
+                    <form action="/user/<%= userToEdit.user_id %>/edit" method="POST" enctype='multipart/form-data'>
+                        <div class="label-flex section-form">
+                            <label for="user_name">Nombre y Apellido</label>
+                            <input type="text" value="<%= userToEdit.name %>" name="user_name"
+                                placeholder="Ingresa su nombre y apellido" id="user_name">
+                        </div>
+                        <div class="label-flex section-form">
+                            <label for="email">E-mail</label>
+                            <input type="email" value="<%= userToEdit.email %>" name="email"
+                                placeholder="Ingresa tu e-mail" id="email">
+                        </div>
+                        <div class="label-flex section-form">
+                            <label for="password">Contraseña</label>
+                            <div class="contenedero_ojo">
+                                <input type="password" name="password" placeholder="Ingresa tu contraseña" id="password"
+                                    require minlength="6">
+                                <i class="fa fa-eye showpwd" onClick="showPwd('password', this)"> </i>
+                            </div>
+                        </div>
+                        <div class="label-flex section-form">
+                            <label for="img">Foto perfil usuario</label>
+                            <input class="avatar" type="file" name="img" placeholder="Selecciona una imagen" id="img">
+                        </div>
+
+                        <button class=" button large-button bg-green font-color-white " type="submit">Editar
+                            usuario</button>
+                    </form>
+                    <form action="/user/<%= userToEdit.user_id %>/delete" method="POST">
+                        <button class=" button large-button bg-green font-color-white " type="submit">Borrar
+                            usuario</button>
+                    </form>
+
+
+
+                    <!--
                     <div class="urlfb">
                     <form action="./" method="POST">
                         <button class="facebook" type="submit"><i class="fab fa-facebook-square"> Continuar en
@@ -58,23 +71,13 @@
                     </form>
                 </div>
                 -->
-
-            </section>
-        </div>
-        <div class="modelo">
-            <h1>Dejá volar tú</h1>
-            <h3>imaginación</h3>
-            <p>Personalizá cualquier producto y hacé realidad esa prenda que siempre quisiste</p>
-            <div class="merchandising">
-                <img class="remera" src="/img/Group 5.png" width="500px" alt="merchandising">
+                </div>
             </div>
-        </div>
-    </div>
-    
-    <%-include("./partials/footer")%>  
+        </section>
+        <%-include("./partials/footer")%>
 
-    <script src="/scripts/register.js"></script>
-    
-</body>
+            <script src="/scripts/register.js"></script>
+
+    </body>
 
 </html>
