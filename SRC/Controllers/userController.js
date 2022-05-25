@@ -4,7 +4,7 @@ const bcryptjs = require("bcryptjs");
 //Se requieren los módulos necesarios
 const path = require("path");
 const fs = require("fs");
-//const user = require("../models/user");
+const user = require("../models/user");
 const express = require ("express");
 const { validationResult } = require("express-validator")
 const { body } = require("express-validator");
@@ -60,7 +60,7 @@ const controller = {
     
       // Update - Method to update
       update: async (req, res) => {
-        
+      // console.log(req.body.img);  
       if (req.body.img  === undefined) {
         
           await Users.update({
@@ -73,11 +73,24 @@ const controller = {
                 where:{
                   user_id: req.params.id,
                 }
-              }),
-    
-               res.render('userProfile')
-      }else{ 
-            await Users.update({
+              });
+              
+              /*
+              let userUpdated = Users.findAll({
+                where:{email : req.session.userLogged.email,}}); //trae info de user
+
+              console.log(userUpdated);
+
+              res.locals.userLogged = userUpdated; //usuario logeado en variable local
+
+              console.log(res.locals.userLogged);
+              */
+
+              res.redirect('user/logout/')
+      }else{
+        //console.log(req.body.img);
+        // console.log(req.file.filename); 
+           await Users.update({
               name: req.body.user_name,
               email: req.body.email,
               img: req.file.filename,
@@ -86,10 +99,21 @@ const controller = {
                   where:{
                     user_id: req.params.id,
                   }
-                }),
+                });
           
-                 res.render('userProfile')
-      }
+                /*
+                // console.log(req.file.filename);
+                // console.log(req.body.img);
+
+                let emailCookie = req.cookies.userEmail;//busco usuario en cookie
+                let userFromCookie = user.findByEmail(emailCookie); //trae info de user
+
+                // req.session.userLogged = userFromCookie;
+                res.locals.userLogged = userFromCookie; //usuario logeado en variable local
+                */
+
+                res.redirect('user/logout/')
+      };
     },
     
       delete: async (req, res) => {
@@ -117,12 +141,12 @@ const controller = {
               console.log(usuario);
 
               if(!usuario){
-                console.log(usuario);
+                // console.log(usuario);
                 return res.send('USUARIO NO REGISTRADO')
               };
 
               let correctPassword = bcryptjs.compareSync(req.body.password, usuario.password);
-              console.log(correctPassword);
+              // console.log(correctPassword);
               if(correctPassword){
                 delete usuario.password;
                 req.session.userLogged = usuario;
