@@ -42,13 +42,13 @@ let pErrorMail = document.querySelector('p.emailE')
 //validacion de contraseña
     campoPassword.addEventListener('focusout',function(){
         if(campoPassword.value == ''){
-            pErrorPassword.innerHTML = "La contraseña no puede estar vacia y debe tener al menos 3 caracteres";
+            pErrorPassword.innerHTML = "La contraseña no puede estar vacia y debe tener al menos 8 caracteres mayuscula y un simbolo especial";
         }
     });
     campoPassword.addEventListener("keyup",function(){
-    if(campoPassword.value.length < 3){
-        pErrorPassword.innerHTML = "La contraseña no puede estar vacia y debe tener al menos 3 caracteres";
-        errores.push("La contraseña no puede estar vacia y debe tener al menos 3 caracteres")
+    if(campoPassword.value.length < 8){
+        pErrorPassword.innerHTML = "La contraseña no puede estar vacia y debe tener al menos 8 caracteres mayuscula y un simbolo especial";
+        errores.push("La contraseña no puede estar vacia y debe tener al menos 8 caracteres mayuscula y un simbolo especial")
     } else{
         pErrorPassword.innerHTML = "";
         errores.length = 0;

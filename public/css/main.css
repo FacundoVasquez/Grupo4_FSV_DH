@@ -283,13 +283,12 @@ header{
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--color-verde) ;
-    font-weight: 600;
+    font-weight: 800;
     color: var(--color-white) ;
     background-color: var(--color-amarillo);
     border-radius: 50px;
     border-style: none;
     padding: 10px 15px;
-    font-size: 0,5em;
     text-decoration: none;
 }
 .button:active{
@@ -502,6 +501,11 @@ button:active{
 
 /* FIN SECCION PERFIL DEL USUARIO*/
 
+
+
+
+
+
 /* INICIO FOOTER*/
 
 footer{
@@ -701,9 +705,24 @@ textarea {
    
 
 }
-
-
 /* ------- FIN PAGINA  QUIENES SOMOS -------*/
+
+/* ------- INICIO PAGINA  REGISTER -------*/
+
+.errores{
+    font-size: 12px;
+    font-weight: 100;
+    color: red;
+}
+.contenedero_ojo{
+    position: relative;
+}
+.contenedero_ojo i {
+    position: absolute;
+    top: 30%;
+    right: 5%;    
+}
+/* ------- FIN PAGINA REGISTER -------*/
 
 
 /* ------- INICIO PAGINA  DETALLE PRODUCTO -------*/
@@ -1072,9 +1091,7 @@ footer img{
     .paragraph{
         font-size: 1.2vw;
     }
-    .button{
-        font-size: 1em;
-    }
+
     .button-mg-botom{
         margin-bottom: 50px;
 

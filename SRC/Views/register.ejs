@@ -1,73 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Register'}) %>
+<%- include('partials/head', {title: 'Register' }) %>
+    <script src="/scripts/validacion.js"></script>
 
-<link href="/css/registerStyle.css" rel="stylesheet">
-<script src="/scripts/validacion.js"></script>
+    <body>
+        <header>
+            <%- include('partials/header') %>
+        </header>
+        <section class="banner">
+            <div class=" first-gap">
 
- 
+                <div class="container">
+                    <h1 class="">
+                        Registrate
+                    </h1>
+                </div>
 
-<body>
-    <div class="flex-container">
-        <div class="register">
-            <section class="header">
+        </section>
 
-                <div class="logo"><a href="/"><img src="/img/logo-kapu-01.png" alt="logo"></a></div>
-                <h1>Registrate</h1>
-
-                <% if (typeof errors !== "undefined") { %>
-
-                    <% errors.forEach(error => { %> 
-            
-                    <span style="color:red"><li><%= error.msg %> </li></span>
-            
-                    <% }) %>
-                    <% } %>
-                   
-            
-
-            </section>
-            <section class="form">
-                <form action="/user/register" method="POST" class="register" enctype='multipart/form-data'>
-                    <div class="seccionform">
-                        <label for="user_name">Nombre y Apellido</label>
-                        <input  type="text" name="user_name" placeholder="Ingresa su nombre y apellido" value="<%= locals.old && old.user_name%>" id="user_name">
-                        <p class="error errores"></p>
-                    </div>
-                    <div class="seccionform">
-                        <label for="email">E-mail</label>
-                        <input type="email" name="email" placeholder="Ingresa tu e-mail" value="<%= locals.old && old.email%>" id="email">
-                        <p class="emailE errores"></p>
-
-                    </div>
-                    <div class="seccionform">
-                        <label for="password">Contraseña</label>
-                        <div class="pass-eye">
-                        <input type="password" name="password" placeholder="Ingresa tu contraseña" id="password" require minlength="8">
-                        <i class="fa fa-eye showpwd" onClick="showPwd('password', this)">  </i>
-                        <p class="passwordE errores"></p>
-                    </div>
-                    </div>
-                    <div class="seccionform">
-                        <label for="password1">Confirmar Contraseña</label>
-                        <div class="pass-eye">
-                        <input type="password" name="password1" id="password1" placeholder="Ingresa nuevamente tu contraseña"
-                            id="password1" require minlength="8">
-                        <i class="fa fa-eye showpwd" onClick="showPwd('password1', this)"> </i>
-                        <p class="passwordE1 errores"></p>
+        <section class="margin-form-start">
+            <div class="container">
+                <section class="header">
+                    <% if (typeof errors !=="undefined" ) { %>
+                        <% errors.forEach(error=> { %>
+                            <span style="color:red">
+                                <li>
+                                    <%= error.msg %>
+                                </li>
+                            </span>
+                            <% }) %>
+                                <% } %>
+                </section>
+                <div class="form-contact">
+                    <form action="/user/register" method="POST" class="register" enctype='multipart/form-data'>
+                        <div class="label-flex section-form">
+                            <label for="user_name">Nombre y Apellido</label>
+                            <input type="text" name="user_name" placeholder="Ingresa su nombre y apellido"
+                                value="<%= locals.old && old.user_name%>" id="user_name">
+                            <p class="error errores"></p>
                         </div>
+                        <div class="label-flex section-form">
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" placeholder="Ingresa tu e-mail"
+                                value="<%= locals.old && old.email%>" id="email">
+                            <p class="emailE errores"></p>
                         </div>
-                    <div class="seccionform">
-                        <label for="img">Foto perfil usuario</label>
-                        <input class="avatar" type="file" name="img" placeholder="Selecciona una imagen" id="img">
-                    </div>
- 
-                    <button type="submit">ENVIAR</button>
-                </form>
-
-                <!-- <div class="urlfb">
+                        <div class="label-flex section-form">
+                            <label for="password">Contraseña</label>
+                            <div class="contenedero_ojo">
+                                <input type="password" name="password" placeholder="Ingresa tu contraseña" id="password"
+                                    require minlength="8">
+                                <i class="fa fa-eye showpwd" onClick="showPwd('password', this)"> </i>
+                            </div>
+                                <p class="passwordE errores"></p>
+                        </div>
+                        <div class="label-flex section-form">
+                            <label for="password1">Confirmar Contraseña</label>
+                            <div class="contenedero_ojo">
+                                <input type="password" name="password1" id="password1"
+                                    placeholder="Ingresa nuevamente tu contraseña" id="password1" require minlength="8">
+                                <i class="fa fa-eye showpwd" onClick="showPwd('password1', this)"> </i>
+                                <p class="passwordE1 errores"></p>
+                            </div>
+                        </div>
+                        <div class="label-flex section-form">
+                            <label for="img">Foto perfil usuario</label>
+                            <input class="avatar" type="file" name="img" placeholder="Selecciona una imagen" id="img">
+                        </div>
+                        <butto class=" button large-button bg-green font-color-white" type="submit">ENVIAR</button>
+                    </form>
+                    <!-- <div class="urlfb">
                     <form action="./" method="POST">
                         <button class="facebook" type="submit"><i class="fab fa-facebook-square"> Continuar en
                                 Facebook</i></button>
@@ -78,23 +81,13 @@
                         <button class="google" type="submit"><i class="fab fa-google"> Continuar en google</i></button>
                     </form>
                 </div> -->
-                
-            </section>
-        </div>
-        <div class="modelo">
-            <h1>Dejá volar tú</h1>
-            <h3>imaginación</h3>
-            <p>Personalizá cualquier producto y hacé realidad esa prenda que siempre quisiste</p>
-            <div class="merchandising">
-                <img class="remera" src="/img/Group 5.png" width="500px" alt="merchandising">
-            </div>
-        </div>
-    </div>
-    
-    <%-include("./partials/footer")%>  
 
-    <script src="/scripts/register.js"></script>
-    
-</body>
+                </div>
+            </div>
+        </section>
+        <%-include("./partials/footer")%>
+            <script src="/scripts/register.js"></script>
+
+    </body>
 
 </html>
