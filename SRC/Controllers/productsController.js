@@ -51,7 +51,7 @@ const controller = {
 			description: req.body.description,
 			img: req.file.filename,
 		  })
-		  return res.redirect("product")
+		  return res.redirect("/")
 		},
 
     productCart: (req, res) => {
@@ -73,7 +73,10 @@ const controller = {
 
 	// Update - Method to update
 	update: async (req, res) => {
-
+		console.log(req.body.img)
+		if (req.body.img  === undefined) {
+        
+		
 		await Product.update({
 			name: req.body.name,
 			price: req.body.price,
@@ -83,10 +86,28 @@ const controller = {
 			  where:{
 				  products_id: req.params.id
 			  }
-		  }),
+				}),
 
-		   res.redirect('/product')
-	},
+			  res.redirect("/")
+
+			}else{
+				await Product.update({
+				name: req.body.name,
+				price: req.body.price,
+				discount: req.body.discount,
+				description: req.body.description,
+				img: req.file.filename,
+				
+			  },
+			  {
+				  where:{
+					  products_id: req.params.id
+				  }
+				})
+					
+				  res.redirect("/")
+			}
+		  },
 
     
     // Delete - Delete one product from DB

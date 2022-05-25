@@ -26,22 +26,22 @@
         <section class="margin-form-start">
             <div class="container">
                 <div class="form-contact">
-                    <form action="/product/<%= productToEdit.products_id %>/edit" method="POST">
+                    <form action="/product/<%= productToEdit.products_id %>/edit" method="POST" enctype='multipart/form-data'>
                         <div class="label-flex section-form">
                             <label for="">Nombre del Producto</label>
-                            <input type="text" value="<%= productToEdit.name %>" id="name" placeholder="Nombre del producto">
+                            <input type="text" value="<%= productToEdit.name %>" name = "name" id="name" placeholder="Nombre del producto">
                         </div>
                         <div class="label-flex section-form">
                             <label for="">Precio del Producto</label>
                             <input type="number" name="price"  value="<%= productToEdit.price %>" id="price" placeholder="Precio $">
                         </div>
                         <div class="label-flex file-form">
-                            <label for="">Imagen/es del Producto</label>
-                            <input type="file"  name="img"  id="img">
+                            <label for="img">Imagen/es del Producto</label>
+                            <input type="file"  value="<%= productToEdit.img %>" name="img"  id="img">
                         </div>
                         <div class="label-flex section-form">
                             <label for="">Descripción</label>
-                            <textarea name="description"  id="description" cols="30" rows="10" placeholder="Descripción del producto"><%= productToEdit.description %></textarea>
+                            <textarea name="description"  value="<%= productToEdit.description %>" id="description" cols="30" rows="10" placeholder="Descripción del producto"></textarea>
                         </div> 
                         <div class="label-flex section-form">
                             <label for="">Descuento</label>

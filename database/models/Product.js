@@ -11,8 +11,6 @@ module.exports = (sequelize, dataTypes) => {
             name:{
                 type: dataTypes.STRING,
                 notNull: true,
-                unique: true
-
             } , 
             price:{
                 type: dataTypes.STRING,
