@@ -44,6 +44,7 @@ const controller = {
     },
 
     store: async(req, res) => {
+		console.log(req.body.img)
 		await Product.create({
 			name: req.body.name,
 			price: req.body.price,
@@ -73,22 +74,24 @@ const controller = {
 
 	// Update - Method to update
 	update: async (req, res) => {
-		console.log(req.body.img)
-		if (req.body.img  === undefined) {
-        
-		
+		console.log(req.file.filename)
+
+		if (req.file.filename  == undefined) {
 		await Product.update({
+
 			name: req.body.name,
 			price: req.body.price,
 			discount: req.body.discount,
 			description: req.body.description,
-		  },{
+
+		  },
+		  {
 			  where:{
 				  products_id: req.params.id
 			  }
-				}),
+				});
 
-			  res.redirect("/")
+			  res.redirect("/product")
 
 			}else{
 				await Product.update({
