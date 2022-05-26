@@ -5,7 +5,7 @@ const fontSize = document.getElementById ('font-size');
 
 //TEXTO
 if (divTopText){
-    divTopText.addEventListener('keyup', ()=> {
+    topText.addEventListener('keyup', ()=> {
     divTopText.innerHTML=topText.value;
 });
 }

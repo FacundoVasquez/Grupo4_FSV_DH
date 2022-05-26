@@ -1,4 +1,5 @@
 //API CARRITO
+let cart=[]
     fetch('http://localhost:3000/api')    
     .then(res=>res.json())
     .then((res) => {

@@ -20,13 +20,7 @@
         <div id="divTopText1" class="div-top-text1"> <%= producto.description %> </div>
       </div>
 
-      <div class="carrousel-container">
-        <div class="carrousel-image">
-          <img src="/img/AC mockup.png" alt="img1" class="img-carrousel" width="20%"/>
-          <img src="/img/AC mockup.png" alt="img2" class="img-carrousel" width="20%"/>
-          <img src="/img/AC mockup.png" alt="img3" class="img-carrousel" width="20%"/>
-        </div>
-      </div>
+    
     </section>
 
     <section class="container-title-form">
@@ -36,25 +30,25 @@
       </div>
 
       <div class="product-form">
-        <form method="POST">
-          <div class="size-container">
-            <button type="button" name="button-size" class="size-button" id="s">S</button>
-            <button type="button" name="button-size" class="size-button" id="m">M</button>
-            <button type="button" name="button-size" class="size-button" id="l">L</button>
-            <button type="button" name="button-size" class="size-button" id="xl">XL</button>
+        <label> Elige tu talle:</label>
+        <select name="size" id="size">
+          <option id= "S" value="S" >S</option>
+          <option id= "M" value="M" >M</option>
+          <option id= "L" value="L" >L</option>
+          <option id= "XL" value="XL" >XL</option>
+          
+        </select>
           </div>
-
-          <div class="file">
-            <label for="cargar-archivo"></label>
-            <input type="file" accept="image/*" class="up-file" name="img">
-            
+          <div>
             <label for="top-text">Tu frase acá</label>
             <input type="text" id="topText" value=" "><label for="option">Elige la fuente</label>
+          </div>
+            
             
             <select name="option" id="option">
               <option id= "arial" value="arial" style="font-family:Arial, Helvetica, sans-serif">ARIAL</option>
               <option id= "courier" value="courier" style="font-family: 'Courier New', Courier, monospace;">COURIER NEW</option>
-              <option id= "cursive" value="cursive" style="font-family:'cursive'"> COMIC SANS </option>
+              <option id= "cursive" value="cursive" style="font-family:'cursive'"> CURSIVE </option>
               <option id= "impact" value="impact" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">IMPACT</option>
               <option id= "timesNewRoman" value="times-new-roman" style="font-family:'Times New Roman', Times, serif">Times New Roman</option>
             </select>
