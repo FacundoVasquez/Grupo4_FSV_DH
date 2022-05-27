@@ -4,7 +4,7 @@ const bcryptjs = require("bcryptjs");
 //Se requieren los módulos necesarios
 const path = require("path");
 const fs = require("fs");
-const user = require("../models/user");
+/*const user = require("../models/user");*/
 const express = require ("express");
 const { validationResult } = require("express-validator")
 const { body } = require("express-validator");
@@ -17,7 +17,7 @@ const { body } = require("express-validator");
 //base de datos
 
 const {Users} = require("../../database/models");
-const User = require("../../database/models/User");
+/*const User = require("../../database/models/User");*/
 
 const controller = { 
       register: (req, res) => {
@@ -134,6 +134,9 @@ const controller = {
               if(correctPassword){
                 delete usuario.password;
                 req.session.userLogged = usuario;
+
+                if(req.body.remember_user != undefined)  {
+                  res.cookie('remember_user', usuario.email, {maxAge: (1000 * 60)*2})}
 
               return res.redirect('/');
             }

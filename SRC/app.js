@@ -6,6 +6,7 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const userLoggedMiddleware = require('./middleware/userLoggedMiddleware')
+const remember_user = require("./middleware/remember_user")
 const cors = require('cors')
 
 //Se configura la ruta de la carpeta pública y views
@@ -31,6 +32,7 @@ app.use(session({
 }))
 app.use(cookieParser());
 app.use(userLoggedMiddleware);  //middleware usuario logeado
+app.use(remember_user);
 
 //Rutas
 const mainRouter = require("./router/mainRouter");
