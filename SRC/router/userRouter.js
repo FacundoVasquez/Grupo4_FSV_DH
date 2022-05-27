@@ -26,7 +26,7 @@ const upload = multer({storage:storage});
 router.get("/login", guestMiddleware, userController.login);    //formulario login
 router.post("/login", userController.loginProcess);     //procesar formulario
 
-router.get("/userProfile/", authMiddleware, userController.profile);     //perfil del usuario
+router.get("/userProfile", authMiddleware, userController.profile);     //perfil del usuario
 
 router.get("/logout/", userController.logout)   //destruir sesion   
 
