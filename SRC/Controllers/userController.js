@@ -30,7 +30,16 @@ const controller = {
         if (!errors.isEmpty()) {
         return res.render("register", { errors: errors.errors, old: req.body});
             
-        }else { 
+        }else if (req.body.img  === undefined){
+          Users.create({
+            name: req.body.user_name,
+            email: req.body.email,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            img: 'avatar.jpeg',
+          })
+          return res.redirect ("/user/login")
+
+        }  else { 
 
                   Users.create({
                   name: req.body.user_name,
@@ -60,36 +69,20 @@ const controller = {
     
       // Update - Method to update
       update: async (req, res) => {
-      // console.log(req.body.img);  
-      if (req.body.img  === undefined) {
-        
+      if (req.body.img  === undefined) {      
           await Users.update({
-
             name: req.body.user_name,
-            email: req.body.email,
-            
+            email: req.body.email,      
               },
               {
                 where:{
                   user_id: req.params.id,
                 }
               });
-              
-              /*
-              let userUpdated = Users.findAll({
-                where:{email : req.session.userLogged.email,}}); //trae info de user
-
-              console.log(userUpdated);
-
-              res.locals.userLogged = userUpdated; //usuario logeado en variable local
-
-              console.log(res.locals.userLogged);
-              */
-
-              res.redirect('user/logout/')
+              req.session.userLogged=null;
+              req.session.destroy();
+              res.render('login')
       }else{
-        //console.log(req.body.img);
-        // console.log(req.file.filename); 
            await Users.update({
               name: req.body.user_name,
               email: req.body.email,
@@ -100,19 +93,10 @@ const controller = {
                     user_id: req.params.id,
                   }
                 });
-          
-                /*
-                // console.log(req.file.filename);
-                // console.log(req.body.img);
+                req.session.userLogged=null;
+                req.session.destroy();
 
-                let emailCookie = req.cookies.userEmail;//busco usuario en cookie
-                let userFromCookie = user.findByEmail(emailCookie); //trae info de user
-
-                // req.session.userLogged = userFromCookie;
-                res.locals.userLogged = userFromCookie; //usuario logeado en variable local
-                */
-
-                res.redirect('user/logout/')
+                res.render('login')
       };
     },
     
@@ -172,6 +156,7 @@ const controller = {
       profile: (req, res)=>{
         // console.log(req.session.userLogged);
         // const user = locals.userLogged;
+
         return res.render('userProfile');
       },
      
