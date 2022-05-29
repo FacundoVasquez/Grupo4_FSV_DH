@@ -3,9 +3,9 @@ Es un marketplace pensado para que el cliente pueda customizar diferentes produc
 Está dirigida a mayores de 18 años sin límite de edad, ubicados en la República Argentina que tengan acceso a un teléfono móvil o computadora con conexión a internet.
 
 Gracias a una amigable interface de nuetro sitio, de simple uso y dinámica, lograremos poder llegar no sólo a público que tenga dominio en tecnología y diseño, sino también aquellos que más dificultades tengan a la hora de realizar operaciones online.
-<p>
-  <img src="../grupo_4/public/img/KAPU_INDEX.png" width="300" title="hover text">
-</p>
+
+
+  [![KAPU-INDEX.png](https://i.postimg.cc/y6SZbRJ0/KAPU-INDEX.png)](https://postimg.cc/K4xjKRDY)
 
 
 
