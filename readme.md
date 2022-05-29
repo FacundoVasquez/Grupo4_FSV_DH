@@ -3,6 +3,11 @@ Es un marketplace pensado para que el cliente pueda customizar diferentes produc
 Está dirigida a mayores de 18 años sin límite de edad, ubicados en la República Argentina que tengan acceso a un teléfono móvil o computadora con conexión a internet.
 
 Gracias a una amigable interface de nuetro sitio, de simple uso y dinámica, lograremos poder llegar no sólo a público que tenga dominio en tecnología y diseño, sino también aquellos que más dificultades tengan a la hora de realizar operaciones online.
+<p>
+  <img src="../grupo_4/public/img/KAPU_INDEX.png" width="300" title="hover text">
+</p>
+
+
 
 ***
 ## EQUIPO DE DESARROLLO
@@ -46,3 +51,36 @@ Las páginas prototipadas fueron:
 
 # Tablero de Trabajo
 https://trello.com/b/Q06Mp1l6/grupo4personalizar
+--------------------------------------------------------------------------------------------------------------------
+# Lenguajes, tecnologías y Recursos:
+<h3></h3>
+    <ul>
+        <li> 
+            <img src="https://media.giphy.com/media/XAxylRMCdpbEWUAvr8/giphy.gif" alt="html" width="40" height="40"> 
+        </li>
+        <li> 
+            <img src="https://media.giphy.com/media/fsEaZldNC8A1PJ3mwp/giphy.gif" alt="css3" width="40" height="40">
+        </li>
+        <li> 
+            <img src="https://media.giphy.com/media/kdFc8fubgS31b8DsVu/giphy.gif" alt="node" width="40" height="40"> 
+        </li>
+        <li> 
+            <img src="https://media.giphy.com/media/ln7z2eWriiQAllfVcn/giphy.gif" alt="javascript" width="30" height="30"/> 
+        </li>
+        <li> 
+            <img src="https://media.giphy.com/media/kH1DBkPNyZPOk0BxrM/giphy.gif" alt="git" width="50" height="30"/>
+        </li>
+        <li> 
+            <img src="https://media.giphy.com/media/EK5nB6wQKKN86j7GWx/giphy.gif" alt="ddbb" width="50" height="50"/>
+        </li>
+        <li>Api utilizada: <a href="http://localhost:3000/api">API KAPU</a>
+        </li>
+    </ul> 
+ 
+------------------------------------------------------------------------------------------------------------------
+            
+## Para correr el proyecto:
+
+Ejecutar el comando:
+
+### `npm start`
