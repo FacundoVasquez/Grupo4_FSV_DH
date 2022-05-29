@@ -1,5 +1,5 @@
 //API CARRITO
-/*
+
 let cart=[]
     fetch('http://localhost:3000/api')    
     .then(res=>res.json())
@@ -13,10 +13,11 @@ let cart=[]
         `
         });
     })
-*/
+
 
 //                  *****PRUEBA CARRITO*****
 // ARRAY DE PRODUCTOS EN VENTA
+
 const productos = [
     {
         id: 1,
@@ -58,6 +59,8 @@ const DOMcarrito = document.querySelector('#productosCarrito');//
 const DOMtotal = document.querySelector('#total');//total
 const DOMbotonVaciar = document.querySelector('#boton-vaciar');//=
 DOMitems.addEventListener('click', anyadirProductoAlCarrito)
+DOMbotonVaciar.setAttribute("marcador", info.id)
+
 
 // Funciones
 //Renderiza todos los productos a partir de array productos. No confundir con el carrito

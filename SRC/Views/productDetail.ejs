@@ -14,7 +14,7 @@
   <main>
     <section class="product-container">
       <div class="product-image">
-        <img src = "/uploads/<%= producto.img %>" id="imagen-producto">
+        <img src = "/uploads/<%= producto.img %>" >
         <div id="divImgProduct"><%= producto.name %></div>
         <div id="divTopText" class="div-top-text">  </div> 
         <div id="divTopText1" class="div-top-text1"> <%= producto.description %> </div>
@@ -59,10 +59,9 @@
               <label for="font-size"> Tamaño del texto</label>
               <input id="font-size" type="number" value="30" min="10" max="45">
               
-
               <label for="submit"></label>
-              <button type="submit" class="submit" id="submit">AGREGAR AL CARRITO</button>
-            
+              <button type="submit" class="submit" id ="submit">AGREGAR AL CARRITO</button>
+            </form>
           </div>
         </form>
       </div>
@@ -73,9 +72,9 @@
   <footer>
     <%-include("./partials/footer")%> 
   </footer>
-  
- <script src="/scripts/productDetail.js"></script>
-
+  <!--   <script src="/scripts/pruebaCarrito.js"></script>-->
+  <script src="/scripts/productDetail.js"></script>
+  <script src="/scripts/productCart.js"></script>
 </body>
 
 </html>
