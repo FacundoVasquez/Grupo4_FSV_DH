@@ -60,60 +60,45 @@ const controller = {
     
       // Update - Method to update
       update: async (req, res) => {
-      // console.log(req.body.img);  
-      if (req.body.img  === undefined) {
+      const UserId = req.params.id; 
+      if (req.file !== undefined) {
+
+        await Users.update({
+          name: req.body.user_name,
+          email: req.body.email,
+          img: req.file.filename,
+            },
+            {
+              where:{
+                user_id: req.params.id,
+              }
+            });
+      
+            const userUpdated = await Users.findByPk(UserId);
+
+            req.session.userLogged = userUpdated;
+            res.locals.userLogged = userUpdated;
+
+            res.render("userProfile");
+
+      } else {
+        await Users.update({
+          name: req.body.user_name,
+          email: req.body.email,
+        },
+        {
+          where:{user_id: req.params.id,}
+        }
+        );
         
-          await Users.update({
+        const userUpdated = await Users.findByPk(UserId);
+        
+         req.session.userLogged = userUpdated;
+         res.locals.userLogged = userUpdated;
 
-            name: req.body.user_name,
-            email: req.body.email,
-            
-              },
-              {
-                where:{
-                  user_id: req.params.id,
-                }
-              });
-              
-              /*
-              let userUpdated = Users.findAll({
-                where:{email : req.session.userLogged.email,}}); //trae info de user
+         res.render("userProfile");
 
-              console.log(userUpdated);
-
-              res.locals.userLogged = userUpdated; //usuario logeado en variable local
-
-              console.log(res.locals.userLogged);
-              */
-
-              res.redirect('user/logout/')
-      }else{
-        //console.log(req.body.img);
-        // console.log(req.file.filename); 
-           await Users.update({
-              name: req.body.user_name,
-              email: req.body.email,
-              img: req.file.filename,
-                },
-                {
-                  where:{
-                    user_id: req.params.id,
-                  }
-                });
-          
-                /*
-                // console.log(req.file.filename);
-                // console.log(req.body.img);
-
-                let emailCookie = req.cookies.userEmail;//busco usuario en cookie
-                let userFromCookie = user.findByEmail(emailCookie); //trae info de user
-
-                // req.session.userLogged = userFromCookie;
-                res.locals.userLogged = userFromCookie; //usuario logeado en variable local
-                */
-
-                res.redirect('user/logout/')
-      };
+    }
     },
     
       delete: async (req, res) => {
