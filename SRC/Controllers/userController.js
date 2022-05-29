@@ -30,7 +30,7 @@ const controller = {
         if (!errors.isEmpty()) {
         return res.render("register", { errors: errors.errors, old: req.body});
             
-        }else if (req.body.img  === undefined){
+        }else if (req.file  === undefined){
           Users.create({
             name: req.body.user_name,
             email: req.body.email,
