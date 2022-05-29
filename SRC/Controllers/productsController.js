@@ -19,7 +19,7 @@ const controller = {
 	search: (req, res)=>{
         Product.findAll({
             where:{
-                name:{ [Op.like] : '%' + req.params.query.term +'%'}
+                name:{ [Op.like] : '%' + req.query.term +'%'}
             }
         })
         .then(productos =>{
