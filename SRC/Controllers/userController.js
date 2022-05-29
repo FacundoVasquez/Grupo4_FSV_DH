@@ -69,35 +69,45 @@ const controller = {
     
       // Update - Method to update
       update: async (req, res) => {
-      if (req.body.img  === undefined) {      
-          await Users.update({
-            name: req.body.user_name,
-            email: req.body.email,      
-              },
-              {
-                where:{
-                  user_id: req.params.id,
-                }
-              });
-              req.session.userLogged=null;
-              req.session.destroy();
-              res.render('login')
-      }else{
-           await Users.update({
-              name: req.body.user_name,
-              email: req.body.email,
-              img: req.file.filename,
-                },
-                {
-                  where:{
-                    user_id: req.params.id,
-                  }
-                });
-                req.session.userLogged=null;
-                req.session.destroy();
+      const UserId = req.params.id; 
+      if (req.file !== undefined) {
 
-                res.render('login')
-      };
+        await Users.update({
+          name: req.body.user_name,
+          email: req.body.email,
+          img: req.file.filename,
+            },
+            {
+              where:{
+                user_id: req.params.id,
+              }
+            });
+      
+            const userUpdated = await Users.findByPk(UserId);
+
+            req.session.userLogged = userUpdated;
+            res.locals.userLogged = userUpdated;
+
+            res.render("userProfile");
+
+      } else {
+        await Users.update({
+          name: req.body.user_name,
+          email: req.body.email,
+        },
+        {
+          where:{user_id: req.params.id,}
+        }
+        );
+        
+        const userUpdated = await Users.findByPk(UserId);
+        
+         req.session.userLogged = userUpdated;
+         res.locals.userLogged = userUpdated;
+
+         res.render("userProfile");
+
+    }
     },
     
       delete: async (req, res) => {
