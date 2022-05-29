@@ -2,9 +2,9 @@ function showPwd(id, el) {
     let x = document.getElementById(id);
     if (x.type === "password") {
       x.type = "text";
-      el.className = 'fa fa-eye-slash showpwd';
+      el.className = 'fa fa-eye showpwd';
     } else {
       x.type = "password";
-      el.className = 'fa fa-eye showpwd';
+      el.className = 'fa fa-eye-slash showpwd';
     }
   }

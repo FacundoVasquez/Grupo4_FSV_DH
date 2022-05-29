@@ -3,6 +3,7 @@
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Register' }) %>
     <script src="/scripts/validacion.js"></script>
+    <script src="/scripts/register.js"></script>
 
     <body>
         <header>
@@ -51,7 +52,7 @@
                             <div class="contenedero_ojo">
                                 <input type="password" name="password" placeholder="Ingresa tu contraseña" id="password"
                                     require minlength="8">
-                                <i class="fa fa-eye showpwd" onClick="showPwd('password', this)"> </i>
+                                <i class="fa fa-eye-slash showpwd" onClick="showPwd('password', this)"> </i>
                             </div>
                             <p class="passwordE errores"></p>
                         </div>
@@ -60,7 +61,7 @@
                             <div class="contenedero_ojo">
                                 <input type="password" name="password1" id="password1"
                                     placeholder="Ingresa nuevamente tu contraseña" id="password1" require minlength="8">
-                                <i class="fa fa-eye showpwd" onClick="showPwd('password1', this)"> </i>
+                                <i class="fa fa-eye-slash showpwd" onClick="showPwd('password1', this)"> </i>
                                 <p class="passwordE1 errores"></p>
                             </div>
                         </div>
@@ -70,17 +71,6 @@
                         </div>
                         <button class=" button large-button bg-green font-color-white" type="submit">ENVIAR</button>
                     </form>
-                    <!-- <div class="urlfb">
-                    <form action="./" method="POST">
-                        <button class="facebook" type="submit"><i class="fab fa-facebook-square"> Continuar en
-                                Facebook</i></button>
-                    </form>
-                </div>
-                <div class="urlg">
-                    <form action="./" method="POST">
-                        <button class="google" type="submit"><i class="fab fa-google"> Continuar en google</i></button>
-                    </form>
-                </div> -->
 
                 </div>
             </div>
