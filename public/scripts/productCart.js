@@ -1,5 +1,6 @@
 //API CARRITO
-
+/*
+// RENDERIZA EL ULTIMO ITEM DE LA API
 let cart=[]
     fetch('http://localhost:3000/api')    
     .then(res=>res.json())
@@ -12,7 +13,7 @@ let cart=[]
         <span class="precio">${producto.price}</span>
         `
         });
-    })
+    })*/
 
 
 //                  *****PRUEBA CARRITO*****

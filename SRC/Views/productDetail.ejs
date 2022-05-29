@@ -19,52 +19,45 @@
         <div id="divTopText" class="div-top-text">  </div> 
         <div id="divTopText1" class="div-top-text1"> <%= producto.description %> </div>
       </div>
+      </section>
 
-    
-    </section>
-
-    <section class="container-title-form">
-      <div class="product-title">
-        <h2 class="product-name"><%= producto.name %></h2>
-        <h3 class="product-price">$<%= producto.price %></h3>
-      </div>
-
-      <div class="product-form">
-        <label> Elige tu talle:</label>
-        <select name="size" id="size">
-          <option id= "S" value="S" >S</option>
-          <option id= "M" value="M" >M</option>
-          <option id= "L" value="L" >L</option>
-          <option id= "XL" value="XL" >XL</option>
-          
-        </select>
-          </div>
-          <div>
+      <section class="container-title-form">
+        <div class="product-title">
+          <h2 class="product-name"><%= producto.name %></h2>
+          <h3 class="product-price">$<%= producto.price %></h3>
+        </div>
+        <div class="product-form">
+          <label> Elige tu talle:</label>
+            <select name="size" id="size">
+              <option id= "S" value="S" >S</option>
+              <option id= "M" value="M" >M</option>
+              <option id= "L" value="L" >L</option>
+              <option id= "XL" value="XL" >XL</option>
+            </select>
+        </div>
+        <div class="text-form">
             <label for="top-text">Tu frase acá</label>
-            <input type="text" id="topText" value=" "><label for="option">Elige la fuente</label>
-          </div>
-            
-            
-            <select name="option" id="option">
+            <input type="text" id="topText" value=" ">
+        </div> 
+        <div id="font-container">
+          <label for="option">Elige la fuente</label> 
+          <select name="option" id="option">
               <option id= "arial" value="arial" style="font-family:Arial, Helvetica, sans-serif">ARIAL</option>
               <option id= "courier" value="courier" style="font-family: 'Courier New', Courier, monospace;">COURIER NEW</option>
               <option id= "cursive" value="cursive" style="font-family:'cursive'"> CURSIVE </option>
               <option id= "impact" value="impact" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">IMPACT</option>
               <option id= "timesNewRoman" value="times-new-roman" style="font-family:'Times New Roman', Times, serif">Times New Roman</option>
             </select>
-
-              <label for="color-text">Color del texto</label>
+        </div>
+        <div class="text-fontSize-container">
+          <label for="color-text">Color del texto</label>
               <input type="color" id="color-text" value="#000000">
-            
-              <label for="font-size"> Tamaño del texto</label>
+            <label for="font-size"> Tamaño del texto</label>
               <input id="font-size" type="number" value="30" min="10" max="45">
-              
-              <label for="submit"></label>
-              <button type="submit" class="submit" id ="submit">AGREGAR AL CARRITO</button>
-            </form>
-          </div>
-        </form>
-      </div>
+        </div>
+            <label for="submit"></label>
+            <button type="submit" class="button large-button bg-green font-color-white" id ="submit">AGREGAR AL CARRITO</button>
+
     </section>
 
   </main>
