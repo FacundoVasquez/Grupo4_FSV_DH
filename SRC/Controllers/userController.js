@@ -30,7 +30,16 @@ const controller = {
         if (!errors.isEmpty()) {
         return res.render("register", { errors: errors.errors, old: req.body});
             
-        }else { 
+        }else if (req.body.img  === undefined){
+          Users.create({
+            name: req.body.user_name,
+            email: req.body.email,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            img: 'avatar.jpeg',
+          })
+          return res.redirect ("/user/login")
+
+        }  else { 
 
                   Users.create({
                   name: req.body.user_name,
@@ -157,6 +166,7 @@ const controller = {
       profile: (req, res)=>{
         // console.log(req.session.userLogged);
         // const user = locals.userLogged;
+
         return res.render('userProfile');
       },
      

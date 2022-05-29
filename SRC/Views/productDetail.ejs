@@ -14,7 +14,7 @@
   <main>
     <section class="product-container">
       <div class="product-image">
-        <img src = "/uploads/<%= producto.img %>" >
+        <img src = "/uploads/<%= producto.img %>" id="imagen-producto">
         <div id="divImgProduct"><%= producto.name %></div>
         <div id="divTopText" class="div-top-text">  </div> 
         <div id="divTopText1" class="div-top-text1"> <%= producto.description %> </div>
@@ -61,7 +61,7 @@
               
 
               <label for="submit"></label>
-              <button type="submit" class="submit">AGREGAR AL CARRITO</button>
+              <button type="submit" class="submit" id="submit">AGREGAR AL CARRITO</button>
             
           </div>
         </form>
@@ -74,7 +74,7 @@
     <%-include("./partials/footer")%> 
   </footer>
   
-  <script src="/scripts/productDetail.js"></script>
+ <script src="/scripts/productDetail.js"></script>
 
 </body>
 
