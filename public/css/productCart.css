@@ -178,40 +178,8 @@ input::placeholder{
   padding-left: 10px;
 }
 
-footer{
-  padding-top: 50px;
-  background-color: #328093;
-}
-footer img{
-   display: block;
-   margin: auto;
-  }
 
-footer div ul{
-  list-style: none;
-  padding: 0;
-}
 
-footer div ul li{
-  padding: 10px 0;
-  text-align: center;
-  color: #DFB760;
-}
-
-.redes{
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 50px;
-font-size: 1.5em;
-  color: #328093;
-}
-.redes i{
-  background-color: white;
-  text-align: center;
-  width: 45px;
-  padding: 10px;
-  border-radius: 50px;
-}
 
 
 @media (min-width: 768px){
@@ -279,27 +247,6 @@ font-size: 1.5em;
       margin: auto;
       margin-right: 30px;
   }
-
-  footer{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0;
-
-  }
-   footer img{
-       margin: 10%;
-      }
-  
-  .redes{
-      margin: 10%;
-
-  }
-  .redes i{
-      margin-left: 10px;
-
-  }
-
   
   /* cambio de menu */
 

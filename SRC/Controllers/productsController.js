@@ -22,9 +22,11 @@ const controller = {
                 name:{ [Op.like] : '%' + req.query.term +'%'}
             }
         })
-        .then(productos =>{
-			return res.render("products", {products: productos});
+        .then(products =>{
+
+			return res.render("products", {products});
         })
+	
     },
     
     detail: async (req, res) => {
@@ -74,9 +76,9 @@ const controller = {
 
 	// Update - Method to update
 	update: async (req, res) => {
-		console.log(req.file.filename)
 
-		if (req.file.filename  == undefined) {
+
+		if (req.file  == undefined) {
 		await Product.update({
 
 			name: req.body.name,

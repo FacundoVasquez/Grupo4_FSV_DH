@@ -6,6 +6,8 @@
 <%- include('partials/head', {title: 'Login'}) %>
    
 <link href="/css/login.css" rel="stylesheet">
+<script src="/scripts/validacion.js"></script>
+
 
     <body>
 
@@ -31,7 +33,7 @@
                         <div class="seccionform">
                             <label for="email">E-mail</label>
                             <input type="email" name="email" placeholder="Ingresa tu e-mail" id="email">
-
+                            <p class="emailE errores"></p>
                             <label for="password">Contraseña</label>
                             <div class="pass-eye">
                             <input type="password" name="password" placeholder="Ingresa tu contraseña" id="password">

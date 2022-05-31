@@ -23,6 +23,11 @@
 		<section class="all-products container">
 			
 				<div class="flex">
+					<% if(products.length == 0){%>
+						<div>
+							<h2 style="color:black; height: 30vh;">Producto no encontrado</h2>
+						</div>
+					<% }else{%>
 					<% products.forEach( product=> { %>
 						<a href="/product/<%= product.products_id %>">
 							<div class="product-info">
@@ -48,6 +53,7 @@
 							</div>
 						</a>
 						<% }) %>
+						<% } %>
 				</div>
 			
 		</section>

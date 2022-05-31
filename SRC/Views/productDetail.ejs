@@ -15,9 +15,14 @@
     <section class="product-container">
       <div class="product-image">
         <img src = "/uploads/<%= producto.img %>" >
-        <div id="divImgProduct"><%= producto.name %></div>
-        <div id="divTopText" class="div-top-text">  </div> 
-        <div id="divTopText1" class="div-top-text1"> <%= producto.description %> </div>
+        <div id="divImgProduct">
+          <%= producto.name %>
+        </div>
+        <div id="divTopText" class="div-top-text"> 
+           </div> 
+        <div id="divTopText1" class="div-top-text1">
+          <%= producto.description %> 
+        </div>
       </div>
       </section>
 
@@ -26,6 +31,7 @@
           <h2 class="product-name"><%= producto.name %></h2>
           <h3 class="product-price">$<%= producto.price %></h3>
         </div>
+        <div class="items-personalizar">
         <div class="product-form">
           <label> Elige tu talle:</label>
             <select name="size" id="size">
@@ -55,6 +61,7 @@
             <label for="font-size"> Tamaño del texto</label>
               <input id="font-size" type="number" value="30" min="10" max="45">
         </div>
+      </div>
             <label for="submit"></label>
             <button type="submit" class="button large-button bg-green font-color-white" id ="submit">AGREGAR AL CARRITO</button>
 
